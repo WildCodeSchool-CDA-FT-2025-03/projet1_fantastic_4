@@ -1,7 +1,11 @@
 import "./BooksPage.css";
 
 const BooksPage = () => {
-  return <></>;
+  return (
+    <>
+      <h2>Books Page</h2>
+    </>
+  );
 };
 
 export default BooksPage;
