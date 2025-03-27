@@ -1,0 +1,26 @@
+{
+  "name": "projet1_fantastic_4",
+  "version": "1.0.0",
+  "description": "Projet CDA 1",
+  "homepage": "https://github.com/WildCodeSchool-CDA-FT-2025-03/projet1_fantastic_4#readme",
+  "bugs": {
+    "url": "https://github.com/WildCodeSchool-CDA-FT-2025-03/projet1_fantastic_4/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildCodeSchool-CDA-FT-2025-03/projet1_fantastic_4.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.0",
+    "@commitlint/config-conventional": "^19.8.0",
+    "husky": "^9.1.7"
+  }
+}
