@@ -15,9 +15,11 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node ./start.js",
+    "dev": "node ./start.js",
     "prepare": "husky",
-    "check-branch": "validate-branch-name"
+    "check-branch": "validate-branch-name",
+    "check": "./.husky/pre-commit",
+    "check-build": "./.husky/pre-push"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.0",
