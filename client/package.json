@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "pretty": "prettier . --write",
-    "prettier-check": "prettier . --check"
+    "prettier-check": "prettier . --check",
+    "build-check": "tsc -b --noEmit"
   },
   "dependencies": {
     "@apollo/client": "^3.13.5",
