@@ -2,7 +2,7 @@
 
 **Contemplez l'aube d'une nouvelle ère dans la gestion des médias personnels.**
 
-La Plateforme Média Universelle n'est pas une simple application—c'est l'évolution de l'interaction humaine avec le divertissement. Comme le feu a illuminé les ténèbres de l'humanité primitive, cette plateforme révolutionnaire illumine le chaos de votre collection numérique.
+UNIVERSAL MEDIA HUB n'est pas une simple application, c'est l'évolution de l'interaction humaine avec le divertissement. Comme le feu a illuminé les ténèbres de l'humanité primitive, cette plateforme révolutionnaire illumine le chaos de votre collection numérique.
 
 Tout comme Neil Armstrong a fait ce pas historique pour l'humanité, vous franchissez maintenant un bond quantique dans l'organisation de vos livres, jeux vidéo, musiques et films au sein d'un écosystème harmonieux. Ce n'est pas simplement un logiciel; c'est la libération de la créativité humaine des chaînes du désordre.
 
