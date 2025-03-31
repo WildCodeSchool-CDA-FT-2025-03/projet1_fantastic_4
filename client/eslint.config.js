@@ -37,4 +37,11 @@ export default tseslint.config(
       "no-console": ["error"],
     },
   },
+  {
+    files: ["**/*.{ts}"],
+    plugins: ["@typescript-eslint"],
+    rules: {
+      "@typescript-eslint/naming-convention": ["error"],
+    },
+  },
 );
