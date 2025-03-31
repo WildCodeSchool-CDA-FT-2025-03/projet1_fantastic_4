@@ -10,7 +10,7 @@ export default [
     languageOptions: { globals: globals.browser },
     rules: {
       semi: ["error", "always"],
-      indent: ["error", 2],
+      indent: ["error", 2, { ignoredNodes: ["PropertyDefinition"] }],
       quotes: ["error", "double"],
       eqeqeq: ["error", "always"],
       "no-var": "error",
@@ -21,33 +21,7 @@ export default [
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
       "no-console": ["error"],
-      "@typescript-eslint/naming-convention": [
-        "error",
-        {
-          selector: "objectLiteralProperty",
-          format: ["camelCase", "PascalCase"],
-        },
-        {
-          selector: "default",
-          format: ["camelCase"],
-          leadingUnderscore: "allow",
-          trailingUnderscore: "allow",
-        },
-        {
-          selector: "variable",
-          format: ["camelCase", "UPPER_CASE"],
-          leadingUnderscore: "allow",
-          trailingUnderscore: "allow",
-        },
-        {
-          selector: "typeLike",
-          format: ["PascalCase"],
-        },
-        {
-          selector: "import",
-          format: ["camelCase", "PascalCase"],
-        },
-      ],
+      "@typescript-eslint/naming-convention": ["error"],
     },
   },
   pluginJs.configs.recommended,

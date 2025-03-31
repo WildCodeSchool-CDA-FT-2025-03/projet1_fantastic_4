@@ -1,30 +1,24 @@
+import "module-alias/register";
+import "reflect-metadata";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
-import { getMedias } from "./resolvers/media.resolver";
+import { buildSchema } from "type-graphql";
+import MediaResolver from "./resolvers/media.resolver";
 import logger from "./services/logger.service";
 
 import "dotenv";
 
-const typeDefs = `#graphql
-  type Query {
-    getMedias: [String],
-  }
-`;
-
-const resolvers = {
-  Query: {
-    getMedias,
-  },
-  // Mutation: {},
-};
-
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-});
-
 const PORT = process.env.APOLLO_SERVER_PORT || "4000";
+
 (async () => {
+  const schema = await buildSchema({
+    resolvers: [MediaResolver],
+  });
+
+  const server = new ApolloServer({
+    schema,
+  });
+
   const { url } = await startStandaloneServer(server, {
     listen: { port: parseInt(PORT) },
   });
