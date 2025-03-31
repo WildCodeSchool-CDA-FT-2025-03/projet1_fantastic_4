@@ -7,7 +7,7 @@
   "type": "commonjs",
   "main": "main.js",
   "scripts": {
-    "dev": "ts-node-dev ./src/main.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register ./src/main.ts",
     "test": "jest --passWithNoTests",
     "build": "tsc -b",
     "lint": "eslint .",
@@ -31,9 +31,11 @@
     "@apollo/server": "^4.11.3",
     "@types/winston": "^2.4.4",
     "chalk": "^5.4.1",
+    "class-validator": "^0.14.1",
     "graphql": "^16.10.0",
     "reflect-metadata": "^0.2.2",
     "sqlite3": "^5.1.7",
+    "tsconfig-paths": "^4.2.0",
     "type-graphql": "^2.0.0-rc.2",
     "typeorm": "^0.3.21",
     "winston": "^3.17.0"

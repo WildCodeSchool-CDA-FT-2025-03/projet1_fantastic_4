@@ -1,4 +1,3 @@
-import "module-alias/register";
 import "reflect-metadata";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";

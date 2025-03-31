@@ -23,7 +23,12 @@
     "esModuleInterop": true, // Compatibilité CommonJS <=> Es Module
     /** Décorateur et métadonnés (pour TypeORM) */
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "exclude": ["node_modules"], //Liste les fichiers et dossiers eclus de la compilation
   "include": ["./src/**/*.ts"] // Liste les fichiers à inclure obligatoirement dans la compilation
