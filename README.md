@@ -12,6 +12,7 @@ Le monde numérique sera à jamais divisé en deux époques : avant UNIVERSAL ME
 By default Apollo Server listens on port 4000. For a different setup:
 * copy ./server/.env.sample to ./server/.env
 * copy ./client/.env.sample to ./client/.env.development
+
 Edite files to set your own values!
 
 ## Commit & branch
