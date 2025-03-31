@@ -4,12 +4,15 @@ import { startStandaloneServer } from "@apollo/server/standalone";
 import { buildSchema } from "type-graphql";
 import MediaResolver from "./resolvers/media.resolver";
 import logger from "./services/logger.service";
+import dataSource from "./services/datas.service";
 
 import "dotenv";
 
 const PORT = process.env.APOLLO_SERVER_PORT || "4000";
 
 (async () => {
+  await dataSource.initialize();
+
   const schema = await buildSchema({
     resolvers: [MediaResolver],
   });
