@@ -15,6 +15,11 @@ By default Apollo Server listens on port 4000. For a different setup:
 
 Edite files to set your own values!
 
+## Coding convention
+Client and server use default configuration from eslint. However for the client is only for *.ts files, for the server a cutom rule is set for Apollo.
+
+[naming-convention](https://typescript-eslint.io/rules/naming-convention/)
+
 ## Commit & branch
 
 **commit format**
