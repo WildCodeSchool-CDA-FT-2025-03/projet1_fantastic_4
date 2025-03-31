@@ -6,7 +6,7 @@ import tseslint from "typescript-eslint";
 export default [
   { ignores: ["dist"] },
   {
-    files: ["**/*.{js,mjs,cjs,ts}"],
+    files: ["**/*.{js,cjs,ts}"],
     languageOptions: { globals: globals.browser },
     rules: {
       semi: ["error", "always"],
@@ -21,6 +21,33 @@ export default [
         { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
       ],
       "no-console": ["error"],
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          selector: "objectLiteralProperty",
+          format: ["camelCase", "PascalCase"],
+        },
+        {
+          selector: "default",
+          format: ["camelCase"],
+          leadingUnderscore: "allow",
+          trailingUnderscore: "allow",
+        },
+        {
+          selector: "variable",
+          format: ["camelCase", "UPPER_CASE"],
+          leadingUnderscore: "allow",
+          trailingUnderscore: "allow",
+        },
+        {
+          selector: "typeLike",
+          format: ["PascalCase"],
+        },
+        {
+          selector: "import",
+          format: ["camelCase", "PascalCase"],
+        },
+      ],
     },
   },
   pluginJs.configs.recommended,
