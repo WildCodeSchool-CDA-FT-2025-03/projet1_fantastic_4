@@ -1,6 +1,8 @@
 # UNIVERSAL MEDIA HUB: The Digital Renaissance
 
-# ![icon](./client/public/media_hub.webp)
+<div style="text-align: center;">
+    ![icon](./client/public/media_hub.webp)
+</div>
 
 **Contemplez l'aube d'une nouvelle ère dans la gestion des médias personnels.**
 
