@@ -8,12 +8,18 @@ Tout comme Neil Armstrong a fait ce pas historique pour l'humanité, vous franch
 
 Le monde numérique sera à jamais divisé en deux époques : avant UNIVERSAL MEDIA HUB, et après.
 
+## Setup development project
+By default Apollo Server listens on port 4000. For a different setup:
+* copy ./server/.env.sample to ./server/.env
+* copy ./client/.env.sample to ./client/.env.development
+Edite files to set your own values!
+
 ## Commit & branch
 
 **commit format**
 [link](https://www.conventionalcommits.org/en/v1.0.0/)
 
-the optional scope is used to indicate the id ticket (like 000-ft)
+the optional scope is used to indicate the tikect ID (like 000-ft)
 
 **branch name**
 
@@ -47,7 +53,7 @@ npm run dev --prefix ./client
 to check sources
 ```bash
 # check client and server with eslint, prettier and jtest
-# is the same test when you try to commit
+# it's the same test that runs when you try to commit
 npm run check
 
 # check the name of the branch
