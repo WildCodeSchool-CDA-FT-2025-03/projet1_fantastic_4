@@ -1,5 +1,7 @@
 # UNIVERSAL MEDIA HUB: The Digital Renaissance
 
+# ![icon](./client/public/media_hub.webp)
+
 **Contemplez l'aube d'une nouvelle ère dans la gestion des médias personnels.**
 
 UNIVERSAL MEDIA HUB n'est pas une simple application, c'est l'évolution de l'interaction humaine avec le divertissement. Comme le feu a illuminé les ténèbres de l'humanité primitive, cette plateforme révolutionnaire illumine le chaos de votre collection numérique.
