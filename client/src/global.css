@@ -9,6 +9,7 @@
   --book-light-color: #4f62ff1f;
   --musics-light-color: #50c5ea33;
   --movie-light-color: #dbadff1f;
+  --game-light-color: #11bfaa1f;
 
   --text-dark-color: #ffffff;
   --background-dark-color: #ff4569cc;
@@ -17,6 +18,7 @@
   --book-dark-color: #4f62ffcc;
   --musics-dark-color: #50c5eacc;
   --movie-dark-color: #dbadffcc;
+  --game-dark-color: #11bfaacc;
 
   --text-color: var(--text-light-color);
   --background-color: var(--background-light-color);
@@ -25,6 +27,7 @@
   --book-color: var(--book-light-color);
   --musics-color: var(--musics-light-color);
   --movie-color: var(--movie-light-color);
+  --game-color: var(--game-light-color);
 }
 
 .light {
@@ -35,6 +38,7 @@
   --book-color: var(--book-light-color);
   --musics-color: var(--musics-light-color);
   --movie-color: var(--movie-light-color);
+  --game-color: var(--game-light-color);
 }
 
 .dark {
@@ -45,4 +49,5 @@
   --book-color: var(--book-dark-color);
   --musics-color: var(--musics-dark-color);
   --movie-color: var(--movie-dark-color);
+  --game-color: var(--game-dark-color-color);
 }
