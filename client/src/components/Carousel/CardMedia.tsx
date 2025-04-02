@@ -3,7 +3,7 @@ import "../Carousel/CardMedia.css";
 function CardMedia() {
   return (
     <>
-      <article className="card-media">
+      <article className="card-media,carousel-slide">
         <section className="card-content">
           <img
             className="category-icon"

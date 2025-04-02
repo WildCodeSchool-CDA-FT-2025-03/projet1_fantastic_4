@@ -1,3 +1,9 @@
+.carousel-slide {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  padding: 9px;
+}
+
 .card-media {
   min-width: 296px;
   max-width: 296px;
