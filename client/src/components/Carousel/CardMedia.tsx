@@ -14,11 +14,6 @@ function CardMedia() {
         </section>
         <section className="card-footer">
           <p>Genre</p>
-          <img
-            className="heart-icon"
-            src="/public/empty-heart.svg"
-            alt="heart icon"
-          />
         </section>
       </article>
     </>
