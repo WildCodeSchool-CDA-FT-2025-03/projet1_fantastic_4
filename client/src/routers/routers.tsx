@@ -5,6 +5,7 @@ import MoviesPage from "@/pages/movies/MoviesPage";
 import MusicsPage from "@/pages/musics/MusicsPage";
 import GamesPage from "@/pages/games/GamesPage";
 import BooksPage from "@/pages/books/BooksPage";
+import GameInfo from "@/pages/games/GameInfo/GameInfo";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/musics",
         element: <MusicsPage />,
+      },
+      {
+        path: "/games/:id",
+        element: <GameInfo />,
       },
       {
         path: "/games",
