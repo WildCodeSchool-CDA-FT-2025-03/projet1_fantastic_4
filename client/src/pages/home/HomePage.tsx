@@ -1,6 +1,5 @@
-import CardMedia from "@/components/Carousel/CardMedia";
 import "./HomePage.css";
-import Skeleton from "@/components/Carousel/Skeleton";
+import Carousel from "@/components/Carousel/Carousel";
 
 const fakeDatas = [
   { id: 1, title: "Title 1", category: "games", genre: "Horror" },
@@ -21,8 +20,8 @@ const HomePage = () => {
   return (
     <>
       <h2>Home Page</h2>
-      <CardMedia />
-      <Skeleton />
+      <h2>Recommandations</h2>
+      <Carousel datas={fakeDatas} />
     </>
   );
 };
