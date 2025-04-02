@@ -10,7 +10,7 @@ function CardMedia() {
             src="public-homecenter/games-icon.svg"
             alt="category icon"
           />
-          <h2>Title</h2>
+          <h3>Title</h3>
         </section>
         <section className="card-footer">
           <p>Genre</p>

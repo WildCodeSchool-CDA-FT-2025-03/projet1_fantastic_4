@@ -12,10 +12,10 @@
   --sub-title-font-size-mobile: 16px;
   --sub-title-font-size-desktop: 20px;
   /*FONT SUBTITLE H3*/
-  --sub-title-font-family: "Inter", sans-serif;
-  --sub-title-font-weight: bold;
-  --sub-title-font-size-mobile: 16px;
-  --sub-title-font-size-desktop: 16px;
+  --sub-sub-title-font-family: "Inter", sans-serif;
+  --sub-sub-title-font-weight: bold;
+  --sub-sub-title-font-size-mobile: 16px;
+  --sub-sub-title-font-size-desktop: 16px;
   /*BODY*/
   --body-font-family: "Inter", sans-serif;
   --body-font-size: 12px;
@@ -96,9 +96,9 @@ h2 {
 }
 
 h3 {
-  font-family: var(--sub-title-h3-font-family);
-  font-weight: var(--sub-title-h3-font-weight);
-  font-size: var(--sub-title-h3-font-size-mobile);
+  font-family: var(--sub-sub-title-font-family);
+  font-weight: var(--sub-sub-title-font-weight);
+  font-size: var(--sub-sub-title-font-size-mobile);
 }
 
 a {
