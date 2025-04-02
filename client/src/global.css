@@ -71,3 +71,77 @@
   --movie-dark-color: #dbadffcc;
   --game-dark-color: #11bfaacc;
 }
+
+body {
+  color: var(--text-color);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+}
+
+main {
+  background-color: var(--primary-color);
+  /* min-height: calc(100vh - 70px - 213px); */
+}
+
+h1 {
+  font-family: var(--title-font-family);
+  font-weight: var(--title-font-weight);
+  font-size: var(--title-font-size-mobile);
+}
+
+h2 {
+  font-family: var(--sub-title-h2-font-family);
+  font-weight: var(--sub-title-h2-font-weight);
+  font-size: var(--sub-title-h2-font-size-mobile);
+}
+
+h3 {
+  font-family: var(--sub-title-h3-font-family);
+  font-weight: var(--sub-title-h3-font-weight);
+  font-size: var(--sub-title-h3-font-size-mobile);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow-button {
+  height: 30px;
+  width: 30px;
+  border: none;
+  transition: border 0.2s ease-in;
+}
+
+.arrow-button:hover {
+  border: solid 3px var(--accent-color);
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 950px) {
+  body {
+    font-size: var(--body-font-family-desktop);
+  }
+
+  h1 {
+    font-size: var(--title-font-size-desktop);
+  }
+
+  h2 {
+    font-size: var(--sub-title-h2-font-size-desktop);
+  }
+
+  h3 {
+    font-size: var(--sub-title-h3-font-size-desktop);
+  }
+
+  .arrow-button {
+    height: 48px;
+    width: 48px;
+  }
+}
