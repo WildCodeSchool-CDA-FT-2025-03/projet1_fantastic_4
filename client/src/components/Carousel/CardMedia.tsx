@@ -7,7 +7,7 @@ function CardMedia() {
         <section className="card-content">
           <img
             className="category-icon"
-            src="public-homecenter/games-icon.svg"
+            src="public/games-icon.svg"
             alt="category icon"
           />
           <h3>Title</h3>
@@ -16,7 +16,7 @@ function CardMedia() {
           <p>Genre</p>
           <img
             className="heart-icon"
-            src="/public-homecenter/empty-heart.svg"
+            src="/public/empty-heart.svg"
             alt="heart icon"
           />
         </section>
