@@ -90,9 +90,9 @@ h1 {
 }
 
 h2 {
-  font-family: var(--sub-title-h2-font-family);
-  font-weight: var(--sub-title-h2-font-weight);
-  font-size: var(--sub-title-h2-font-size-mobile);
+  font-family: var(--sub-title-font-family);
+  font-weight: var(--sub-title-font-weight);
+  font-size: var(--sub-title-font-size-mobile);
 }
 
 h3 {
