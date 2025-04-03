@@ -13,7 +13,6 @@ function CardMedia({ title, category_name, genre }: CardProps) {
     <>
       <article className="card-media">
         <Link to="/">
-          // TODO add the path of the specific media of this slide
           <section className="card-content">
             <img
               className="category-icon"
