@@ -1,4 +1,5 @@
 import "./MediaInfoLayout.css";
+import Rating from "../Rating/Rating";
 
 type PropsMediaInfoLayout = {
   genre: "games" | "musics" | "movies" | "books";
@@ -14,7 +15,7 @@ const MediaInfoLayout = (props: PropsMediaInfoLayout) => {
   const genre = props.genre;
   const title = props.title;
   const summary = props.summary;
-  const _rating = props.rating;
+  const rating = parseFloat(props.rating.toFixed(1));
   const _isFavorite = props.isFavorite;
   const subtitle = props.subtitle;
   const secondaryInfo = props.secondaryInfo;
@@ -25,7 +26,7 @@ const MediaInfoLayout = (props: PropsMediaInfoLayout) => {
     <div className="media-info-layout">
       <section className={"media-info-layout-top " + backgroundColor}>
         <h2>{title}</h2>
-        <p>X X X X X</p>
+        <Rating rate={rating} />
       </section>
       <section className={"media-info-layout-main " + backgroundColor}>
         <div className="media-info-layout-main-left">
