@@ -5,7 +5,7 @@ header {
   box-sizing: border-box;
 }
 
-img {
-  resize: horizontal 50%;
-  width: auto;
-}
+ img {
+  resize: 50%;
+  display: flex;
+} 

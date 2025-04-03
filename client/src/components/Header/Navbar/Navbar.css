@@ -54,11 +54,10 @@ a {
 
 .navbar {
   border: solid 2px red;
-  position: absolute;
   padding: 50px;
   display: flex;
-  justify-content: left;
-  align-items: center;
+ /* justify-content: left;
+  align-items: center;*/
 }
 
 .navlinks {
