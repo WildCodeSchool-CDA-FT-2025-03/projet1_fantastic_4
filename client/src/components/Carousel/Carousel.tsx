@@ -18,7 +18,6 @@ type Data = {
 export default function Carousel({ datas }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const videosPerPage = 1;
-  // const { theme } = useTheme();
 
   const skeletonList = Array(20)
     .fill("skel")
