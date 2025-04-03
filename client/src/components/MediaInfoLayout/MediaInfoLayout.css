@@ -47,7 +47,7 @@
 .media-info-layout-main-left > .cover {
   min-width: 280px;
   min-height: 400px;
-  background-color: #ffffff80;
+  background-color: #ffffffee;
   border-radius: 15px;
 }
 
@@ -62,17 +62,28 @@
   min-width: 100px;
   min-height: 50px;
   align-self: flex-start;
-  background-color: #ffffffcc;
+  background-color: #ffffffee;
   padding: 0.5rem;
   border-top: 0.9rem;
 }
 
 .media-info-layout-others {
-  background-color: #ffffffcc;
+  background-color: var(--game-color);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   column-gap: 0.5rem;
   row-gap: 1rem;
   width: 100%;
-  box-sizing: border-box;
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+
+.media-info-layout-others-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.item-info {
+  text-align: end;
 }

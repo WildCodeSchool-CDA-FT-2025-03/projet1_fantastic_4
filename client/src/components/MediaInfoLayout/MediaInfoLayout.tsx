@@ -1,7 +1,5 @@
 import "./MediaInfoLayout.css";
 
-// type _PropsMediaInfoLayout = {};
-
 const MediaInfoLayout = () => {
   return (
     <div className="media-info-layout">
@@ -18,7 +16,15 @@ const MediaInfoLayout = () => {
           Un jeux video trop bien, tu dois l'acheter!! et oui!!'
         </div>
       </div>
-      <div className="media-info-layout-others"></div>
+      <div className="media-info-layout-others">
+        <div className="media-info-layout-other-item">
+          <div className="item-title">
+            <span>Release date </span>
+            <hr />
+          </div>
+          <p className="item-info"> 15-11-2025</p>
+        </div>
+      </div>
     </div>
   );
 };
