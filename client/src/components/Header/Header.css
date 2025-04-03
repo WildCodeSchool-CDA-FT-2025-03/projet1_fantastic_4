@@ -1,0 +1,4 @@
+header {
+  border: solid 2px blue;
+  background-color: var(--secondary-color);
+}

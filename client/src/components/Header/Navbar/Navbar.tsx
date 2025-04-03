@@ -5,22 +5,22 @@ const Navbar = () => {
     <nav className="navbar">
       <ul className="navlinks">
         <li>
-          <NavLink to="/movies" className="nav-item">
+          <NavLink to="/movies" className="navbar-item">
             Movies
           </NavLink>
         </li>
         <li>
-          <NavLink to="/musics" className="nav-item">
+          <NavLink to="/musics" className="navbar-item">
             Musics
           </NavLink>
         </li>
         <li>
-          <NavLink to="/games" className="nav-item">
+          <NavLink to="/games" className="navbar-item">
             Games
           </NavLink>
         </li>
         <li>
-          <NavLink to="/books" className="nav-item">
+          <NavLink to="/books" className="navbar-item">
             Books
           </NavLink>
         </li>
