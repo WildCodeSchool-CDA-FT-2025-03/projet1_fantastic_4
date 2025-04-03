@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import "../Carousel/CardMedia.css";
+import "@/components/Carousel/CardMedia.css";
 
 interface CardProps {
   id: number;

@@ -1,19 +1,19 @@
 import { useState } from "react";
-import "./Carousel.css";
+import "@/components/Carousel/Carousel.css";
 
 import Skeleton from "./Skeleton";
 import CardMedia from "./CardMedia";
 
-interface CarouselProps {
+type CarouselProps = {
   datas: Data[];
-}
+};
 
-interface Data {
+type Data = {
   id: number;
   title: string;
   category_name: string;
   genre: string;
-}
+};
 
 export default function Carousel({ datas }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -29,21 +29,21 @@ export default function Carousel({ datas }: CarouselProps) {
       };
     });
 
-  // Fonction pour passer à la vidéo suivante
+  // Function to skip to the next video
   const nextSlide = () => {
     if (currentIndex + videosPerPage < datas.length) {
       setCurrentIndex(currentIndex + 1);
     }
   };
 
-  // Fonction pour revenir à la vidéo précédente
+  // Function to return to the previous video
   const prevSlide = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
   };
 
-  const slideWidthPixels = 296 + 9; //on ajoute le gap
+  const slideWidthPixels = 296 + 9; //we add the gap
   const trackWidthPixels = datas.length * slideWidthPixels;
 
   return (
@@ -64,7 +64,7 @@ export default function Carousel({ datas }: CarouselProps) {
         <div
           className="carousel-track"
           style={{
-            // on translate la track de la largeur d'une carte + le gap * par l'index courant
+            // we translate the track of the width of a card + the gap * by the current index
             transform: `translateX(-${currentIndex * slideWidthPixels}px)`,
             width: `${trackWidthPixels}px`,
           }}

@@ -1,4 +1,4 @@
-import "./HomePage.css";
+import "@/pages/home/HomePage.css";
 import Carousel from "@/components/Carousel/Carousel";
 
 const fakeDatas = [
@@ -15,8 +15,6 @@ const fakeDatas = [
 ];
 
 const HomePage = () => {
-  // eslint-disable-next-line no-console
-  console.info(fakeDatas);
   return (
     <>
       <div className="home-page" id="top">

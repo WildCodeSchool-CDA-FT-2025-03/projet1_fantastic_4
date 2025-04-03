@@ -12,8 +12,7 @@
 }
 
 .home-page-subtitle {
-  padding-left: 100px;
-  font-size: var(--sub-title-font-size-desktop);
+  padding-left: 10px;
 }
 
 @media (min-width: 769px) {

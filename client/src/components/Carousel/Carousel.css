@@ -15,18 +15,12 @@
 
 .carousel-track {
   display: flex;
-  transition: transform 500ms ease-in-out; /* Transition  entre les slides */
+  transition: transform 500ms ease-in-out; /* ⚠️ Slides transition */
   align-items: center;
   justify-content: flex-start;
   gap: 9px;
   padding: 16px;
 }
-
-/* .carousel-slide {
-	scroll-snap-align: start;
-	scroll-snap-stop: always;
-	padding: 9px;
-} */
 
 .carousel-arrows {
   display: flex;
@@ -40,7 +34,7 @@
   position: absolute;
   top: 100%;
   left: 2rem;
-  display: none; /* hide arrows in mobile since we have the scroll snap feature*/
+  display: none; /* ⚠️ hide arrows in mobile since we have the scroll snap feature*/
 }
 
 .carousel-arrow.next {

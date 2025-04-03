@@ -133,11 +133,11 @@ button {
   }
 
   h2 {
-    font-size: var(--sub-title-h2-font-size-desktop);
+    font-size: var(--sub-title-font-size-desktop);
   }
 
   h3 {
-    font-size: var(--sub-title-h3-font-size-desktop);
+    font-size: var(--sub-title-font-size-desktop);
   }
 
   .arrow-button {
