@@ -12,7 +12,12 @@ function CardMedia({ title, category_name, genre }: CardProps) {
   return (
     <>
       <article className="card-media">
-        <Link to="/">
+        <Link
+          to="/"
+          onClick={() =>
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+          }
+        >
           <section className="card-content">
             <img
               className="category-icon"
