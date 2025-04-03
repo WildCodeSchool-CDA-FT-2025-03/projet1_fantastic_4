@@ -1,18 +1,11 @@
 header {
   border: solid 2px blue;
   background-color: var(--secondary-color);
+  display: flex;
+  box-sizing: border-box;
 }
 
-.navbar {
-  position: absolute;
-  padding: 50px;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-
-.navlinks {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+img {
+  resize: horizontal 50%;
+  width: auto;
 }

@@ -54,4 +54,21 @@ a {
 
 .navbar {
   border: solid 2px red;
+  position: absolute;
+  padding: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar img {
+  max-width: 50px; /* Taille maximale */
+  max-height: 30px;
+  height: auto; /* Conserver les proportions */
 }
