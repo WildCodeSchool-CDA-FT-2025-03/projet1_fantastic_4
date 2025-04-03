@@ -7,7 +7,7 @@ interface CarouselProps {
 interface Data {
   id: number;
   title: string;
-  category: string;
+  category_name: string;
   genre: string;
 }
 
@@ -17,7 +17,13 @@ export default function Carousel({ datas }: CarouselProps) {
       <section className="carousel-container">
         <div className="carousel-track">
           {datas.map((item) => (
-            <CardMedia key={item.id} />
+            <CardMedia
+              key={item.id}
+              title={item.title}
+              category_name={item.category_name}
+              genre={item.genre}
+              id={item.id}
+            />
           ))}
         </div>
       </section>

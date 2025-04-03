@@ -1,19 +1,26 @@
 import "../Carousel/CardMedia.css";
 
-function CardMedia() {
+interface CardProps {
+  id: number;
+  title: string;
+  category_name: string;
+  genre: string;
+}
+
+function CardMedia({ title, category_name, genre }: CardProps) {
   return (
     <>
       <article className="card-media,carousel-slide">
         <section className="card-content">
           <img
             className="category-icon"
-            src="public/games-icon.svg"
-            alt="category icon"
+            src={`public/${category_name}-icon.svg`}
+            alt={`${category_name} icon`}
           />
-          <h3>Title</h3>
+          <h3>{title}</h3>
         </section>
         <section className="card-footer">
-          <p>Genre</p>
+          <p>{genre}</p>
         </section>
       </article>
     </>
