@@ -1,6 +1,5 @@
 import { Resolver, Query, Mutation, Arg, Int } from "type-graphql";
 import { CategoriesEntity, CategoryInput } from "@/entities/categories.entity";
-import { log } from "console";
 
 @Resolver()
 class CategoriesResolver {
@@ -25,7 +24,7 @@ class CategoriesResolver {
     const newCategory = new CategoriesEntity();
     newCategory.name = category.name;
     await newCategory.save();
-    log(newCategory);
+
     return newCategory.id;
   }
 
@@ -41,7 +40,7 @@ class CategoriesResolver {
 
     existingCategory.name = category.name;
     await existingCategory.save();
-    log(existingCategory);
+
     return existingCategory.id;
   }
 

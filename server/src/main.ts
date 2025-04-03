@@ -8,6 +8,7 @@ import dataSource from "./services/datas.service";
 
 import "dotenv";
 import CategoriesResolver from "./resolvers/categories.resolver";
+import { UserResolver } from "./resolvers/user.resolver";
 
 const PORT = process.env.APOLLO_SERVER_PORT || "4000";
 
@@ -15,7 +16,7 @@ const PORT = process.env.APOLLO_SERVER_PORT || "4000";
   await dataSource.initialize();
 
   const schema = await buildSchema({
-    resolvers: [MediaResolver, CategoriesResolver],
+    resolvers: [MediaResolver, CategoriesResolver, UserResolver],
   });
 
   const server = new ApolloServer({
