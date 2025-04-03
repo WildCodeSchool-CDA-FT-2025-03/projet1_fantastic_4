@@ -5,6 +5,7 @@ const Header = () => {
   return (
     <>
       <header>
+        <img src="/media-hub-S.webp"></img>
         <Navbar />
       </header>
     </>
