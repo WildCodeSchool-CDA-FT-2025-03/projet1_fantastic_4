@@ -3,9 +3,6 @@ h4,
 h2 {
   margin: 0;
   padding: 0;
-}
-
-p {
   word-wrap: break-word;
 }
 
@@ -55,7 +52,7 @@ p {
   align-items: start;
 }
 
-.media-info-layout-main-left > .cover {
+.media-info-layout-main-left > .media-cover {
   min-width: 280px;
   min-height: 400px;
   background-color: #ffffffee;
@@ -99,4 +96,26 @@ p {
 
 .item-info {
   text-align: end;
+}
+
+.media-cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+.media-cover-games {
+  background-image: url("/public/games-icon.svg");
+}
+
+.media-cover-movies {
+  background-image: url("/public/movies-icon.svg");
+}
+
+.media-cover-musics {
+  background-image: url("/public/musics-icon.svg");
+}
+
+.media-cover-books {
+  background-image: url("/public/books-icon.svg");
 }

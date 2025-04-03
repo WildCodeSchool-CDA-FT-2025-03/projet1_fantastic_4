@@ -11,6 +11,7 @@ type PropsMediaInfoLayout = {
 };
 
 const MediaInfoLayout = (props: PropsMediaInfoLayout) => {
+  const genre = props.genre;
   const title = props.title;
   const summary = props.summary;
   const _rating = props.rating;
@@ -26,7 +27,7 @@ const MediaInfoLayout = (props: PropsMediaInfoLayout) => {
       </section>
       <section className="media-info-layout-main">
         <div className="media-info-layout-main-left">
-          <div className="cover"></div>
+          <div className={"media-cover " + `media-cover-${genre}`}></div>
           <p className="subtitle">{subtitle}</p>
         </div>
         <div className="media-info-layout-main-description">{summary}</div>

@@ -21,9 +21,8 @@ const GameInfo = () => {
   return (
     <>
       <MediaInfoLayout
-        genre="game"
+        genre="games"
         title={game.title}
-        releaseDate={game.releseDate}
         summary={game.summary}
         rating={game.rating}
         isFavorite={game.isFavorite}
