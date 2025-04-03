@@ -1,4 +1,5 @@
 import StarIcon from "@/components/Icons/StarIcon";
+import "./Rating.css";
 
 type PropsRating = {
   rate: number;
@@ -14,9 +15,11 @@ const Rating = (props: PropsRating) => {
   }
 
   return (
-    <div className="star-icon">
-      {props.rate}
-      {star}
+    <div className="rating">
+      <p>{props.rate}</p>
+      <div title={"" + props.rate} className="rating-star-icon">
+        {star}
+      </div>
     </div>
   );
 };
