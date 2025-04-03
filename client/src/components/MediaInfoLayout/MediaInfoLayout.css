@@ -48,12 +48,18 @@ h2 {
   align-items: start;
 }
 
-.media-info-layout-main-left > .media-cover {
-  min-width: 280px;
-  min-height: 400px;
+.media-info-cover {
+  width: 100px;
+  height: 100px;
   background-color: #ffffffee;
   border-radius: 15px;
   border: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+.media-cover-games-size {
 }
 
 .media-info-layout-main-left > .subtitle {
@@ -93,12 +99,6 @@ h2 {
   text-align: end;
 }
 
-.media-cover {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80%;
-}
-
 .media-info-color-games {
   background-color: var(--game-color);
 }
@@ -116,17 +116,25 @@ h2 {
 }
 
 .media-cover-games {
+  width: 280px;
+  height: 400px;
   background-image: url("/public/games-icon.svg");
 }
 
 .media-cover-movies {
+  width: 280px;
+  height: 400px;
   background-image: url("/public/movies-icon.svg");
 }
 
 .media-cover-musics {
+  width: 280px;
+  height: 400px;
   background-image: url("/public/musics-icon.svg");
 }
 
 .media-cover-books {
+  width: 280px;
+  height: 400px;
   background-image: url("/public/books-icon.svg");
 }

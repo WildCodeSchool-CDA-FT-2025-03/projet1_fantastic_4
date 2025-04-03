@@ -30,7 +30,7 @@ const MediaInfoLayout = (props: PropsMediaInfoLayout) => {
       </section>
       <section className={"media-info-layout-main " + backgroundColor}>
         <div className="media-info-layout-main-left">
-          <div className={"media-cover " + `media-cover-${genre}`}></div>
+          <div className={"media-info-cover " + `media-cover-${genre}`}></div>
           <p className="subtitle">{subtitle}</p>
         </div>
         <div className={"media-info-layout-description "}>{summary}</div>
