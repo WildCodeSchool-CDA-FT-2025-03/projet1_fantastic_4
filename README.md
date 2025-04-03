@@ -1,6 +1,6 @@
 # UNIVERSAL MEDIA HUB: The Digital Renaissance
 
-![icon](./client/public/media_hub.webp)
+![icon](./client/public/media-hub-M.webp)
 
 **Contemplez l'aube d'une nouvelle ère dans la gestion des médias personnels.**
 
@@ -11,6 +11,11 @@ Tout comme Neil Armstrong a fait ce pas historique pour l'humanité, vous franch
 Le monde numérique sera à jamais divisé en deux époques : avant UNIVERSAL MEDIA HUB, et après.
 
 ## Setup development project
+Install packages on server and client:
+* npm install
+* npm install --prefix ./server
+* npm install --prefix ./client
+
 By default Apollo Server listens on port 4000. For a different setup:
 * copy ./server/.env.sample to ./server/.env
 * copy ./client/.env.sample to ./client/.env.development
