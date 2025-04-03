@@ -1,10 +1,7 @@
-import { useParams } from "react-router";
 import MediaInfoLayout from "@/components/MediaInfoLayout/MediaInfoLayout";
 import "./GameInfo.css";
 
 const GameInfo = () => {
-  const { _id } = useParams();
-
   const game = {
     title: "Factorio",
     releseDate: "21-08-2025",

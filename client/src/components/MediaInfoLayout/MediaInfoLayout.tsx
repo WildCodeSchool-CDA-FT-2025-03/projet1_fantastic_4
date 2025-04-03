@@ -16,7 +16,7 @@ const MediaInfoLayout = (props: PropsMediaInfoLayout) => {
   const title = props.title;
   const summary = props.summary;
   const rating = parseFloat(props.rating.toFixed(1));
-  const _isFavorite = props.isFavorite;
+  //  const _isFavorite = props.isFavorite;
   const subtitle = props.subtitle;
   const secondaryInfo = props.secondaryInfo;
 
