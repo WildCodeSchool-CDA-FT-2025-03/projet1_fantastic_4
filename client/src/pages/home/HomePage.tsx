@@ -19,9 +19,15 @@ const HomePage = () => {
   console.info(fakeDatas);
   return (
     <>
-      <h2>Home Page</h2>
-      <h2>Recommandations</h2>
-      <Carousel datas={fakeDatas} />
+      <div className="home-page" id="top">
+        <h1 className="home-page-title">
+          Welcome to your <span>Home Center</span> !
+        </h1>
+        <section>
+          <h2 className="home-page-subtitle">Recommandations</h2>
+          <Carousel datas={fakeDatas} />
+        </section>
+      </div>
     </>
   );
 };

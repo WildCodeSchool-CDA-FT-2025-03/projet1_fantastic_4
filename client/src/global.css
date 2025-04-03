@@ -80,7 +80,7 @@ body {
 
 main {
   background-color: var(--primary-color);
-  /* min-height: calc(100vh - 70px - 213px); */
+  min-height: calc(100vh - 140px);
 }
 
 h1 {
