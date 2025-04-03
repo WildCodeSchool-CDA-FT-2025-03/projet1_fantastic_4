@@ -21,10 +21,12 @@ import { CategoriesEntity } from "../../entities/categories.entity";
     });
 
     const res = await dataSource.manager.save(newCategories);
-    log(res);
+    if (res) log("Migration done !");
     await queryRunner.commitTransaction();
   } catch (error) {
     log(error);
     await queryRunner.rollbackTransaction();
+  } finally {
+    await queryRunner.release();
   }
 })();
