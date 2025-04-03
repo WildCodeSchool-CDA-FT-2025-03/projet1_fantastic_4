@@ -17,7 +17,7 @@ type Data = {
 
 export default function Carousel({ datas }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const videosPerPage = 1;
+  const cardsPerPage = 1;
 
   const skeletonList = Array(20)
     .fill("skel")
@@ -30,7 +30,7 @@ export default function Carousel({ datas }: CarouselProps) {
 
   // Function to skip to the next video
   const nextSlide = () => {
-    if (currentIndex + videosPerPage < datas.length) {
+    if (currentIndex + cardsPerPage < datas.length) {
       setCurrentIndex(currentIndex + 1);
     }
   };
@@ -85,7 +85,7 @@ export default function Carousel({ datas }: CarouselProps) {
       <button
         type="button"
         onClick={nextSlide}
-        disabled={currentIndex + videosPerPage >= datas.length}
+        disabled={currentIndex + cardsPerPage >= datas.length}
         className="carousel-arrow next"
       >
         <img
