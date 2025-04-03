@@ -19,20 +19,22 @@ const MediaInfoLayout = (props: PropsMediaInfoLayout) => {
   const subtitle = props.subtitle;
   const secondaryInfo = props.secondaryInfo;
 
+  const backgroundColor = `media-info-color-${genre}`;
+
   return (
     <div className="media-info-layout">
-      <section className="media-info-layout-top">
+      <section className={"media-info-layout-top " + backgroundColor}>
         <h2>{title}</h2>
         <p>X X X X X</p>
       </section>
-      <section className="media-info-layout-main">
+      <section className={"media-info-layout-main " + backgroundColor}>
         <div className="media-info-layout-main-left">
           <div className={"media-cover " + `media-cover-${genre}`}></div>
           <p className="subtitle">{subtitle}</p>
         </div>
-        <div className="media-info-layout-main-description">{summary}</div>
+        <div className={"media-info-layout-description "}>{summary}</div>
       </section>
-      <section className="media-info-layout-others">
+      <section className={"media-info-layout-others " + backgroundColor}>
         {secondaryInfo?.map((info) => {
           return (
             <div key={info.title} className="media-info-layout-other-item">

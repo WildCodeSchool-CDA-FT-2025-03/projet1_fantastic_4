@@ -3,7 +3,6 @@ h4,
 h2 {
   margin: 0;
   padding: 0;
-  word-wrap: break-word;
 }
 
 .media-info-layout {
@@ -20,13 +19,14 @@ h2 {
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 0.5rem;
-  background-color: var(--game-color);
   border-radius: 15px;
   padding: 0.5rem;
 }
 
 .media-info-layout-top > h2 {
   font-size: 2rem;
+  row-gap: 0.5rem;
+  overflow-wrap: anywhere;
 }
 
 .media-info-layout-top > p {
@@ -40,7 +40,6 @@ h2 {
   flex-wrap: wrap;
   gap: 1rem;
   border-radius: 15px;
-  background-color: var(--game-color);
   width: 100%;
   padding: 0.5rem;
 }
@@ -66,7 +65,7 @@ h2 {
   word-wrap: break-word;
 }
 
-.media-info-layout-main-description {
+.media-info-layout-description {
   border-radius: 15px;
   min-width: 100px;
   align-self: flex-start;
@@ -78,7 +77,6 @@ h2 {
 }
 
 .media-info-layout-others {
-  background-color: var(--game-color);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   column-gap: 0.5rem;
@@ -102,6 +100,22 @@ h2 {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
+}
+
+.media-info-color-games {
+  background-color: var(--game-color);
+}
+
+.media-info-color-movies {
+  background-color: var(--movie-color);
+}
+
+.media-info-color-musics {
+  background-color: var(--musics-color);
+}
+
+.media-info-color-books {
+  background-color: var(--book-color);
 }
 
 .media-cover-games {
