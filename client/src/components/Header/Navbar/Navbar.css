@@ -1,0 +1,44 @@
+.topnav {
+  background-color: var(--background-light-color);
+  overflow: hidden;
+}
+
+.topnav movies {
+  float: left;
+  display: block;
+  color: var(--movie-light-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: dashed;
+  font-size: 17px;
+}
+
+.topnav musics {
+  float: left;
+  display: block;
+  color: var(--musics-light-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: dashed;
+  font-size: 17px;
+}
+
+.topnav games {
+  float: left;
+  display: block;
+  color: var(--games-light-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: dashed;
+  font-size: 17px;
+}
+
+.topnav books {
+  float: left;
+  display: block;
+  color: var(--books-light-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: dashed;
+  font-size: 17px;
+}
