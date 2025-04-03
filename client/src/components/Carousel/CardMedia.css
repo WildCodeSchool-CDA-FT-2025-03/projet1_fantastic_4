@@ -1,16 +1,19 @@
-.carousel-slide {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  padding: 9px;
+.card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
 }
 
 .card-media {
   min-width: 296px;
-  max-width: 296px;
   background: var(--tertiary-color);
   border-radius: 8px;
   box-shadow: 0 2px 6px var(--shadow-color);
   background: var(--tertiary-color);
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  padding: 9px;
 }
 
 .card-header {
@@ -25,10 +28,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-.card-content h2 {
-  font-size: 16px;
 }
 
 .category-icon {
@@ -50,10 +49,4 @@
 .card-footer p {
   margin: auto;
   font-size: 12px;
-}
-
-.heart-icon {
-  align-self: flex-end;
-  width: 28px;
-  height: 28px;
 }
