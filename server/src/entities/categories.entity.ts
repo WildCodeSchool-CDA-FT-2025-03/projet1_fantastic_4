@@ -1,4 +1,4 @@
-import { Field, InputType, ObjectType } from "type-graphql";
+import { Field, ObjectType } from "type-graphql";
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @ObjectType()
@@ -9,12 +9,6 @@ export class CategoriesEntity extends BaseEntity {
   id: number;
 
   @Column()
-  @Field()
-  name: string;
-}
-
-@InputType()
-export class CategoryInput {
   @Field()
   name: string;
 }

@@ -1,11 +1,10 @@
 import { CategoriesEntity } from "@/entities/categories.entity";
-import { UsersEntity } from "@/entities/users.entity";
 import { DataSource } from "typeorm";
 
 const dataSource = new DataSource({
   type: "sqlite",
   database: "./db.sqlite",
-  entities: [CategoriesEntity, UsersEntity],
+  entities: [CategoriesEntity],
   synchronize: true, //pas en prod
 });
 
