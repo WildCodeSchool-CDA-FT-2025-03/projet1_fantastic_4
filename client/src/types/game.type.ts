@@ -9,4 +9,6 @@ export type Game = {
   rating: number;
 };
 
-export type GameTag = string;
+export type GameTag = {
+  name: string;
+};

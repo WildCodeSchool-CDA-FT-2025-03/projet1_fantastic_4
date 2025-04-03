@@ -1,11 +1,12 @@
 import { useParams } from "react-router";
+import MediaInfoLayout from "@/components/MediaInfoLayout/MediaInfoLayout";
 import "./GameInfo.css";
 
 const GameInfo = () => {
-  const { id } = useParams();
+  const { _id } = useParams();
   return (
     <>
-      <h2>Games Info: {id}</h2>
+      <MediaInfoLayout />
     </>
   );
 };
