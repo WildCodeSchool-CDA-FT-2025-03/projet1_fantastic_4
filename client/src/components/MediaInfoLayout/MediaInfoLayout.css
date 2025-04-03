@@ -1,3 +1,14 @@
+p,
+h4,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  word-wrap: break-word;
+}
+
 .media-info-layout {
   width: auto;
   padding: 1rem;
@@ -17,11 +28,11 @@
   padding: 0.5rem;
 }
 
-.media-info-layout-top > .title {
+.media-info-layout-top > h2 {
   font-size: 2rem;
 }
 
-.media-info-layout-top > .raiting {
+.media-info-layout-top > p {
   font-size: 2rem;
 }
 
@@ -49,6 +60,7 @@
   min-height: 400px;
   background-color: #ffffffee;
   border-radius: 15px;
+  border: 0;
 }
 
 .media-info-layout-main-left > .subtitle {
