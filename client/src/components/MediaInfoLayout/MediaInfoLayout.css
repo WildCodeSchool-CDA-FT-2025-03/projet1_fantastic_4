@@ -60,11 +60,12 @@
 .media-info-layout-main-description {
   border-radius: 15px;
   min-width: 100px;
-  min-height: 50px;
   align-self: flex-start;
   background-color: #ffffffee;
   padding: 0.5rem;
   border-top: 0.9rem;
+  flex: 1;
+  text-wrap: wrap;
 }
 
 .media-info-layout-others {
