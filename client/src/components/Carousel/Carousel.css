@@ -21,3 +21,64 @@
   gap: 9px;
   padding: 16px;
 }
+
+/* .carousel-slide {
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+	padding: 9px;
+} */
+
+.carousel-arrows {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-arrow {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 100%;
+  left: 2rem;
+  display: none; /* hide arrows in mobile since we have the scroll snap feature*/
+}
+
+.carousel-arrow.next {
+  left: auto;
+  right: 2rem;
+}
+
+.carousel-arrow:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (min-width: 769px) {
+  .carousel-wrapper {
+    padding: 2rem;
+  }
+
+  .carousel-container {
+    width: calc(100% - 120px);
+    margin: auto;
+    overflow-x: hidden;
+  }
+
+  .carousel-arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+
+  .carousel-arrow.next {
+    left: auto;
+    right: 1rem;
+  }
+
+  .carousel-slide {
+    scroll-snap-align: initial;
+    scroll-snap-stop: initial;
+  }
+}
