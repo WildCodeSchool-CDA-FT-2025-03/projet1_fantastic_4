@@ -18,7 +18,7 @@ const MediaInfoLayout = () => {
           Un jeux video trop bien, tu dois l'acheter!! et oui!!'
         </div>
       </div>
-      <div className="media-info-layout-"></div>
+      <div className="media-info-layout-others"></div>
     </div>
   );
 };
