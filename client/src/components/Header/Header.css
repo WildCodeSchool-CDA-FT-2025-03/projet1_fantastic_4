@@ -5,7 +5,6 @@ header {
   box-sizing: border-box;
 }
 
- img {
+.logo-header {
   resize: 50%;
-  display: flex;
-} 
+}

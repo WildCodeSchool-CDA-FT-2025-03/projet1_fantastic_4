@@ -1,42 +1,3 @@
-/* a retirer avant le merge*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
-:root {
-  --title-font-family: "Inter", sans-serif;
-  --title-font-weight: bold;
-  --title-font-size-mobile: 20px;
-  --title-font-size-desktop: 32px;
-
-  --sub-title-font-family: "Inter", sans-serif;
-  --sub-title-font-weight: bold;
-  --sub-title-font-size-mobile: 16px;
-  --sub-title-font-size-desktop: 20px;
-
-  --sub-sub-title-font-family: "Inter", sans-serif;
-  --sub-sub-title-font-weight: bold;
-  --sub-sub-title-font-size-mobile: 16px;
-  --sub-sub-title-font-size-desktop: 16px;
-
-  --body-font-family: "Inter", sans-serif;
-  --body-font-size: 12px;
-  --body-font-family-desktop: 12px;
-
-  --shadow-color: rgb(0 0 0 / 25%);
-
-  --accent-color: #fa9a46;
-
-  --primary-color: #fbfcff;
-  --secondary-color: #ffffff;
-  --tertiary-color: #ffffff;
-  --text-color: #0d0d0d;
-
-  --favorite-light-color: #ff45691f;
-  --book-light-color: #4f62ff1f;
-  --musics-light-color: #50c5ea33;
-  --movie-light-color: #dbadff1f;
-  --game-light-color: #11bfaa1f;
-}
-
 ul {
   list-style-type: none;
 }
@@ -56,8 +17,6 @@ a {
   border: solid 2px red;
   padding: 50px;
   display: flex;
- /* justify-content: left;
-  align-items: center;*/
 }
 
 .navlinks {

@@ -1,14 +1,13 @@
 import Navbar from "./Navbar/Navbar";
-import "../Header/Header.css";
-import "../Header/Burgermenu/Burgermenu.css";
-import Burgermenu from "../Header/Burgermenu/Burgermenu";
+import "./Header.css";
+import "./Burgermenu/Burgermenu.css";
 
 const Header = () => {
   return (
     <>
       <header>
+        <div className="logo-header"></div>
         <img src="/media-hub-icon.webp"></img>
-        <Burgermenu />
         <Navbar />
       </header>
     </>
