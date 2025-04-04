@@ -1,4 +1,4 @@
-import StarIcon from "@/components/Icons/StarIcon";
+import StarIcon from "@/components/StarIcon/StarIcon";
 import "./Rating.css";
 
 type PropsRating = {
