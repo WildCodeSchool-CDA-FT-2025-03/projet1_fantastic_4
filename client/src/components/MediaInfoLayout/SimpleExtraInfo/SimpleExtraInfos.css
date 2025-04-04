@@ -1,0 +1,20 @@
+p,
+h4,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.simple-extra-infos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  column-gap: 0.5rem;
+  row-gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+
+.simple-extra-infos-item {
+  text-align: end;
+}

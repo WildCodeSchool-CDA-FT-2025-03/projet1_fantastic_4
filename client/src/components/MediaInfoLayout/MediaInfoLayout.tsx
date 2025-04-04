@@ -31,8 +31,10 @@ const MediaInfoLayout = ({
         </div>
         <div className={"media-info-layout-description "}>{summary}</div>
       </section>
-      {React.Children.toArray(children).map((child) => (
-        <div className={backgroundColor}> {child}</div>
+      {React.Children.toArray(children).map((child, index) => (
+        <section key={`media-info-extra-${index}`} className={backgroundColor}>
+          {child}
+        </section>
       ))}
     </div>
   );

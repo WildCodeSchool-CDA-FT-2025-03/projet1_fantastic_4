@@ -7,20 +7,24 @@ h2 {
 
 .media-info-layout {
   width: auto;
-  padding: 1rem;
+  padding-right: 1rem;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
 }
 
-.media-info-layout-top {
+.media-info-layout > section {
+  display: flex;
   width: 100%;
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+
+.media-info-layout-top {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   row-gap: 0.5rem;
-  border-radius: 15px;
-  padding: 0.5rem;
   align-items: center;
 }
 
@@ -36,9 +40,6 @@ h2 {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
-  border-radius: 15px;
-  width: 100%;
-  padding: 0.5rem;
 }
 
 .media-info-layout-main-left {
@@ -74,26 +75,6 @@ h2 {
   border-top: 0.9rem;
   flex: 1;
   text-wrap: wrap;
-}
-
-.media-info-layout-others {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  column-gap: 0.5rem;
-  row-gap: 1rem;
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 15px;
-}
-
-.media-info-layout-others-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.item-info {
-  text-align: end;
 }
 
 .media-info-color-games {
