@@ -10,11 +10,7 @@ type PropsMediaInfoLayout = {
 };
 
 const MediaInfoLayout = (props: PropsMediaInfoLayout) => {
-  const category = props.category;
-  const title = props.title;
-  const summary = props.summary;
-  const subtitle = props.subtitle;
-  const secondaryInfo = props.secondaryInfo;
+  const { category, title, summary, subtitle, secondaryInfo } = props;
 
   const backgroundColor = `media-info-color-${category}`;
 
