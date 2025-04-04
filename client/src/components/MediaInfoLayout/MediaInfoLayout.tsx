@@ -1,12 +1,13 @@
-import "./MediaInfoLayout.css";
+import React, { ReactNode } from "react";
 import { Category } from "@/types/category.type";
+import "./MediaInfoLayout.css";
 
 type PropsMediaInfoLayout = {
   category: Category;
   title: string;
   summary: string;
-  subtitle?: string;
-  secondaryInfo?: { title: string; text: string }[];
+  subtitle: string;
+  children?: ReactNode;
 };
 
 const MediaInfoLayout = ({
@@ -14,10 +15,10 @@ const MediaInfoLayout = ({
   title,
   summary,
   subtitle,
-  secondaryInfo,
+  children,
 }: PropsMediaInfoLayout) => {
   const backgroundColor = `media-info-color-${category}`;
-
+  children = children === children ? children : [];
   return (
     <div className="media-info-layout">
       <section className={`media-info-layout-top ${backgroundColor}`}>
@@ -30,19 +31,9 @@ const MediaInfoLayout = ({
         </div>
         <div className={"media-info-layout-description "}>{summary}</div>
       </section>
-      <section className={`media-info-layout-others ${backgroundColor}`}>
-        {secondaryInfo?.map((info) => {
-          return (
-            <div key={info.title} className="media-info-layout-other-item">
-              <div className="item-title">
-                <h4>{info.title}</h4>
-                <hr />
-              </div>
-              <p className="item-info">{info.text}</p>
-            </div>
-          );
-        })}
-      </section>
+      {React.Children.toArray(children).map((child) => (
+        <div className={backgroundColor}> {child}</div>
+      ))}
     </div>
   );
 };

@@ -1,6 +1,7 @@
-import MediaInfoLayout from "@/components/MediaInfoLayout/MediaInfoLayout";
-import { Category } from "@/types/category.type";
 import { useParams } from "react-router";
+import MediaInfoLayout from "@/components/MediaInfoLayout/MediaInfoLayout";
+import SimpleExtraInfo from "@/components/MediaInfoLayout/SimpleExtraInfo/SimpleExtraInfos";
+import { Category } from "@/types/category.type";
 
 import FakeDataGame from "@/utiles/fakeInfoGame.json";
 
@@ -18,15 +19,15 @@ const GameInfo = () => {
           title={game.title}
           summary={game.summary}
           subtitle={game.subtitle}
-          secondaryInfo={[
-            { title: "Developer", text: game.developer },
-            {
-              title: "Publisher",
-              text: game.publisher,
-            },
-            { title: "Pegi", text: game.pegi },
-          ]}
-        />
+        >
+          <SimpleExtraInfo
+            infos={[
+              { title: "Developer", text: game.developer },
+              { title: "Publisher", text: game.publisher },
+              { title: "Pegi", text: game.pegi },
+            ]}
+          />
+        </MediaInfoLayout>
       </>
     );
   }
