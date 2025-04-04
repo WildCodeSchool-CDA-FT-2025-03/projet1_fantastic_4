@@ -15,7 +15,6 @@
 
 .carousel-track {
   display: flex;
-  transition: transform 500ms ease-in-out; /* ⚠️ Slides transition */
   align-items: center;
   justify-content: flex-start;
   gap: 9px;

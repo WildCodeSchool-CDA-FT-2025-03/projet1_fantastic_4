@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "@/components/Carousel/Carousel.css";
 
 import Skeleton from "./Skeleton";
@@ -17,6 +17,7 @@ type Data = {
 };
 
 const SLIDEWITHPIXELS = 296 + 9; //we add the gap
+const TRANSITION_TIME_MS = 500;
 
 export default function Carousel({ datas, title_carousel }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -26,18 +27,46 @@ export default function Carousel({ datas, title_carousel }: CarouselProps) {
 
   const cardsPerPage = 1;
 
-  useEffect(() => {
-    const currentLastItem = lastItemRef.current; //Take the current ref when it's changed
-    const currentCarouselTrack = carouselRef.current;
-    if (currentLastItem && currentCarouselTrack) {
-      const carouselRight = currentCarouselTrack.getBoundingClientRect().right; //Object JS for the four offset of an element
-      const lastSlideRight =
-        currentLastItem.getBoundingClientRect().right - 7 - SLIDEWITHPIXELS; // padding deleted
-      if (lastSlideRight < carouselRight) {
-        setIsAbleToGoToNext(false);
+  const calculateIfIsAbleGoToNext = useCallback(() => {
+    // setTimeout for waitting the end of the transition animation time to calculate the right position of the last slide offset
+    setTimeout(() => {
+      // register a function to be memorized by react in order to avoid to be redifined by react at each render.
+      // If some of the dependence changes, the function will be refdefined.
+      const currentLastItem = lastItemRef.current; //Take the current ref when it's changed
+      const currentCarouselTrack = carouselRef.current;
+
+      if (currentLastItem && currentCarouselTrack) {
+        const carouselRight =
+          currentCarouselTrack.getBoundingClientRect().right; //Object JS for the four offset of an element
+        const lastSlideRight =
+          currentLastItem.getBoundingClientRect().right - 7; // padding deleted
+
+        if (lastSlideRight < carouselRight) {
+          setIsAbleToGoToNext(false);
+        } else {
+          setIsAbleToGoToNext(true);
+        }
       }
-    }
-  }, [carouselRef, lastItemRef, currentIndex]);
+    }, TRANSITION_TIME_MS);
+  }, [lastItemRef, carouselRef, setIsAbleToGoToNext]);
+
+  const handleResize = useCallback(() => {
+    // setTimeout for avoid exponential rendering durint the resize with the mouse
+    setTimeout(calculateIfIsAbleGoToNext, 200);
+  }, [calculateIfIsAbleGoToNext]);
+
+  useEffect(() => {
+    // lauch the code inside useEffetc if some of the dependancies change
+    calculateIfIsAbleGoToNext();
+
+    window.addEventListener("resize", calculateIfIsAbleGoToNext);
+
+    // use effect "clean-up" to avoid problems with active listeners when component unmount
+    // (return in useEffect is executed just before component unmounts)
+    return () => {
+      window.removeEventListener("resize", calculateIfIsAbleGoToNext);
+    };
+  }, [calculateIfIsAbleGoToNext, currentIndex, handleResize]);
 
   // Function to skip to the next slide
   const nextSlide = () => {
@@ -76,6 +105,7 @@ export default function Carousel({ datas, title_carousel }: CarouselProps) {
               // we translate the track of the width of a card + the gap * by the current index
               transform: `translateX(-${currentIndex * SLIDEWITHPIXELS}px)`,
               width: `${datas.length * SLIDEWITHPIXELS}px`,
+              transition: `transform ${TRANSITION_TIME_MS}ms ease-in-out`,
             }}
           >
             {datas.map((item, index) => (
