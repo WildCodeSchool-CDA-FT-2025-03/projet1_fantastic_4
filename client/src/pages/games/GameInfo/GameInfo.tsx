@@ -1,6 +1,5 @@
 import MediaInfoLayout from "@/components/MediaInfoLayout/MediaInfoLayout";
 import FakeDataGame from "@/utiles/fakeInfoGame.json";
-import "./GameInfo.css";
 
 const GameInfo = () => {
   const game = FakeDataGame;
