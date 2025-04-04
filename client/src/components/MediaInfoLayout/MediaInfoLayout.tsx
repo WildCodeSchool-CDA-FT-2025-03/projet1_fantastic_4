@@ -16,7 +16,6 @@ const MediaInfoLayout = (props: PropsMediaInfoLayout) => {
   const title = props.title;
   const summary = props.summary;
   const rating = parseFloat(props.rating.toFixed(1));
-  //  const _isFavorite = props.isFavorite;
   const subtitle = props.subtitle;
   const secondaryInfo = props.secondaryInfo;
 
@@ -30,14 +29,12 @@ const MediaInfoLayout = (props: PropsMediaInfoLayout) => {
       </section>
       <section className={"media-info-layout-main " + backgroundColor}>
         <div className="media-info-layout-main-left">
-          <div
-            className={"media-info-cover " + `media-cover-${category}`}
-          ></div>
+          <div className={`media-info-cover media-cover-${category}`}></div>
           <p className="subtitle">{subtitle}</p>
         </div>
         <div className={"media-info-layout-description "}>{summary}</div>
       </section>
-      <section className={"media-info-layout-others " + backgroundColor}>
+      <section className={`media-info-layout-others ${backgroundColor}`}>
         {secondaryInfo?.map((info) => {
           return (
             <div key={info.title} className="media-info-layout-other-item">
