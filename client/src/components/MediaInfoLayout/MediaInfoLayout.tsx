@@ -1,10 +1,9 @@
 import "./MediaInfoLayout.css";
 
 type PropsMediaInfoLayout = {
-  category: "games" | "musics" | "movies" | "books";
+  category: "games";
   title: string;
   summary: string;
-  isFavorite: boolean;
   subtitle?: string;
   secondaryInfo?: { title: string; text: string }[];
 };

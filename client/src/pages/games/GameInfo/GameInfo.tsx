@@ -10,7 +10,6 @@ const GameInfo = () => {
         category="games"
         title={game.title}
         summary={game.summary}
-        isFavorite={game.isFavorite}
         subtitle={game.subtitle}
         secondaryInfo={[
           { title: "Developer", text: game.developer },
