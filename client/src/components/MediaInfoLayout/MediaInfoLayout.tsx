@@ -1,5 +1,5 @@
 import "./MediaInfoLayout.css";
-import Rating from "../Rating/Rating";
+import Rating from "@/components/Rating/Rating";
 
 type PropsMediaInfoLayout = {
   genre: "games" | "musics" | "movies" | "books";
