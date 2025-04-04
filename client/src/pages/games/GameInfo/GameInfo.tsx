@@ -24,6 +24,7 @@ const GameInfo = () => {
             infos={[
               { title: "Developer", text: game.developer },
               { title: "Publisher", text: game.publisher },
+              { title: "Release date", text: game.releaseDate },
               { title: "Pegi", text: game.pegi },
             ]}
           />
