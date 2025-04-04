@@ -1,11 +1,13 @@
 import { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import IconBurger from "../assets/burgermenu.svg";
+import IconBurger from "@/assets/burgermenu.svg";
+import "./Burgermenu.css";
 
 const Burgernavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    /*console.log({isMenuOpen});*/
   };
   return (
     <div className="menu-burger">
