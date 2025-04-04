@@ -1,7 +1,8 @@
 import "./MediaInfoLayout.css";
+import { Category } from "@/types/category.type";
 
 type PropsMediaInfoLayout = {
-  category: "games";
+  category: Category;
   title: string;
   summary: string;
   subtitle?: string;

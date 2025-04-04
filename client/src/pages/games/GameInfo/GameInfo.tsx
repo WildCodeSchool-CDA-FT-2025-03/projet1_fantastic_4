@@ -1,5 +1,6 @@
 import MediaInfoLayout from "@/components/MediaInfoLayout/MediaInfoLayout";
 import FakeDataGame from "@/utiles/fakeInfoGame.json";
+import { Category } from "@/types/category.type.d";
 
 const GameInfo = () => {
   const game = FakeDataGame;
@@ -7,7 +8,7 @@ const GameInfo = () => {
   return (
     <>
       <MediaInfoLayout
-        category="games"
+        category={Category.Games}
         title={game.title}
         summary={game.summary}
         subtitle={game.subtitle}
