@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element: <MusicsPage />,
       },
       {
-        path: "/games/:id",
+        path: "/games/:slug",
         element: <GameInfo />,
       },
       {
