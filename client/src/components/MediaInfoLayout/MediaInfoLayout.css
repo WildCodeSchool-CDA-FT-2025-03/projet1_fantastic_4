@@ -103,38 +103,8 @@ h2 {
   background-color: var(--game-color);
 }
 
-.media-info-color-movies {
-  background-color: var(--movie-color);
-}
-
-.media-info-color-musics {
-  background-color: var(--musics-color);
-}
-
-.media-info-color-books {
-  background-color: var(--book-color);
-}
-
 .media-cover-games {
   width: 280px;
   height: 400px;
   background-image: url("/public/games-icon.svg");
-}
-
-.media-cover-movies {
-  width: 280px;
-  height: 400px;
-  background-image: url("/public/movies-icon.svg");
-}
-
-.media-cover-musics {
-  width: 280px;
-  height: 400px;
-  background-image: url("/public/musics-icon.svg");
-}
-
-.media-cover-books {
-  width: 280px;
-  height: 400px;
-  background-image: url("/public/books-icon.svg");
 }
