@@ -23,7 +23,7 @@ export class MovieEntity extends BaseEntity {
 
   @Column()
   @Field()
-  releaseDate: string;
+  releaseDate: Date;
 
   @Column()
   @Field()
