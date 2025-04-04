@@ -3,6 +3,7 @@ import {
   BaseEntity,
   Column,
   Entity,
+  JoinColumn,
   ManyToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
@@ -19,57 +20,21 @@ export class MovieEntity extends BaseEntity {
   @Field()
   title: string;
 
-  @Column("text", { array: true })
-  @Field(() => [String])
-  producers: string[];
-  //TODO Relation with movie_producer table
-
-  @Column("text", { array: true })
-  @Field(() => [String])
-  studios: string[];
-
   @Column()
   @Field()
-  releaseDate: Date;
+  genre: string;
+  // TODO Relation with movie_producer table
 
-  @Column()
+  //  Foreign Key CategoriesEntity
+  @Column({ default: 3 }) // Force ID 3
   @Field()
-  duration: number;
+  categoryId: number = 3;
 
-  @Column("text", { array: true })
-  @Field(() => [String])
-  genre: string[];
-  //TODO Relation with movie_producer table
-
-  @Column()
-  @Field()
-  summary: string;
-
-  @Column()
-  @Field()
-  targetedAudience: string;
-
-  @Column("text", { array: true })
-  @Field(() => [String])
-  awards: string[];
-
-  @Column("text", { array: true })
-  @Field(() => [String])
-  actors: string;
-
-  @Column()
-  @Field()
-  budget: number;
-
-  @Column()
-  @Field()
-  boxOffice: number;
-
-  @Column()
-  @Field()
-  rate: number;
-
-  @ManyToOne(() => CategoriesEntity, (category) => category.movies)
+  // CategoriesEntity relation
+  @ManyToOne(() => CategoriesEntity, (category) => category.movies, {
+    eager: true,
+  })
+  @JoinColumn({ name: "categoryId" }) // Associates categoryId to CategoriesEntity
   @Field(() => CategoriesEntity)
   category: CategoriesEntity;
 }

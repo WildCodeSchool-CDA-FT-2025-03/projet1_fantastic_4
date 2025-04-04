@@ -19,8 +19,7 @@ export class CategoriesEntity extends BaseEntity {
   @Field()
   name: string;
 
-  // Inverse relationship to link movies to a category
+  // Inverse relationship to link movies to a category => Optional
   @OneToMany(() => MovieEntity, (movie) => movie.category) // MovieEntity -> category
-  @Field(() => [MovieEntity])
   movies: MovieEntity[];
 }
