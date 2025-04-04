@@ -8,7 +8,7 @@ const GameInfo = () => {
   return (
     <>
       <MediaInfoLayout
-        genre="games"
+        category="games"
         title={game.title}
         summary={game.summary}
         rating={game.rating}
