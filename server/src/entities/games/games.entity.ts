@@ -9,6 +9,7 @@ import {
   ManyToOne,
 } from "typeorm";
 import { GamesPegiEsbr } from "./pegiesbr.entity";
+import { GamesLanguages } from "./languages.entity";
 
 @ObjectType()
 @Entity("games")
@@ -43,4 +44,10 @@ export class GamesEntity extends BaseEntity {
   })
   @JoinColumn({ name: "pegi_id" })
   pegi: GamesPegiEsbr;
+
+  @ManyToOne(() => GamesLanguages, (lang) => lang.id, {
+    cascade: true,
+  })
+  @JoinColumn({ name: "original_language" })
+  originalLanguage: GamesLanguages;
 }
