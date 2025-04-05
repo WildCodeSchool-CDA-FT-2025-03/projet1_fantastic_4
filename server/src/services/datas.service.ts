@@ -3,11 +3,18 @@ import { CategoriesEntity } from "../entities/categories.entity";
 import { DataSource } from "typeorm";
 import { GamesPegiEsbr } from "../entities/games/pegiesbr.entity";
 import { GamesLanguages } from "../entities/games/languages.entity";
+import { CompaniesEntity } from "../entities/games/companies.entity";
 
 const dataSource = new DataSource({
   type: "sqlite",
   database: "./db.sqlite",
-  entities: [CategoriesEntity, GamesEntity, GamesPegiEsbr, GamesLanguages],
+  entities: [
+    CategoriesEntity,
+    GamesEntity,
+    GamesPegiEsbr,
+    GamesLanguages,
+    CompaniesEntity,
+  ],
   synchronize: true, //pas en prod
 });
 
