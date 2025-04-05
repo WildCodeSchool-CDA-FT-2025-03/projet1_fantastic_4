@@ -13,6 +13,7 @@ import {
 import { GamesPegiEsbr } from "./pegiesbr.entity";
 import { GamesLanguagesEntity } from "./languages.entity";
 import { CompaniesEntity } from "./companies.entity";
+import { TagsGameEntity } from "./tags.entity";
 
 @ObjectType()
 @Entity("games")
@@ -61,4 +62,8 @@ export class GamesEntity extends BaseEntity {
   @ManyToMany(() => CompaniesEntity, (company) => company.gamesPublishers)
   @JoinTable()
   publishers: CompaniesEntity[];
+
+  @ManyToMany(() => TagsGameEntity, (tag) => tag.games)
+  @JoinTable()
+  tags: TagsGameEntity[];
 }
