@@ -3,6 +3,7 @@ import { log } from "console";
 import { default as gamesData } from "./games.json";
 import { GamesEntity } from "../../entities/games/games.entity";
 import { GamesPegiEsbr } from "../../entities/games/pegiesbr.entity";
+import { GamesLanguages } from "../../entities/games/languages.entity";
 
 type SubGame = {
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -27,6 +28,7 @@ function toPegi(g: SubGame) {
     await queryRunner.startTransaction();
     await queryRunner.query("DELETE FROM games");
     await queryRunner.query("DELETE FROM games_pegi_esbr");
+    await queryRunner.query("DELETE FROM games_languages");
     await queryRunner.query("DELETE FROM sqlite_sequence");
 
     // CREATE PEGI DATABASE
@@ -42,6 +44,19 @@ function toPegi(g: SubGame) {
       {} as Record<string, GamesPegiEsbr>,
     );
 
+    // CREATE LANGUAGES DATABASE
+    const languages = Array.from(
+      new Set(gamesData.map((g) => g.original_language)),
+    ).reduce(
+      (acc, l) => {
+        const newLanguage = new GamesLanguages();
+        newLanguage.language = l;
+        acc[l] = newLanguage;
+        return acc;
+      },
+      {} as Record<string, GamesLanguages>,
+    );
+
     // CREATE GAME DATABASE
     const newGames = gamesData.map((game) => {
       const newGame = new GamesEntity();
@@ -53,6 +68,8 @@ function toPegi(g: SubGame) {
       newGame.releaseDate = new Date(game.release_date);
       newGame.slug = slug;
 
+      newGame.originalLanguage = languages[game.original_language];
+
       const pegiValue = toPegi(game);
       newGame.pegi = pegi[pegiValue];
 
@@ -60,6 +77,7 @@ function toPegi(g: SubGame) {
     });
 
     const res =
+      (await dataSource.manager.save(Object.values(languages))) &&
       (await dataSource.manager.save(Object.values(pegi))) &&
       (await dataSource.manager.save(newGames));
 
