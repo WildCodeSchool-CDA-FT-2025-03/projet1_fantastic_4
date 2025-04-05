@@ -79,17 +79,7 @@ function toPegi(g: SubGame) {
       );
 
     // CREATE TAGS DATABASE
-    const tags = Array.from(
-      new Set(
-        gamesData.map((g) => [
-          ...g.keywords,
-          ...g.developers,
-          ...g.platforms,
-          g.category,
-          g.original_language,
-        ]),
-      ),
-    )
+    const tags = Array.from(new Set(gamesData.map((g) => [...g.keywords])))
       .flat()
       .reduce(
         (acc, t) => {
@@ -130,19 +120,11 @@ function toPegi(g: SubGame) {
         return company;
       });
 
-      newGame.tags = [
-        ...game.developers,
-        ...game.platforms,
-        ...game.keywords,
-        game.category,
-        game.original_language,
-      ]
-        .flat()
-        .map((t) => {
-          const tag = tags[t];
-          tag.games.push(newGame);
-          return tag;
-        });
+      newGame.tags = game.keywords.map((t) => {
+        const tag = tags[t];
+        tag.games.push(newGame);
+        return tag;
+      });
 
       return newGame;
     });
