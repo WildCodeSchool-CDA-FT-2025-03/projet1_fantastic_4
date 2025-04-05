@@ -7,9 +7,12 @@ import {
   Index,
   JoinColumn,
   ManyToOne,
+  ManyToMany,
+  JoinTable,
 } from "typeorm";
 import { GamesPegiEsbr } from "./pegiesbr.entity";
 import { GamesLanguages } from "./languages.entity";
+import { CompaniesEntity } from "./companies.entity";
 
 @ObjectType()
 @Entity("games")
@@ -50,4 +53,12 @@ export class GamesEntity extends BaseEntity {
   })
   @JoinColumn({ name: "original_language" })
   originalLanguage: GamesLanguages;
+
+  @ManyToMany(() => CompaniesEntity, (company) => company.gamesDevelopers)
+  @JoinTable()
+  developers: CompaniesEntity[];
+
+  @ManyToMany(() => CompaniesEntity, (company) => company.gamesPublishers)
+  @JoinTable()
+  publishers: CompaniesEntity[];
 }
