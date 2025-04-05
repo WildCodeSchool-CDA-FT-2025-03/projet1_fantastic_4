@@ -4,6 +4,7 @@ import { default as gamesData } from "./games.json";
 import { GamesEntity } from "../../entities/games/games.entity";
 import { GamesPegiEsbr } from "../../entities/games/pegiesbr.entity";
 import { GamesLanguages } from "../../entities/games/languages.entity";
+import { CompaniesEntity } from "../../entities/games/companies.entity";
 
 type SubGame = {
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -29,6 +30,7 @@ function toPegi(g: SubGame) {
     await queryRunner.query("DELETE FROM games");
     await queryRunner.query("DELETE FROM games_pegi_esbr");
     await queryRunner.query("DELETE FROM games_languages");
+    await queryRunner.query("DELETE FROM companies");
     await queryRunner.query("DELETE FROM sqlite_sequence");
 
     // CREATE PEGI DATABASE
@@ -57,6 +59,23 @@ function toPegi(g: SubGame) {
       {} as Record<string, GamesLanguages>,
     );
 
+    // CREATE COMPANIES DATABASE
+    const companies = Array.from(
+      new Set(gamesData.map((g) => g.developers.concat(g.publishers))),
+    )
+      .flat()
+      .reduce(
+        (acc, c) => {
+          const company = new CompaniesEntity();
+          company.name = c;
+          company.gamesDevelopers = [];
+          company.gamesPublishers = [];
+          acc[c] = company;
+          return acc;
+        },
+        {} as Record<string, CompaniesEntity>,
+      );
+
     // CREATE GAME DATABASE
     const newGames = gamesData.map((game) => {
       const newGame = new GamesEntity();
@@ -73,10 +92,24 @@ function toPegi(g: SubGame) {
       const pegiValue = toPegi(game);
       newGame.pegi = pegi[pegiValue];
 
+      newGame.developers = game.developers.map((d) => {
+        const company = companies[d];
+        company.gamesDevelopers.push(newGame);
+        return company;
+      });
+
+      newGame.publishers = game.publishers.map((d) => {
+        const company = companies[d];
+        company.gamesPublishers.push(newGame);
+        return company;
+      });
+
       return newGame;
     });
 
+    // DAVE DATA
     const res =
+      (await dataSource.manager.save(Object.values(companies))) &&
       (await dataSource.manager.save(Object.values(languages))) &&
       (await dataSource.manager.save(Object.values(pegi))) &&
       (await dataSource.manager.save(newGames));
