@@ -18,7 +18,7 @@ import { MovieEntity } from "../../entities/movie.entity";
 
     const newCategories = categoriesData.map((category) => {
       const newCategory = new CategoriesEntity();
-      newCategory.id = category.id; // S'assurer que l'ID est bien défini
+      newCategory.id = category.id;
       newCategory.name = category.name;
       return newCategory;
     });
