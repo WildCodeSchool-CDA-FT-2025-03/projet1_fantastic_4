@@ -2,19 +2,48 @@ import dataSource from "../../services/datas.service";
 import { log } from "console";
 import { default as gamesData } from "./games.json";
 import { GamesEntity } from "../../entities/games/games.entity";
+import { GamesPegiEsbr } from "../../entities/games/pegiesbr.entity";
+
+type SubGame = {
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  "PEGI/ESRB_rating"?: string;
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  PEGI_ESRB_rating?: string;
+};
+
+function toPegi(g: SubGame) {
+  return (g["PEGI/ESRB_rating"] || g["PEGI_ESRB_rating"] || "N/A").replace(
+    ",",
+    " /",
+  );
+}
 
 (async () => {
   await dataSource.initialize();
   const queryRunner = dataSource.createQueryRunner();
 
   try {
+    // CLEAR DATABASE
     await queryRunner.startTransaction();
     await queryRunner.query("DELETE FROM games");
+    await queryRunner.query("DELETE FROM games_pegi_esbr");
     await queryRunner.query("DELETE FROM sqlite_sequence");
 
-    const games = gamesData;
+    // CREATE PEGI DATABASE
+    const pegi = Array.from(
+      new Set(gamesData.map((g) => toPegi(g as SubGame))),
+    ).reduce(
+      (acc, p) => {
+        const newPegi = new GamesPegiEsbr();
+        newPegi.pegi = p;
+        acc[p] = newPegi;
+        return acc;
+      },
+      {} as Record<string, GamesPegiEsbr>,
+    );
 
-    const newGames = games.map((game) => {
+    // CREATE GAME DATABASE
+    const newGames = gamesData.map((game) => {
       const newGame = new GamesEntity();
       const slug = encodeURI(game.title.replace(/ /g, "-").toLowerCase());
 
@@ -24,11 +53,20 @@ import { GamesEntity } from "../../entities/games/games.entity";
       newGame.releaseDate = new Date(game.release_date);
       newGame.slug = slug;
 
+      const pegiValue = toPegi(game);
+      newGame.pegi = pegi[pegiValue];
+
       return newGame;
     });
 
-    const res = await dataSource.manager.save(newGames);
-    if (res) log("Migration games done !");
+    const res =
+      (await dataSource.manager.save(Object.values(pegi))) &&
+      (await dataSource.manager.save(newGames));
+
+    if (res) {
+      log("Migration games done !");
+    }
+
     await queryRunner.commitTransaction();
   } catch (error) {
     log(error);
