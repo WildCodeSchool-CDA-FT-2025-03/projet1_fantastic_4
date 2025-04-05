@@ -26,7 +26,7 @@ export class BooksEntity extends BaseEntity {
 
   @Field()
   @Column()
-  audiencerate: string;
+  audiencerate: number;
 
   @Field()
   @Column()
