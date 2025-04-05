@@ -1,6 +1,5 @@
 import Navbar from "./Navbar/Navbar";
 import "./Header.css";
-import "./Burgermenu/Burgermenu.css";
 
 const Header = () => {
   return (

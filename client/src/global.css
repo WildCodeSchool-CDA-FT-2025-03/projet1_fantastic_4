@@ -50,9 +50,8 @@
   --musics-color: var(--musics-dark-color);
   --movie-color: var(--movie-dark-color);
   --game-color: var(--game-dark-color-color);
-} 
+}
 
 ul {
   list-style-type: none;
 }
-
