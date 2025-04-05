@@ -3,7 +3,7 @@ import { log } from "console";
 import { default as gamesData } from "./games.json";
 import { GamesEntity } from "../../entities/games/games.entity";
 import { GamesPegiEsbr } from "../../entities/games/pegiesbr.entity";
-import { GamesLanguages } from "../../entities/games/languages.entity";
+import { GamesLanguagesEntity } from "../../entities/games/languages.entity";
 import { CompaniesEntity } from "../../entities/games/companies.entity";
 
 type SubGame = {
@@ -51,12 +51,12 @@ function toPegi(g: SubGame) {
       new Set(gamesData.map((g) => g.original_language)),
     ).reduce(
       (acc, l) => {
-        const newLanguage = new GamesLanguages();
+        const newLanguage = new GamesLanguagesEntity();
         newLanguage.language = l;
         acc[l] = newLanguage;
         return acc;
       },
-      {} as Record<string, GamesLanguages>,
+      {} as Record<string, GamesLanguagesEntity>,
     );
 
     // CREATE COMPANIES DATABASE

@@ -10,7 +10,7 @@ import {
 @ObjectType()
 @Entity("games_languages")
 @Unique(["language"])
-export class GamesLanguages extends BaseEntity {
+export class GamesLanguagesEntity extends BaseEntity {
   @Field()
   @PrimaryGeneratedColumn("increment")
   id: number;

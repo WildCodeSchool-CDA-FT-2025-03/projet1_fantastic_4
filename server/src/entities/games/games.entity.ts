@@ -11,7 +11,7 @@ import {
   JoinTable,
 } from "typeorm";
 import { GamesPegiEsbr } from "./pegiesbr.entity";
-import { GamesLanguages } from "./languages.entity";
+import { GamesLanguagesEntity } from "./languages.entity";
 import { CompaniesEntity } from "./companies.entity";
 
 @ObjectType()
@@ -48,11 +48,11 @@ export class GamesEntity extends BaseEntity {
   @JoinColumn({ name: "pegi_id" })
   pegi: GamesPegiEsbr;
 
-  @ManyToOne(() => GamesLanguages, (lang) => lang.id, {
+  @ManyToOne(() => GamesLanguagesEntity, (lang) => lang.id, {
     cascade: true,
   })
   @JoinColumn({ name: "original_language" })
-  originalLanguage: GamesLanguages;
+  originalLanguage: GamesLanguagesEntity;
 
   @ManyToMany(() => CompaniesEntity, (company) => company.gamesDevelopers)
   @JoinTable()
