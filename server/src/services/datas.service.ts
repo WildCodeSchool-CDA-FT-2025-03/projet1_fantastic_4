@@ -4,6 +4,7 @@ import { DataSource } from "typeorm";
 import { GamesPegiEsbr } from "../entities/games/pegiesbr.entity";
 import { GamesLanguagesEntity } from "../entities/games/languages.entity";
 import { CompaniesEntity } from "../entities/games/companies.entity";
+import { TagsGameEntity } from "../entities/games/tags.entity";
 
 const dataSource = new DataSource({
   type: "sqlite",
@@ -14,6 +15,7 @@ const dataSource = new DataSource({
     GamesPegiEsbr,
     GamesLanguagesEntity,
     CompaniesEntity,
+    TagsGameEntity,
   ],
   synchronize: true, //pas en prod
 });

@@ -5,6 +5,7 @@ import { GamesEntity } from "../../entities/games/games.entity";
 import { GamesPegiEsbr } from "../../entities/games/pegiesbr.entity";
 import { GamesLanguagesEntity } from "../../entities/games/languages.entity";
 import { CompaniesEntity } from "../../entities/games/companies.entity";
+import { TagsGameEntity } from "../../entities/games/tags.entity";
 
 type SubGame = {
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -31,6 +32,7 @@ function toPegi(g: SubGame) {
     await queryRunner.query("DELETE FROM games_pegi_esbr");
     await queryRunner.query("DELETE FROM games_languages");
     await queryRunner.query("DELETE FROM companies");
+    await queryRunner.query("DELETE FROM games_tags");
     await queryRunner.query("DELETE FROM sqlite_sequence");
 
     // CREATE PEGI DATABASE
@@ -76,6 +78,30 @@ function toPegi(g: SubGame) {
         {} as Record<string, CompaniesEntity>,
       );
 
+    // CREATE TAGS DATABASE
+    const tags = Array.from(
+      new Set(
+        gamesData.map((g) => [
+          ...g.keywords,
+          ...g.developers,
+          ...g.platforms,
+          g.category,
+          g.original_language,
+        ]),
+      ),
+    )
+      .flat()
+      .reduce(
+        (acc, t) => {
+          const newTag = new TagsGameEntity();
+          newTag.name = t;
+          newTag.games = [];
+          acc[t] = newTag;
+          return acc;
+        },
+        {} as Record<string, TagsGameEntity>,
+      );
+
     // CREATE GAME DATABASE
     const newGames = gamesData.map((game) => {
       const newGame = new GamesEntity();
@@ -104,6 +130,20 @@ function toPegi(g: SubGame) {
         return company;
       });
 
+      newGame.tags = [
+        ...game.developers,
+        ...game.platforms,
+        ...game.keywords,
+        game.category,
+        game.original_language,
+      ]
+        .flat()
+        .map((t) => {
+          const tag = tags[t];
+          tag.games.push(newGame);
+          return tag;
+        });
+
       return newGame;
     });
 
@@ -112,6 +152,7 @@ function toPegi(g: SubGame) {
       (await dataSource.manager.save(Object.values(companies))) &&
       (await dataSource.manager.save(Object.values(languages))) &&
       (await dataSource.manager.save(Object.values(pegi))) &&
+      (await dataSource.manager.save(Object.values(tags))) &&
       (await dataSource.manager.save(newGames));
 
     if (res) {
