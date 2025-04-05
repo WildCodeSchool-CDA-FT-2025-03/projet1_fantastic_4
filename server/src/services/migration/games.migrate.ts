@@ -6,6 +6,7 @@ import { GamesPegiEsbr } from "../../entities/games/pegiesbr.entity";
 import { GamesLanguagesEntity } from "../../entities/games/languages.entity";
 import { CompaniesEntity } from "../../entities/games/companies.entity";
 import { TagsGameEntity } from "../../entities/games/tags.entity";
+import { GameCategorieEntity } from "../../entities/games/categories.entity";
 
 type SubGame = {
   // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -33,6 +34,7 @@ function toPegi(g: SubGame) {
     await queryRunner.query("DELETE FROM games_languages");
     await queryRunner.query("DELETE FROM companies");
     await queryRunner.query("DELETE FROM games_tags");
+    await queryRunner.query("DELETE FROM games_categories");
     await queryRunner.query("DELETE FROM sqlite_sequence");
 
     // CREATE PEGI DATABASE
@@ -59,6 +61,19 @@ function toPegi(g: SubGame) {
         return acc;
       },
       {} as Record<string, GamesLanguagesEntity>,
+    );
+
+    // CREATE LANGUAGES DATABASE
+    const categories = Array.from(
+      new Set(gamesData.map((g) => g.category)),
+    ).reduce(
+      (acc, c) => {
+        const category = new GameCategorieEntity();
+        category.name = c;
+        acc[c] = category;
+        return acc;
+      },
+      {} as Record<string, GameCategorieEntity>,
     );
 
     // CREATE COMPANIES DATABASE
@@ -107,6 +122,8 @@ function toPegi(g: SubGame) {
 
       const pegiValue = toPegi(game);
       newGame.pegi = pegi[pegiValue];
+
+      newGame.category = categories[game.category];
 
       newGame.developers = game.developers.map((d) => {
         const company = companies[d];
