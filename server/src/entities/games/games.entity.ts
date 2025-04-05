@@ -14,6 +14,7 @@ import { GamesPegiEsbr } from "./pegiesbr.entity";
 import { GamesLanguagesEntity } from "./languages.entity";
 import { CompaniesEntity } from "./companies.entity";
 import { TagsGameEntity } from "./tags.entity";
+import { GameCategorieEntity } from "./categories.entity";
 
 @ObjectType()
 @Entity("games")
@@ -54,6 +55,12 @@ export class GamesEntity extends BaseEntity {
   })
   @JoinColumn({ name: "original_language" })
   originalLanguage: GamesLanguagesEntity;
+
+  @ManyToOne(() => GameCategorieEntity, (categorie) => categorie.id, {
+    cascade: true,
+  })
+  @JoinColumn({ name: "categorie_id" })
+  category: GameCategorieEntity;
 
   @ManyToMany(() => CompaniesEntity, (company) => company.gamesDevelopers)
   @JoinTable()
