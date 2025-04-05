@@ -5,7 +5,10 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   Index,
+  JoinColumn,
+  ManyToOne,
 } from "typeorm";
+import { GamesPegiEsbr } from "./pegiesbr.entity";
 
 @ObjectType()
 @Entity("games")
@@ -34,4 +37,10 @@ export class GamesEntity extends BaseEntity {
   @Field()
   @Column()
   summary: string;
+
+  @ManyToOne(() => GamesPegiEsbr, (pegi) => pegi.id, {
+    cascade: true,
+  })
+  @JoinColumn({ name: "pegi_id" })
+  pegi: GamesPegiEsbr;
 }
