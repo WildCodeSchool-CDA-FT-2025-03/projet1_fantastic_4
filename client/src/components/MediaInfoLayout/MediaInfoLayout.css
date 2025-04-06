@@ -49,6 +49,11 @@ h2 {
   align-items: start;
 }
 
+.media-info-layout-main-left > p {
+  border-left: 3px solid var(--app-main-color);
+  padding-left: 0.5rem;
+}
+
 .media-info-cover {
   width: 100px;
   height: 100px;
@@ -67,7 +72,8 @@ h2 {
 }
 
 .media-info-layout-description {
-  border-radius: 15px;
+  border-radius: 0px 15px 15px 0px;
+  border-left: 4px solid var(--app-main-color);
   min-width: 100px;
   align-self: flex-start;
   background-color: #ffffffee;

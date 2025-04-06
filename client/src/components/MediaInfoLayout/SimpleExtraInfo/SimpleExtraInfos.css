@@ -18,3 +18,7 @@ h2 {
 .simple-extra-infos-item {
   text-align: end;
 }
+
+.item-title > hr {
+  border-top: 1px solid var(--app-main-color);
+}
