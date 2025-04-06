@@ -2,6 +2,7 @@ import dataSource from "../datas.service";
 import { log } from "console";
 import { default as categoriesData } from "./categories.json";
 import { CategoriesEntity } from "../../entities/categories.entity";
+import gameMigrate from "./games.migrate";
 
 (async () => {
   await dataSource.initialize();
@@ -20,7 +21,9 @@ import { CategoriesEntity } from "../../entities/categories.entity";
       return newCategory;
     });
 
-    const res = await dataSource.manager.save(newCategories);
+    const res =
+      (await dataSource.manager.save(newCategories)) && (await gameMigrate());
+
     if (res) log("Migration done !");
     await queryRunner.commitTransaction();
   } catch (error) {

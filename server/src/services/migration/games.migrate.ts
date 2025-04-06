@@ -22,9 +22,10 @@ function toPegi(g: SubGame) {
   );
 }
 
-(async () => {
-  await dataSource.initialize();
+const gameMigrate = async (): Promise<boolean> => {
+  // await dataSource.initialize();
   const queryRunner = dataSource.createQueryRunner();
+  let error = true;
 
   try {
     // CLEAR DATABASE
@@ -168,10 +169,14 @@ function toPegi(g: SubGame) {
     }
 
     await queryRunner.commitTransaction();
+    error = false;
   } catch (error) {
     log(error);
     await queryRunner.rollbackTransaction();
   } finally {
     await queryRunner.release();
   }
-})();
+  return !error;
+};
+
+export default gameMigrate;
