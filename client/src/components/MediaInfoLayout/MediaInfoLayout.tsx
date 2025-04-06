@@ -7,6 +7,7 @@ type PropsMediaInfoLayout = {
   title: string;
   summary: string;
   subtitle: string;
+  url?: string;
   children?: ReactNode;
 };
 
@@ -15,10 +16,24 @@ const MediaInfoLayout = ({
   title,
   summary,
   subtitle,
+  url,
   children,
 }: PropsMediaInfoLayout) => {
   const backgroundColor = `media-info-color-${category}`;
   children = children === children ? children : [];
+
+  const cover = () => {
+    if (url) {
+      return (
+        <img
+          title={`cover: ${title}`}
+          className="media-info-cover-img"
+          src={url}
+        />
+      );
+    }
+  };
+
   return (
     <div className="media-info-layout">
       <section className={`media-info-layout-top ${backgroundColor}`}>
@@ -26,7 +41,12 @@ const MediaInfoLayout = ({
       </section>
       <section className={`media-info-layout-main ${backgroundColor}`}>
         <div className="media-info-layout-main-left">
-          <div className={`media-info-cover media-cover-${category}`}></div>
+          <div
+            title={`cover: ${title}`}
+            className={`media-info-cover media-cover-${category}`}
+          >
+            {cover()}
+          </div>
           <p className="subtitle">{subtitle}</p>
         </div>
         <div className={"media-info-layout-description "}>{summary}</div>

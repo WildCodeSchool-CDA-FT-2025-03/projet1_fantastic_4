@@ -24,6 +24,7 @@ const GameInfo = () => {
           title={game.title}
           summary={game.summary}
           subtitle={game.subtitle}
+          url={game.coverUrl}
         >
           <SimpleExtraInfo
             infos={[
