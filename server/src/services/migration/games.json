@@ -35,7 +35,13 @@
     ],
     "soundtrack": "Compositeur: Manaka Kataoka, Yasuaki Iwata",
     "available_on": ["Nintendo eShop"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 237895,
+      "artworks": [{ "id": 101524, "image_id": "ar26c4" }],
+      "cover": { "id": 289882, "image_id": "co67oa" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co67oa.jpg"
+    }
   },
   {
     "title": "Cyberpunk 2077",
@@ -81,7 +87,16 @@
       "PlayStation Store",
       "Xbox Store"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 277807,
+      "artworks": [
+        { "id": 124435, "image_id": "ar2o0j" },
+        { "id": 127736, "image_id": "ar2qk8" }
+      ],
+      "cover": { "id": 351145, "image_id": "co7iy1" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7iy1.jpg"
+    }
   },
   {
     "title": "Elden Ring",
@@ -130,7 +145,13 @@
     ],
     "soundtrack": "Compositeur: Yuka Kitamura, Tsukasa Saitoh, Shoi Miyazawa",
     "available_on": ["Steam", "PlayStation Store", "Xbox Store"],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 119133,
+      "artworks": [{ "id": 52129, "image_id": "ar1481" }],
+      "cover": { "id": 212094, "image_id": "co4jni" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4jni.jpg"
+    }
   },
   {
     "title": "God of War Ragnarök",
@@ -170,7 +191,12 @@
     ],
     "soundtrack": "Compositeur: Bear McCreary",
     "available_on": ["PlayStation Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 323174,
+      "cover": { "id": 423634, "image_id": "co92vm" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co92vm.jpg"
+    }
   },
   {
     "title": "Animal Crossing: New Horizons",
@@ -210,7 +236,17 @@
     ],
     "soundtrack": "Compositeur: Kazumi Totaka",
     "available_on": ["Nintendo eShop"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 109462,
+      "artworks": [
+        { "id": 8778, "image_id": "ar6ru" },
+        { "id": 8780, "image_id": "ar6rw" },
+        { "id": 8779, "image_id": "ar6rv" }
+      ],
+      "cover": { "id": 182224, "image_id": "co3wls" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3wls.jpg"
+    }
   },
   {
     "title": "Red Dead Redemption 2",
@@ -253,7 +289,26 @@
       "PlayStation Store",
       "Xbox Store"
     ],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 25076,
+      "artworks": [
+        { "id": 5333, "image_id": "asdntchzmz1kf3k0t79l" },
+        { "id": 5332, "image_id": "cuzmozb8widfr9aj8trf" },
+        { "id": 5330, "image_id": "hzaj3aqkbxmb6hd7k7lc" },
+        { "id": 5335, "image_id": "kmx67l3q1gqugxhg66zv" },
+        { "id": 5334, "image_id": "kiwenuikpml3zbmgkf06" },
+        { "id": 5338, "image_id": "m9ra5j7omj0gn554hkkg" },
+        { "id": 5336, "image_id": "nqtsfctiapng5xcmozyk" },
+        { "id": 5337, "image_id": "l0kjrldascktx2kzqhbi" },
+        { "id": 5645, "image_id": "ar4ct" },
+        { "id": 5339, "image_id": "vev3osrana2gzm9bdj3f" },
+        { "id": 5340, "image_id": "eutpbosgfblccztjkioz" },
+        { "id": 5341, "image_id": "swg128b5wtptafv5foo9" }
+      ],
+      "cover": { "id": 80403, "image_id": "co1q1f" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1q1f.jpg"
+    }
   },
   {
     "title": "Final Fantasy VII Remake",
@@ -287,7 +342,21 @@
     ],
     "soundtrack": "Compositeur: Nobuo Uematsu, Masashi Hamauzu",
     "available_on": ["PlayStation Store", "Epic Games Store", "Steam"],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 11169,
+      "artworks": [
+        { "id": 7452, "image_id": "ar5r0" },
+        { "id": 7492, "image_id": "ar5s4" },
+        { "id": 7493, "image_id": "ar5s5" },
+        { "id": 7491, "image_id": "ar5s3" },
+        { "id": 7494, "image_id": "ar5s6" },
+        { "id": 8703, "image_id": "ar6pr" },
+        { "id": 1046, "image_id": "rn8yyki9o0jh7ossq898" }
+      ],
+      "cover": { "id": 81567, "image_id": "co1qxr" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1qxr.jpg"
+    }
   },
   {
     "title": "Minecraft",
@@ -357,7 +426,16 @@
       "App Store",
       "Google Play"
     ],
-    "mod_support": "Oui (Java Edition)"
+    "mod_support": "Oui (Java Edition)",
+    "igdb": {
+      "id": 135400,
+      "artworks": [
+        { "id": 140433, "image_id": "ar30cx" },
+        { "id": 140434, "image_id": "ar30cy" }
+      ],
+      "cover": { "id": 393775, "image_id": "co8fu7" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8fu7.jpg"
+    }
   },
   {
     "title": "The Witcher 3: Wild Hunt",
@@ -409,7 +487,12 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 141472,
+      "cover": { "id": 372851, "image_id": "co7zoz" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7zoz.jpg"
+    }
   },
   {
     "title": "Hollow Knight",
@@ -461,7 +544,20 @@
       "PlayStation Store",
       "Xbox Store"
     ],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 14593,
+      "artworks": [
+        { "id": 5193, "image_id": "tvfbpcmuonwiugjcbc45" },
+        { "id": 5197, "image_id": "yfx8udozg2xathxuzroi" },
+        { "id": 5198, "image_id": "rdlcclxpscvrpkiq5kkv" },
+        { "id": 5194, "image_id": "m18xmrbbbzlmh8bru5lm" },
+        { "id": 5195, "image_id": "eygmqwtcvjwc8xpjc8jq" },
+        { "id": 5196, "image_id": "ylrp6zuf9e7tcu1nvuir" }
+      ],
+      "cover": { "id": 424251, "image_id": "co93cr" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co93cr.jpg"
+    }
   },
   {
     "title": "Pokémon Legends: Arceus",
@@ -502,7 +598,13 @@
     ],
     "soundtrack": "Compositeur: Go Ichinose, Minako Adachi",
     "available_on": ["Nintendo eShop"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 144054,
+      "artworks": [{ "id": 12638, "image_id": "ar9r2" }],
+      "cover": { "id": 156819, "image_id": "co3d03" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3d03.jpg"
+    }
   },
   {
     "title": "Stardew Valley",
@@ -557,7 +659,13 @@
       "App Store",
       "Google Play"
     ],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 17000,
+      "artworks": [{ "id": 7244, "image_id": "ar5l8" }],
+      "cover": { "id": 14012, "image_id": "xrpmydnu9rpxvxfjkiu7" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/xrpmydnu9rpxvxfjkiu7.jpg"
+    }
   },
   {
     "title": "Disco Elysium",
@@ -610,7 +718,13 @@
       "Nintendo eShop",
       "App Store"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 140050,
+      "artworks": [{ "id": 59283, "image_id": "ar19qr" }],
+      "cover": { "id": 117546, "image_id": "co2ip6" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2ip6.jpg"
+    }
   },
   {
     "title": "Ghost of Tsushima",
@@ -645,7 +759,18 @@
     ],
     "soundtrack": "Compositeur: Ilan Eshkeri, Shigeru Umebayashi",
     "available_on": ["PlayStation Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 75235,
+      "artworks": [
+        { "id": 8328, "image_id": "ar6fc" },
+        { "id": 5087, "image_id": "jvycylrsfekd8ltpoedi" },
+        { "id": 5088, "image_id": "qjve9kld1gvwnb8vv8sj" },
+        { "id": 5086, "image_id": "j7dbzjr8ddshnaewmb4d" }
+      ],
+      "cover": { "id": 109855, "image_id": "co2crj" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2crj.jpg"
+    }
   },
   {
     "title": "Baldur's Gate 3",
@@ -683,7 +808,16 @@
     ],
     "soundtrack": "Compositeur: Borislav Slavov",
     "available_on": ["Steam", "GOG", "PlayStation Store", "Xbox Store"],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 119171,
+      "artworks": [
+        { "id": 21036, "image_id": "arg8c" },
+        { "id": 101139, "image_id": "ar261f" }
+      ],
+      "cover": { "id": 289025, "image_id": "co670h" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co670h.jpg"
+    }
   },
   {
     "title": "Horizon Forbidden West",
@@ -727,7 +861,17 @@
     ],
     "soundtrack": "Compositeur: Joris de Man, The Flight, Niels van der Leest",
     "available_on": ["PlayStation Store", "Steam", "Epic Games Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 112874,
+      "artworks": [
+        { "id": 63393, "image_id": "ar1cwx" },
+        { "id": 63394, "image_id": "ar1cwy" },
+        { "id": 63395, "image_id": "ar1cwz" }
+      ],
+      "cover": { "id": 115194, "image_id": "co2gvu" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2gvu.jpg"
+    }
   },
   {
     "title": "Persona 5 Royal",
@@ -780,7 +924,12 @@
       "Steam",
       "Xbox Store"
     ],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 134222,
+      "cover": { "id": 395287, "image_id": "co8h07" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8h07.jpg"
+    }
   },
   {
     "title": "Death Stranding",
@@ -824,7 +973,18 @@
     ],
     "soundtrack": "Compositeur: Ludvig Forssell, avec des chansons de Low Roar",
     "available_on": ["PlayStation Store", "Steam", "Epic Games Store"],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 19564,
+      "artworks": [
+        { "id": 5007, "image_id": "porotx4upzdqpesaywl1" },
+        { "id": 5009, "image_id": "cepvgymrtpjledmcljbd" },
+        { "id": 5008, "image_id": "lcledoactdqw9jdugn5i" },
+        { "id": 1367, "image_id": "fq9mae2ruszujzbybiif" }
+      ],
+      "cover": { "id": 274400, "image_id": "co5vq8" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5vq8.jpg"
+    }
   },
   {
     "title": "Mass Effect Legendary Edition",
@@ -867,7 +1027,16 @@
     ],
     "soundtrack": "Compositeur: Jack Wall, Sam Hulick, Richard Jacques",
     "available_on": ["Steam", "Origin", "PlayStation Store", "Xbox Store"],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 140839,
+      "artworks": [
+        { "id": 9526, "image_id": "ar7cm" },
+        { "id": 11183, "image_id": "ar8mn" }
+      ],
+      "cover": { "id": 119429, "image_id": "co2k5h" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2k5h.jpg"
+    }
   },
   {
     "title": "Sekiro: Shadows Die Twice",
@@ -901,7 +1070,26 @@
     ],
     "soundtrack": "Compositeur: Yuka Kitamura",
     "available_on": ["Steam", "PlayStation Store", "Xbox Store"],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 76882,
+      "artworks": [
+        { "id": 7182, "image_id": "ar5ji" },
+        { "id": 7018, "image_id": "ar5ey" },
+        { "id": 7017, "image_id": "ar5ex" },
+        { "id": 7020, "image_id": "ar5f0" },
+        { "id": 7023, "image_id": "ar5f3" },
+        { "id": 7022, "image_id": "ar5f2" },
+        { "id": 7025, "image_id": "ar5f5" },
+        { "id": 7019, "image_id": "ar5ez" },
+        { "id": 7021, "image_id": "ar5f1" },
+        { "id": 7024, "image_id": "ar5f4" },
+        { "id": 7026, "image_id": "ar5f6" },
+        { "id": 7027, "image_id": "ar5f7" }
+      ],
+      "cover": { "id": 106347, "image_id": "co2a23" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2a23.jpg"
+    }
   },
   {
     "title": "Assassin's Creed Valhalla",
@@ -957,7 +1145,20 @@
       "PlayStation Store",
       "Xbox Store"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 133004,
+      "artworks": [
+        { "id": 8773, "image_id": "ar6rp" },
+        { "id": 9222, "image_id": "ar746" },
+        { "id": 9221, "image_id": "ar745" },
+        { "id": 9218, "image_id": "ar742" },
+        { "id": 9219, "image_id": "ar743" },
+        { "id": 9220, "image_id": "ar744" }
+      ],
+      "cover": { "id": 111927, "image_id": "co2ed3" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2ed3.jpg"
+    }
   },
   {
     "title": "Control",
@@ -1005,7 +1206,13 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 89823,
+      "artworks": [{ "id": 150986, "image_id": "ar38i2" }],
+      "cover": { "id": 428416, "image_id": "co96kg" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co96kg.jpg"
+    }
   },
   {
     "title": "It Takes Two",
@@ -1058,7 +1265,13 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 135243,
+      "artworks": [{ "id": 10572, "image_id": "ar85o" }],
+      "cover": { "id": 131227, "image_id": "co2t97" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2t97.jpg"
+    }
   },
   {
     "title": "Monster Hunter Rise",
@@ -1115,7 +1328,13 @@
       "PlayStation Store",
       "Xbox Store"
     ],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 207388,
+      "artworks": [{ "id": 79970, "image_id": "ar1ppe" }],
+      "cover": { "id": 350115, "image_id": "co7i5f" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7i5f.jpg"
+    }
   },
   {
     "title": "Halo Infinite",
@@ -1157,7 +1376,16 @@
     ],
     "soundtrack": "Compositeur: Gareth Coker, Curtis Schweitzer, Joel Corelitz",
     "available_on": ["Xbox Store", "Steam", "Microsoft Store"],
-    "mod_support": "Oui (via Forge)"
+    "mod_support": "Oui (via Forge)",
+    "igdb": {
+      "id": 103281,
+      "artworks": [
+        { "id": 7327, "image_id": "ar5nj" },
+        { "id": 10686, "image_id": "ar88u" }
+      ],
+      "cover": { "id": 111228, "image_id": "co2dto" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2dto.jpg"
+    }
   },
   {
     "title": "Deathloop",
@@ -1192,7 +1420,16 @@
     ],
     "soundtrack": "Compositeur: Tom Salta",
     "available_on": ["Steam", "PlayStation Store", "Xbox Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 113598,
+      "artworks": [
+        { "id": 7439, "image_id": "ar5qn" },
+        { "id": 9087, "image_id": "ar70f" }
+      ],
+      "cover": { "id": 217721, "image_id": "co4nzt" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4nzt.jpg"
+    }
   },
   {
     "title": "Splatoon 3",
@@ -1226,7 +1463,13 @@
     ],
     "soundtrack": "Compositeur: Toru Minegishi, Ryo Nagamatsu",
     "available_on": ["Nintendo eShop"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 143613,
+      "artworks": [{ "id": 74627, "image_id": "ar1lkz" }],
+      "cover": { "id": 246135, "image_id": "co59x3" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co59x3.jpg"
+    }
   },
   {
     "title": "Hades II",
@@ -1267,7 +1510,13 @@
     ],
     "soundtrack": "Compositeur: Darren Korb",
     "available_on": ["Steam", "Epic Games Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 228525,
+      "artworks": [{ "id": 95605, "image_id": "ar21rp" }],
+      "cover": { "id": 383916, "image_id": "co888c" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co888c.jpg"
+    }
   },
   {
     "title": "Stellaris",
@@ -1323,7 +1572,13 @@
       "Microsoft Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 11582,
+      "artworks": [{ "id": 8487, "image_id": "ar6jr" }],
+      "cover": { "id": 81905, "image_id": "co1r75" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1r75.jpg"
+    }
   },
   {
     "title": "Subnautica",
@@ -1380,7 +1635,13 @@
       "Microsoft Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 143025,
+      "artworks": [{ "id": 53149, "image_id": "ar150d" }],
+      "cover": { "id": 136391, "image_id": "co2x8n" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2x8n.jpg"
+    }
   },
   {
     "title": "Celeste",
@@ -1436,7 +1697,13 @@
       "Microsoft Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 26226,
+      "artworks": [{ "id": 10157, "image_id": "ar7u5" }],
+      "cover": { "id": 155482, "image_id": "co3byy" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3byy.jpg"
+    }
   },
   {
     "title": "Slay the Spire",
@@ -1492,7 +1759,13 @@
       "App Store",
       "Google Play"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 296831,
+      "artworks": [{ "id": 135078, "image_id": "ar2w86" }],
+      "cover": { "id": 376277, "image_id": "co82c5" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co82c5.jpg"
+    }
   },
   {
     "title": "Ori and the Will of the Wisps",
@@ -1536,7 +1809,13 @@
     ],
     "soundtrack": "Gareth Coker",
     "available_on": ["Steam", "Microsoft Store", "Nintendo eShop"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 37001,
+      "artworks": [{ "id": 10720, "image_id": "ar89s" }],
+      "cover": { "id": 111513, "image_id": "co2e1l" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2e1l.jpg"
+    }
   },
   {
     "title": "Divinity: Original Sin 2",
@@ -1599,7 +1878,13 @@
       "Nintendo eShop",
       "App Store"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 154209,
+      "artworks": [{ "id": 39963, "image_id": "aruu3" }],
+      "cover": { "id": 156451, "image_id": "co3cpv" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3cpv.jpg"
+    }
   },
   {
     "title": "Inscryption",
@@ -1644,7 +1929,13 @@
     ],
     "soundtrack": "Jonah Senzel",
     "available_on": ["Steam", "PlayStation Store", "Nintendo eShop"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 139090,
+      "artworks": [{ "id": 49372, "image_id": "ar123g" }],
+      "cover": { "id": 186672, "image_id": "co401c" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co401c.jpg"
+    }
   },
   {
     "title": "Valheim",
@@ -1689,7 +1980,13 @@
     ],
     "soundtrack": "Patrik Jarlestam",
     "available_on": ["Steam", "Microsoft Store"],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 104967,
+      "artworks": [{ "id": 17526, "image_id": "ardiu" }],
+      "cover": { "id": 136297, "image_id": "co2x61" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2x61.jpg"
+    }
   },
   {
     "title": "Cult of the Lamb",
@@ -1740,7 +2037,13 @@
       "Microsoft Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 165351,
+      "artworks": [{ "id": 68946, "image_id": "ar1h76" }],
+      "cover": { "id": 240565, "image_id": "co55md" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co55md.jpg"
+    }
   },
   {
     "title": "Undertale",
@@ -1796,7 +2099,13 @@
       "Microsoft Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 12517,
+      "artworks": [{ "id": 6312, "image_id": "ar4vc" }],
+      "cover": { "id": 103865, "image_id": "co2855" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2855.jpg"
+    }
   },
   {
     "title": "Stray",
@@ -1852,7 +2161,13 @@
       "PlayStation Store",
       "Microsoft Store"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 177092,
+      "artworks": [{ "id": 96661, "image_id": "ar22l1" }],
+      "cover": { "id": 436872, "image_id": "co9d3c" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9d3c.jpg"
+    }
   },
   {
     "title": "Factorio",
@@ -1901,7 +2216,13 @@
     ],
     "soundtrack": "Daniel James Taylor",
     "available_on": ["Steam", "GOG", "Nintendo eShop"],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 7046,
+      "artworks": [{ "id": 87317, "image_id": "ar1vdh" }],
+      "cover": { "id": 84814, "image_id": "co1tfy" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1tfy.jpg"
+    }
   },
   {
     "title": "Tales of Arise",
@@ -1956,7 +2277,13 @@
     ],
     "soundtrack": "Motoi Sakuraba",
     "available_on": ["Steam", "PlayStation Store", "Microsoft Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 119270,
+      "artworks": [{ "id": 7446, "image_id": "ar5qu" }],
+      "cover": { "id": 261506, "image_id": "co5ls2" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5ls2.jpg"
+    }
   },
   {
     "title": "Deep Rock Galactic",
@@ -2021,7 +2348,13 @@
       "Microsoft Store",
       "Xbox Game Pass"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 27134,
+      "artworks": [{ "id": 6039, "image_id": "ar4nr" }],
+      "cover": { "id": 197601, "image_id": "co48gx" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co48gx.jpg"
+    }
   },
   {
     "title": "Vampire: The Masquerade - Bloodlines 2",
@@ -2072,7 +2405,17 @@
       "PlayStation Store",
       "Microsoft Store"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 116530,
+      "artworks": [
+        { "id": 6934, "image_id": "ar5cm" },
+        { "id": 6936, "image_id": "ar5co" },
+        { "id": 6935, "image_id": "ar5cn" }
+      ],
+      "cover": { "id": 116509, "image_id": "co2hwd" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2hwd.jpg"
+    }
   },
   {
     "title": "Xenoblade Chronicles 3",
@@ -2117,7 +2460,12 @@
     ],
     "soundtrack": "Yasunori Mitsuda, ACE, Kenji Hiramatsu, Manami Kiyota",
     "available_on": ["Nintendo eShop"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 241167,
+      "cover": { "id": 398392, "image_id": "co8jeg" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8jeg.jpg"
+    }
   },
   {
     "title": "Sifu",
@@ -2175,7 +2523,13 @@
       "Microsoft Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 144022,
+      "artworks": [{ "id": 50394, "image_id": "ar12vu" }],
+      "cover": { "id": 208864, "image_id": "co4h5s" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4h5s.jpg"
+    }
   },
   {
     "title": "Eastward",
@@ -2226,7 +2580,13 @@
     ],
     "soundtrack": "Joel Corelitz",
     "available_on": ["Steam", "Nintendo eShop", "PlayStation Store", "GOG"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 24417,
+      "artworks": [{ "id": 12464, "image_id": "ar9m8" }],
+      "cover": { "id": 178653, "image_id": "co3tul" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3tul.jpg"
+    }
   },
   {
     "title": "Atomic Heart",
@@ -2283,7 +2643,20 @@
       "Microsoft Store",
       "Xbox Game Pass"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 76747,
+      "artworks": [
+        { "id": 90740, "image_id": "ar1y0k" },
+        { "id": 90741, "image_id": "ar1y0l" },
+        { "id": 102651, "image_id": "ar277f" },
+        { "id": 102652, "image_id": "ar277g" },
+        { "id": 102654, "image_id": "ar277i" },
+        { "id": 102653, "image_id": "ar277h" }
+      ],
+      "cover": { "id": 290680, "image_id": "co68ag" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co68ag.jpg"
+    }
   },
   {
     "title": "Kena: Bridge of Spirits",
@@ -2328,7 +2701,16 @@
     ],
     "soundtrack": "Jason Gallaty",
     "available_on": ["Epic Games Store", "PlayStation Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 134588,
+      "artworks": [
+        { "id": 11653, "image_id": "ar8zp" },
+        { "id": 11652, "image_id": "ar8zo" }
+      ],
+      "cover": { "id": 443122, "image_id": "co9hwy" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9hwy.jpg"
+    }
   },
   {
     "title": "Satisfactory",
@@ -2378,7 +2760,13 @@
       "Microsoft Store",
       "PlayStation Store"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 90558,
+      "artworks": [{ "id": 6751, "image_id": "ar57j" }],
+      "cover": { "id": 411406, "image_id": "co8tfy" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8tfy.jpg"
+    }
   },
   {
     "title": "Tunic",
@@ -2438,7 +2826,13 @@
       "Nintendo eShop",
       "Xbox Game Pass"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 23733,
+      "artworks": [{ "id": 26701, "image_id": "arklp" }],
+      "cover": { "id": 67622, "image_id": "td1t8kb33gyo8mvhl2pc" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/td1t8kb33gyo8mvhl2pc.jpg"
+    }
   },
   {
     "title": "Return to Monkey Island",
@@ -2495,7 +2889,13 @@
       "Microsoft Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 195517,
+      "artworks": [{ "id": 79126, "image_id": "ar1p1y" }],
+      "cover": { "id": 241803, "image_id": "co56kr" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co56kr.jpg"
+    }
   },
   {
     "title": "Warhammer 40,000: Darktide",
@@ -2553,7 +2953,13 @@
       "PlayStation Store",
       "Xbox Game Pass"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 135998,
+      "artworks": [{ "id": 32027, "image_id": "aropn" }],
+      "cover": { "id": 258150, "image_id": "co5j6u" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5j6u.jpg"
+    }
   },
   {
     "title": "Vampire Survivors",
@@ -2616,7 +3022,13 @@
       "Google Play",
       "Xbox Game Pass"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 186725,
+      "artworks": [{ "id": 63053, "image_id": "ar1cnh" }],
+      "cover": { "id": 202171, "image_id": "co4bzv" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4bzv.jpg"
+    }
   },
   {
     "title": "Horizon Zero Dawn",
@@ -2659,7 +3071,26 @@
     ],
     "soundtrack": "Joris de Man, The Flight",
     "available_on": ["PlayStation Store", "Steam", "Epic Games Store"],
-    "mod_support": "Oui (PC uniquement)"
+    "mod_support": "Oui (PC uniquement)",
+    "igdb": {
+      "id": 11156,
+      "artworks": [
+        { "id": 3267, "image_id": "h67reentho6dmyzbxjx2" },
+        { "id": 3270, "image_id": "jp7zr8lssbsiltamrzix" },
+        { "id": 3274, "image_id": "x58txvifedxj1so2xi1h" },
+        { "id": 3268, "image_id": "msab1zst2qocuvtnma6g" },
+        { "id": 3269, "image_id": "bairdkxounllrpbqug2s" },
+        { "id": 3272, "image_id": "naz7ov85y9hudobelqwm" },
+        { "id": 3271, "image_id": "rqopijuy4efwu70gq3vp" },
+        { "id": 3264, "image_id": "hcy2y2unlt0js27vvpz3" },
+        { "id": 3266, "image_id": "zobboiwgzzikahd52tre" },
+        { "id": 3265, "image_id": "oje3grmccdttezyawpby" },
+        { "id": 3263, "image_id": "zav2zqd2djtjbyos1gkp" },
+        { "id": 3273, "image_id": "m9jcdb9kvhwlfoynhkqp" }
+      ],
+      "cover": { "id": 133030, "image_id": "co2una" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2una.jpg"
+    }
   },
   {
     "title": "Resident Evil Village",
@@ -2692,7 +3123,16 @@
     ],
     "soundtrack": "Marcin Przybyłowicz, Brian D'Oliveira",
     "available_on": ["PlayStation Store", "Xbox Store", "Steam"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 142813,
+      "artworks": [
+        { "id": 47181, "image_id": "ar10el" },
+        { "id": 47182, "image_id": "ar10em" }
+      ],
+      "cover": { "id": 125672, "image_id": "co2oyw" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2oyw.jpg"
+    }
   },
   {
     "title": "Gris",
@@ -2740,7 +3180,13 @@
       "App Store",
       "Google Play"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 22917,
+      "artworks": [{ "id": 15350, "image_id": "arbue" }],
+      "cover": { "id": 81473, "image_id": "co1qv5" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1qv5.jpg"
+    }
   },
   {
     "title": "Hyrule Warriors: Age of Calamity",
@@ -2773,7 +3219,13 @@
     ],
     "soundtrack": "Yasuaki Iwata, Haruki Yamada",
     "available_on": ["Nintendo eShop"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 138343,
+      "artworks": [{ "id": 64164, "image_id": "ar1dic" }],
+      "cover": { "id": 172522, "image_id": "co3p4a" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3p4a.jpg"
+    }
   },
   {
     "title": "Frostpunk",
@@ -2810,7 +3262,17 @@
     ],
     "soundtrack": "Piotr Musiał",
     "available_on": ["Steam", "GOG", "PlayStation Store", "Xbox Store"],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 23248,
+      "artworks": [
+        { "id": 3, "image_id": "bzmmhgsskzw2plzpmabo" },
+        { "id": 4, "image_id": "qira2bnppcegot3dzlgk" },
+        { "id": 2, "image_id": "nfoayruxc3ze4yccf5ey" }
+      ],
+      "cover": { "id": 64984, "image_id": "mferu1am1yv5pcy5aplm" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/mferu1am1yv5pcy5aplm.jpg"
+    }
   },
   {
     "title": "Hades",
@@ -2860,7 +3322,26 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 113112,
+      "artworks": [
+        { "id": 6752, "image_id": "ar57k" },
+        { "id": 47340, "image_id": "ar10j0" },
+        { "id": 47341, "image_id": "ar10j1" },
+        { "id": 56834, "image_id": "ar17uq" },
+        { "id": 56835, "image_id": "ar17ur" },
+        { "id": 56836, "image_id": "ar17us" },
+        { "id": 56837, "image_id": "ar17ut" },
+        { "id": 56838, "image_id": "ar17uu" },
+        { "id": 56839, "image_id": "ar17uv" },
+        { "id": 56840, "image_id": "ar17uw" },
+        { "id": 56841, "image_id": "ar17ux" },
+        { "id": 56842, "image_id": "ar17uy" }
+      ],
+      "cover": { "id": 152760, "image_id": "co39vc" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co39vc.jpg"
+    }
   },
   {
     "title": "Crusader Kings III",
@@ -2904,7 +3385,13 @@
       "PlayStation Store",
       "Xbox Store"
     ],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 124954,
+      "artworks": [{ "id": 10250, "image_id": "ar7wq" }],
+      "cover": { "id": 421014, "image_id": "co90uu" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co90uu.jpg"
+    }
   },
   {
     "title": "Chicory: A Colorful Tale",
@@ -2945,7 +3432,13 @@
       "PlayStation Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 117266,
+      "artworks": [{ "id": 36164, "image_id": "arrwk" }],
+      "cover": { "id": 223143, "image_id": "co4s6f" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4s6f.jpg"
+    }
   },
   {
     "title": "Kentucky Route Zero",
@@ -2988,7 +3481,13 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 5614,
+      "artworks": [{ "id": 9042, "image_id": "ar6z6" }],
+      "cover": { "id": 437927, "image_id": "co9dwn" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9dwn.jpg"
+    }
   },
   {
     "title": "Spiritfarer",
@@ -3039,7 +3538,16 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 119304,
+      "artworks": [
+        { "id": 7429, "image_id": "ar5qd" },
+        { "id": 10902, "image_id": "ar8eu" }
+      ],
+      "cover": { "id": 113263, "image_id": "co2fe7" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2fe7.jpg"
+    }
   },
   {
     "title": "Ghostwire: Tokyo",
@@ -3073,7 +3581,8 @@
     ],
     "soundtrack": "Masatoshi Yanagi",
     "available_on": ["PlayStation Store", "Steam", "Epic Games Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {}
   },
   {
     "title": "Sea of Stars",
@@ -3120,7 +3629,12 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 59626,
+      "cover": { "id": 309450, "image_id": "co6mru" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6mru.jpg"
+    }
   },
   {
     "title": "A Plague Tale: Requiem",
@@ -3159,7 +3673,13 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 152242,
+      "artworks": [{ "id": 39562, "image_id": "aruiy" }],
+      "cover": { "id": 266843, "image_id": "co5pwb" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5pwb.jpg"
+    }
   },
   {
     "title": "Outer Wilds",
@@ -3208,7 +3728,16 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 11737,
+      "artworks": [
+        { "id": 10721, "image_id": "ar89t" },
+        { "id": 10722, "image_id": "ar89u" }
+      ],
+      "cover": { "id": 286788, "image_id": "co65ac" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co65ac.jpg"
+    }
   },
   {
     "title": "Bloodborne",
@@ -3245,7 +3774,23 @@
     ],
     "soundtrack": "Ryan Amon, Tsukasa Saitoh, Yuka Kitamura",
     "available_on": ["PlayStation Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 7334,
+      "artworks": [
+        { "id": 161, "image_id": "a4sajgspwkjoa715f98z" },
+        { "id": 162, "image_id": "djgvpqboykw0ir8yq57d" },
+        { "id": 166, "image_id": "ej4dcisqaefeqc1ju4by" },
+        { "id": 165, "image_id": "xtzxyg3xmlhf5nwboamn" },
+        { "id": 164, "image_id": "fuuhia7acrtoawy8ybio" },
+        { "id": 168, "image_id": "vfr2itwdvysg2inqqvv9" },
+        { "id": 167, "image_id": "ajxsy7djbrxbwibavlt0" },
+        { "id": 163, "image_id": "sfarzj5zaqpy8yx50sfm" },
+        { "id": 38892, "image_id": "aru0c" }
+      ],
+      "cover": { "id": 82054, "image_id": "co1rba" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1rba.jpg"
+    }
   },
   {
     "title": "Portal 2",
@@ -3288,7 +3833,13 @@
     ],
     "soundtrack": "Mike Morasky",
     "available_on": ["Steam", "PlayStation Store", "Xbox Store"],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 193776,
+      "artworks": [{ "id": 70681, "image_id": "ar1ijd" }],
+      "cover": { "id": 424184, "image_id": "co93aw" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co93aw.jpg"
+    }
   },
   {
     "title": "Tetris Effect",
@@ -3338,7 +3889,13 @@
       "Nintendo eShop",
       "Meta Quest Store"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 103221,
+      "artworks": [{ "id": 4983, "image_id": "hyud8bqlda4p61xlniwl" }],
+      "cover": { "id": 119806, "image_id": "co2kfy" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2kfy.jpg"
+    }
   },
   {
     "title": "NieR: Automata",
@@ -3386,7 +3943,19 @@
       "Steam",
       "Nintendo eShop"
     ],
-    "mod_support": "Oui (PC)"
+    "mod_support": "Oui (PC)",
+    "igdb": {
+      "id": 11208,
+      "artworks": [
+        { "id": 7237, "image_id": "ar5l1" },
+        { "id": 1080, "image_id": "mg2psdb1i6gosejsnugx" },
+        { "id": 1082, "image_id": "npzkrvfpuhzkm5iudyax" },
+        { "id": 1081, "image_id": "odo9d54dmfivebhp9f9v" },
+        { "id": 1083, "image_id": "vs2dj7rxsxgehcuq9gmb" }
+      ],
+      "cover": { "id": 266131, "image_id": "co5pcj" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co5pcj.jpg"
+    }
   },
   {
     "title": "Persona 4 Golden",
@@ -3425,7 +3994,13 @@
       "Nintendo eShop",
       "Xbox Store"
     ],
-    "mod_support": "Oui (PC)"
+    "mod_support": "Oui (PC)",
+    "igdb": {
+      "id": 2985,
+      "artworks": [{ "id": 28536, "image_id": "arm0o" }],
+      "cover": { "id": 76533, "image_id": "co1n1x" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1n1x.jpg"
+    }
   },
   {
     "title": "Journey",
@@ -3468,7 +4043,13 @@
     ],
     "soundtrack": "Austin Wintory",
     "available_on": ["PlayStation Store", "Epic Games Store", "App Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 137294,
+      "artworks": [{ "id": 64259, "image_id": "ar1dkz" }],
+      "cover": { "id": 113748, "image_id": "co2fro" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2fro.jpg"
+    }
   },
   {
     "title": "Deus Ex: Human Revolution",
@@ -3514,7 +4095,26 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Oui (PC)"
+    "mod_support": "Oui (PC)",
+    "igdb": {
+      "id": 43,
+      "artworks": [
+        { "id": 386, "image_id": "u7kfitmuzimmfn3ccqo1" },
+        { "id": 387, "image_id": "e19kahyg8kf20nbatt4c" },
+        { "id": 390, "image_id": "pw8i3f0mbbzaekk5hceb" },
+        { "id": 389, "image_id": "d1dnmldxezjrwx1rumk0" },
+        { "id": 391, "image_id": "urkhhakcpd5cep9epjfr" },
+        { "id": 394, "image_id": "jqybynm8ndgeamx9pxug" },
+        { "id": 395, "image_id": "vbob7lrilzskabaz3wkz" },
+        { "id": 5792, "image_id": "ar4gw" },
+        { "id": 388, "image_id": "cybgup3fyo7pxejpu2kl" },
+        { "id": 393, "image_id": "jinjabzhgiykqxy1rcuw" },
+        { "id": 392, "image_id": "du2wltspsaumlig7rf83" },
+        { "id": 5793, "image_id": "ar4gx" }
+      ],
+      "cover": { "id": 82118, "image_id": "co1rd2" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1rd2.jpg"
+    }
   },
   {
     "title": "Bioshock",
@@ -3570,7 +4170,12 @@
       "Xbox Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Oui (PC)"
+    "mod_support": "Oui (PC)",
+    "igdb": {
+      "id": 152660,
+      "cover": { "id": 153461, "image_id": "co3aet" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3aet.jpg"
+    }
   },
   {
     "title": "Ratchet & Clank: Rift Apart",
@@ -3610,7 +4215,13 @@
     ],
     "soundtrack": "Mark Mothersbaugh",
     "available_on": ["PlayStation Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 134582,
+      "artworks": [{ "id": 9632, "image_id": "ar7fk" }],
+      "cover": { "id": 130671, "image_id": "co2str" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2str.jpg"
+    }
   },
   {
     "title": "Fallout: New Vegas",
@@ -3649,7 +4260,17 @@
     ],
     "soundtrack": "Inon Zur",
     "available_on": ["Steam", "GOG", "PlayStation Store", "Xbox Store"],
-    "mod_support": "Oui (PC)"
+    "mod_support": "Oui (PC)",
+    "igdb": {
+      "id": 16,
+      "artworks": [
+        { "id": 5807, "image_id": "ar4hb" },
+        { "id": 9854, "image_id": "ar7lq" },
+        { "id": 10311, "image_id": "ar7yf" }
+      ],
+      "cover": { "id": 85752, "image_id": "co1u60" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1u60.jpg"
+    }
   },
   {
     "title": "Psyconauts 2",
@@ -3683,7 +4304,8 @@
     ],
     "soundtrack": "Peter McConnell",
     "available_on": ["Steam", "PlayStation Store", "Xbox Store", "Game Pass"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {}
   },
   {
     "title": "Half-Life: Alyx",
@@ -3723,7 +4345,8 @@
     ],
     "soundtrack": "Mike Morasky",
     "available_on": ["Steam"],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {}
   },
   {
     "title": "Metroid Dread",
@@ -3763,7 +4386,12 @@
     ],
     "soundtrack": "Kenji Yamamoto",
     "available_on": ["Nintendo eShop"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 323061,
+      "cover": { "id": 423995, "image_id": "co935n" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co935n.jpg"
+    }
   },
   {
     "title": "Lumines: Electronic Symphony",
@@ -3797,7 +4425,12 @@
     ],
     "soundtrack": "Artistes variés dont The Chemical Brothers, Aphex Twin, Underworld",
     "available_on": ["PlayStation Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 4693,
+      "cover": { "id": 115287, "image_id": "co2gyf" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2gyf.jpg"
+    }
   },
   {
     "title": "Starfield",
@@ -3838,7 +4471,13 @@
     ],
     "soundtrack": "Inon Zur",
     "available_on": ["Steam", "Microsoft Store", "Game Pass"],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 96437,
+      "artworks": [{ "id": 11722, "image_id": "ar91m" }],
+      "cover": { "id": 152779, "image_id": "co39vv" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co39vv.jpg"
+    }
   },
   {
     "title": "Astro's Playroom",
@@ -3878,7 +4517,13 @@
     ],
     "soundtrack": "Kenneth C M Young",
     "available_on": ["PlayStation Store (préinstallé sur PS5)"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 134597,
+      "artworks": [{ "id": 9563, "image_id": "ar7dn" }],
+      "cover": { "id": 442336, "image_id": "co9hb4" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9hb4.jpg"
+    }
   },
   {
     "title": "Blasphemous II",
@@ -3925,7 +4570,13 @@
       "Nintendo eShop",
       "Xbox Store"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 165390,
+      "artworks": [{ "id": 106370, "image_id": "ar2a2q" }],
+      "cover": { "id": 298767, "image_id": "co6ej3" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6ej3.jpg"
+    }
   },
   {
     "title": "Oxenfree II: Lost Signals",
@@ -3971,7 +4622,16 @@
       "Nintendo eShop",
       "Netflix Games"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 145784,
+      "artworks": [
+        { "id": 106308, "image_id": "ar2a10" },
+        { "id": 106309, "image_id": "ar2a11" }
+      ],
+      "cover": { "id": 298828, "image_id": "co6eks" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6eks.jpg"
+    }
   },
   {
     "title": "Age of Mythology: Retold",
@@ -4015,7 +4675,13 @@
     ],
     "soundtrack": "Stephen Rippy (remasterisé)",
     "available_on": ["Steam", "Microsoft Store", "Game Pass"],
-    "mod_support": "Oui"
+    "mod_support": "Oui",
+    "igdb": {
+      "id": 222803,
+      "artworks": [{ "id": 129554, "image_id": "ar2ryq" }],
+      "cover": { "id": 419405, "image_id": "co8zm5" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8zm5.jpg"
+    }
   },
   {
     "title": "Loop Hero",
@@ -4071,7 +4737,16 @@
       "PlayStation Store",
       "Xbox Store"
     ],
-    "mod_support": "Oui (sur PC)"
+    "mod_support": "Oui (sur PC)",
+    "igdb": {
+      "id": 248294,
+      "artworks": [
+        { "id": 126641, "image_id": "ar2ppt" },
+        { "id": 126642, "image_id": "ar2ppu" }
+      ],
+      "cover": { "id": 358025, "image_id": "co7o95" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7o95.jpg"
+    }
   },
   {
     "title": "Palworld",
@@ -4117,7 +4792,13 @@
     ],
     "soundtrack": "Musique originale par Pocketpair",
     "available_on": ["Steam", "Xbox Store", "Game Pass"],
-    "mod_support": "Oui (sur PC)"
+    "mod_support": "Oui (sur PC)",
+    "igdb": {
+      "id": 151665,
+      "artworks": [{ "id": 33894, "image_id": "arq5i" }],
+      "cover": { "id": 356402, "image_id": "co7n02" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7n02.jpg"
+    }
   },
   {
     "title": "Alan Wake 2",
@@ -4158,7 +4839,16 @@
     ],
     "soundtrack": "Petri Alanko, avec des morceaux de Old Gods of Asgard",
     "available_on": ["Epic Games Store", "PlayStation Store", "Xbox Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 185246,
+      "artworks": [
+        { "id": 61875, "image_id": "ar1bqr" },
+        { "id": 108356, "image_id": "ar2blw" }
+      ],
+      "cover": { "id": 304947, "image_id": "co6jar" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6jar.jpg"
+    }
   },
   {
     "title": "Dave the Diver",
@@ -4198,7 +4888,13 @@
       "PlayStation Store",
       "Nintendo eShop"
     ],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 203722,
+      "artworks": [{ "id": 78053, "image_id": "ar1o85" }],
+      "cover": { "id": 227137, "image_id": "co4v9d" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4v9d.jpg"
+    }
   },
   {
     "title": "F1 Manager 2024",
@@ -4248,7 +4944,13 @@
       "PlayStation Store",
       "Xbox Store"
     ],
-    "mod_support": "Oui (sur PC)"
+    "mod_support": "Oui (sur PC)",
+    "igdb": {
+      "id": 290808,
+      "artworks": [{ "id": 130981, "image_id": "ar2t2d" }],
+      "cover": { "id": 400543, "image_id": "co8l27" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8l27.jpg"
+    }
   },
   {
     "title": "Rise of the Ronin",
@@ -4290,7 +4992,17 @@
     ],
     "soundtrack": "Yugo Kanno",
     "available_on": ["PlayStation Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 217594,
+      "artworks": [
+        { "id": 125500, "image_id": "ar2ou4" },
+        { "id": 125501, "image_id": "ar2ou5" },
+        { "id": 125502, "image_id": "ar2ou6" }
+      ],
+      "cover": { "id": 246060, "image_id": "co59v0" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co59v0.jpg"
+    }
   },
   {
     "title": "Concord",
@@ -4336,7 +5048,13 @@
     ],
     "soundtrack": "Tyler Bates",
     "available_on": ["PlayStation Store", "Steam", "Epic Games Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 250632,
+      "artworks": [{ "id": 138603, "image_id": "ar2yy3" }],
+      "cover": { "id": 386584, "image_id": "co8aag" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8aag.jpg"
+    }
   },
   {
     "title": "Diablo IV",
@@ -4384,7 +5102,20 @@
     ],
     "soundtrack": "Leo Kaliski",
     "available_on": ["Battle.net", "PlayStation Store", "Xbox Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 125165,
+      "artworks": [
+        { "id": 8172, "image_id": "ar6b0" },
+        { "id": 8173, "image_id": "ar6b1" },
+        { "id": 8171, "image_id": "ar6az" },
+        { "id": 8170, "image_id": "ar6ay" },
+        { "id": 8150, "image_id": "ar6ae" },
+        { "id": 8152, "image_id": "ar6ag" }
+      ],
+      "cover": { "id": 292630, "image_id": "co69sm" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co69sm.jpg"
+    }
   },
   {
     "title": "Viewfinder",
@@ -4425,7 +5156,16 @@
     ],
     "soundtrack": "Matt Naylor",
     "available_on": ["Steam", "PlayStation Store"],
-    "mod_support": "Non"
+    "mod_support": "Non",
+    "igdb": {
+      "id": 142549,
+      "artworks": [
+        { "id": 100519, "image_id": "ar25k7" },
+        { "id": 113681, "image_id": "ar2fpt" }
+      ],
+      "cover": { "id": 308794, "image_id": "co6m9m" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co6m9m.jpg"
+    }
   },
   {
     "title": "Chrono Trigger",
@@ -4471,7 +5211,12 @@
       "App Store",
       "Google Play"
     ],
-    "mod_support": false
+    "mod_support": false,
+    "igdb": {
+      "id": 79447,
+      "cover": { "id": 152718, "image_id": "co39u6" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co39u6.jpg"
+    }
   },
   {
     "title": "Planescape: Torment",
@@ -4522,7 +5267,13 @@
       "PlayStation Store",
       "Nintendo eShop"
     ],
-    "mod_support": true
+    "mod_support": true,
+    "igdb": {
+      "id": 832,
+      "artworks": [{ "id": 39213, "image_id": "aru99" }],
+      "cover": { "id": 161291, "image_id": "co3ggb" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co3ggb.jpg"
+    }
   },
   {
     "title": "Firewatch",
@@ -4559,7 +5310,16 @@
       "Microsoft Store",
       "Nintendo eShop"
     ],
-    "mod_support": false
+    "mod_support": false,
+    "igdb": {
+      "id": 9730,
+      "artworks": [
+        { "id": 8852, "image_id": "ar6tw" },
+        { "id": 80363, "image_id": "ar1q0b" }
+      ],
+      "cover": { "id": 75281, "image_id": "co1m35" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1m35.jpg"
+    }
   },
   {
     "title": "Baba Is You",
@@ -4590,7 +5350,12 @@
     "gameplay_mechanics": ["Manipulation des règles", "Réflexion", "Logique"],
     "soundtrack": "Arvi Teikari",
     "available_on": ["Steam", "Nintendo eShop", "App Store", "Google Play"],
-    "mod_support": false
+    "mod_support": false,
+    "igdb": {
+      "id": 334743,
+      "cover": { "id": 443670, "image_id": "co9ic6" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co9ic6.jpg"
+    }
   },
   {
     "title": "Ori and the Blind Forest",
@@ -4626,7 +5391,13 @@
     ],
     "soundtrack": "Gareth Coker",
     "available_on": ["Steam", "Microsoft Store", "Nintendo eShop"],
-    "mod_support": false
+    "mod_support": false,
+    "igdb": {
+      "id": 19456,
+      "artworks": [{ "id": 10719, "image_id": "ar89r" }],
+      "cover": { "id": 129622, "image_id": "co2s0m" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co2s0m.jpg"
+    }
   },
   {
     "title": "Rimworld",
@@ -4664,7 +5435,13 @@
     ],
     "soundtrack": "Alistair Lindsay",
     "available_on": ["Steam", "GOG", "Epic Games Store"],
-    "mod_support": true
+    "mod_support": true,
+    "igdb": {
+      "id": 9789,
+      "artworks": [{ "id": 17480, "image_id": "ardhk" }],
+      "cover": { "id": 71529, "image_id": "co1j6x" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1j6x.jpg"
+    }
   },
   {
     "title": "Pyre",
@@ -4704,7 +5481,13 @@
     ],
     "soundtrack": "Darren Korb",
     "available_on": ["Steam", "PlayStation Store", "Epic Games Store"],
-    "mod_support": false
+    "mod_support": false,
+    "igdb": {
+      "id": 18822,
+      "artworks": [{ "id": 10810, "image_id": "ar8ca" }],
+      "cover": { "id": 99471, "image_id": "co24r3" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co24r3.jpg"
+    }
   },
   {
     "title": "Katana Zero",
@@ -4741,7 +5524,16 @@
     ],
     "soundtrack": "LudoWic, Bill Kiley",
     "available_on": ["Steam", "Nintendo eShop", "Microsoft Store", "GOG"],
-    "mod_support": false
+    "mod_support": false,
+    "igdb": {
+      "id": 20150,
+      "artworks": [
+        { "id": 6258, "image_id": "ar4tu" },
+        { "id": 10575, "image_id": "ar85r" }
+      ],
+      "cover": { "id": 71017, "image_id": "co1isp" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co1isp.jpg"
+    }
   },
   {
     "title": "Kingdom Come: Deliverance",
@@ -4788,7 +5580,13 @@
       "Microsoft Store",
       "Nintendo eShop"
     ],
-    "mod_support": true
+    "mod_support": true,
+    "igdb": {
+      "id": 298526,
+      "artworks": [{ "id": 136113, "image_id": "ar2x0x" }],
+      "cover": { "id": 407767, "image_id": "co8qmv" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co8qmv.jpg"
+    }
   },
   {
     "title": "Return of the Obra Dinn",
@@ -4827,7 +5625,13 @@
       "Microsoft Store",
       "Nintendo eShop"
     ],
-    "mod_support": false
+    "mod_support": false,
+    "igdb": {
+      "id": 9643,
+      "artworks": [{ "id": 15015, "image_id": "arbl3" }],
+      "cover": { "id": 103077, "image_id": "co27j9" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co27j9.jpg"
+    }
   },
   {
     "title": "Hyper Light Drifter",
@@ -4876,6 +5680,12 @@
       "Nintendo eShop",
       "App Store"
     ],
-    "mod_support": false
+    "mod_support": false,
+    "igdb": {
+      "id": 107295,
+      "artworks": [{ "id": 15687, "image_id": "arc3r" }],
+      "cover": { "id": 204657, "image_id": "co4dwx" },
+      "img_url": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co4dwx.jpg"
+    }
   }
 ]
