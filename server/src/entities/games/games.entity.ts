@@ -45,6 +45,10 @@ export class GamesEntity extends BaseEntity {
   summary: string;
 
   @Field()
+  @Column()
+  coverUrl: string;
+
+  @Field()
   @ManyToOne(() => GamesPegiEsbr, (pegi) => pegi.id, {
     cascade: true,
   })

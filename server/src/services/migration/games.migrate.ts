@@ -127,6 +127,8 @@ function toPegi(g: SubGame) {
 
       newGame.category = categories[game.category];
 
+      newGame.coverUrl = game.igdb.img_url || "";
+
       newGame.developers = game.developers.map((d) => {
         const company = companies[d];
         company.gamesDevelopers.push(newGame);
