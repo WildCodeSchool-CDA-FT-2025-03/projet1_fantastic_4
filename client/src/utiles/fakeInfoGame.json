@@ -1,30 +1,116 @@
-[
-  {
-    "id": "51e68f541w35e",
-    "title": "Factorio",
-    "slug": "factorio",
-    "releaseDate": "21-08-2025",
-    "summary": "Factorio a pour but la création d'une usine complètement automatisée, produisant des éléments de plus en plus complexes, dans un monde en 2D. Utiliser votre imagination pour concevoir votre usine, combiner de simples éléments en ingénieuses structures, tout en vous protégeant des aliens !",
-    "subtitle": "Best game ever!",
-    "gameTags": ["horror", "action", "RPG", "Open "],
-    "rating": 3.6,
-    "isFavorite": true,
-    "pegi": "PEGI 16",
-    "developer": "Maximilien Compamy",
-    "publisher": "Valve"
-  },
-  {
-    "id": "5d5265dds5fhj",
-    "title": "Ravenswatch",
-    "slug": "ravenswatch",
-    "releaseDate": "26-08-2024",
-    "summary": "Héros déchus d’anciens contes et légendes, vous voici à l'aube d'un combat crucial contre le Cauchemar qui envahit et corrompt votre monde. Un action rogue-like par les créateurs de Curse of the Dead Gods©, jouable en solo et en coop en ligne.",
-    "subtitle": "Jeux coop",
-    "gameTags": ["roguelike", "coop", "action"],
-    "rating": 4.6,
-    "isFavorite": true,
-    "pegi": "PEGI 14",
-    "developer": "Passtech Games",
-    "publisher": "Nacon"
+{
+  "data": {
+    "getGames": [
+      {
+        "id": "b87b5be4-e5af-438f-a0d7-14dbd203afbd",
+        "slug": "the-legend-of-zelda:-breath-of-the-wild",
+        "subtitle": "Edition Standard",
+        "summary": "Dans un royaume d'Hyrule dévasté, Link se réveille d'un sommeil de 100 ans pour découvrir un monde ouvert immense. Il doit retrouver ses souvenirs et affronter Ganon, le Fléau, pour sauver la princesse Zelda et restaurer la paix.",
+        "title": "The Legend of Zelda: Breath of the Wild",
+        "releaseDate": 1488499200000,
+        "pegi": {
+          "id": 1,
+          "pegi": "PEGI 12 / ESRB E10+"
+        },
+        "originalLanguage": {
+          "language": "Japonais",
+          "id": 1
+        },
+        "category": {
+          "id": 1,
+          "name": "Action-Aventure, RPG"
+        },
+        "developers": [
+          {
+            "name": "Nintendo EPD",
+            "id": "60a03438-88c1-498b-90bd-82a0a5c4fe80"
+          }
+        ],
+        "publishers": [
+          {
+            "id": "235949ca-51d5-438d-9282-b9127eb57dd2",
+            "name": "Nintendo"
+          }
+        ],
+        "tags": [
+          {
+            "id": 1,
+            "name": "open world"
+          },
+          {
+            "id": 2,
+            "name": "survival"
+          },
+          {
+            "id": 3,
+            "name": "exploration"
+          },
+          {
+            "id": 4,
+            "name": "puzzle"
+          },
+          {
+            "id": 5,
+            "name": "combat"
+          }
+        ],
+        "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co67oa.jpg"
+      },
+      {
+        "id": "7c36ddd7-bebf-4aa2-8e9d-8497c5727c1d",
+        "slug": "cyberpunk-2077",
+        "subtitle": "Edition Collector",
+        "summary": "Dans la mégalopole de Night City, V, un mercenaire cybernétiquement amélioré, se retrouve impliqué dans une conspiration impliquant une puce contenant l'esprit numérisé de Johnny Silverhand, un ancien rockerboy terroriste.",
+        "title": "Cyberpunk 2077",
+        "releaseDate": 1607558400000,
+        "pegi": {
+          "id": 2,
+          "pegi": "PEGI 18 / ESRB M"
+        },
+        "originalLanguage": {
+          "language": "Anglais",
+          "id": 2
+        },
+        "category": {
+          "id": 2,
+          "name": "Action-RPG, FPS"
+        },
+        "developers": [
+          {
+            "name": "CD Projekt Red",
+            "id": "62a9385f-e3c7-4542-9732-d6d50fb5c179"
+          }
+        ],
+        "publishers": [
+          {
+            "id": "e8cbc0fb-3663-47d2-ab67-4364fda145b1",
+            "name": "CD Projekt"
+          }
+        ],
+        "tags": [
+          {
+            "id": 1,
+            "name": "open world"
+          },
+          {
+            "id": 6,
+            "name": "cyberpunk"
+          },
+          {
+            "id": 7,
+            "name": "futuriste"
+          },
+          {
+            "id": 8,
+            "name": "RPG"
+          },
+          {
+            "id": 9,
+            "name": "hacking"
+          }
+        ],
+        "coverUrl": "https://images.igdb.com/igdb/image/upload/t_cover_big_2x/co7iy1.jpg"
+      }
+    ]
   }
-]
+}

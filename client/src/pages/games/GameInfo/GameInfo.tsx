@@ -7,7 +7,12 @@ import FakeDataGame from "@/utiles/fakeInfoGame.json";
 
 const GameInfo = () => {
   const { slug } = useParams();
-  const game = FakeDataGame.find((g) => g.slug === slug);
+  const game = FakeDataGame.data.getGames.find((g) => g.slug === slug);
+
+  const developers = game?.developers.map((d) => d.name).join(", ") || "";
+  const publishers = game?.publishers.map((d) => d.name).join(", ") || "";
+  const date = new Date(game?.releaseDate || 0);
+  const dateStr = `${date.getDay()}-${date.getMonth()}-${date.getFullYear()}`;
 
   let component = <></>;
 
@@ -22,10 +27,15 @@ const GameInfo = () => {
         >
           <SimpleExtraInfo
             infos={[
-              { title: "Developer", text: game.developer },
-              { title: "Publisher", text: game.publisher },
-              { title: "Release date", text: game.releaseDate },
-              { title: "Pegi", text: game.pegi },
+              { title: "Category", text: game.category.name },
+              { title: "Developer", text: developers },
+              { title: "Publisher", text: publishers },
+              { title: "Release date", text: dateStr },
+              { title: "Pegi", text: game.pegi.pegi },
+              {
+                title: "Original language",
+                text: game.originalLanguage.language,
+              },
             ]}
           />
         </MediaInfoLayout>
