@@ -15,7 +15,7 @@ import { GamesEntity } from "./games.entity";
 export class CompaniesEntity extends BaseEntity {
   @Field()
   @PrimaryGeneratedColumn("uuid")
-  id: number;
+  id: string;
 
   @Field()
   @Column()

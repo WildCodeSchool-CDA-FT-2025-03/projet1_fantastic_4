@@ -112,10 +112,12 @@ function toPegi(g: SubGame) {
       const newGame = new GamesEntity();
       const slug = encodeURI(game.title.replace(/ /g, "-").toLowerCase());
 
+      const date = game.release_date.slice(0, 10);
+
       newGame.title = game.title;
       newGame.subtitle = game.subtitle || "";
       newGame.summary = game.summary;
-      newGame.releaseDate = new Date(game.release_date);
+      newGame.releaseDate = new Date(date).getTime();
       newGame.slug = slug;
 
       newGame.originalLanguage = languages[game.original_language];
@@ -146,13 +148,18 @@ function toPegi(g: SubGame) {
       return newGame;
     });
 
-    // DAVE DATA
-    const res =
-      (await dataSource.manager.save(Object.values(companies))) &&
-      (await dataSource.manager.save(Object.values(languages))) &&
-      (await dataSource.manager.save(Object.values(pegi))) &&
-      (await dataSource.manager.save(Object.values(tags))) &&
-      (await dataSource.manager.save(newGames));
+    let res = (
+      await Promise.all([
+        dataSource.manager.save(Object.values(companies)),
+        dataSource.manager.save(Object.values(languages)),
+        dataSource.manager.save(Object.values(pegi)),
+        dataSource.manager.save(Object.values(tags)),
+      ])
+    ).reduce((acc, res) => {
+      return acc && !!res;
+    }, true);
+
+    res = res && !!(await dataSource.manager.save(newGames));
 
     if (res) {
       log("Migration games done !");

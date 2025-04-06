@@ -38,38 +38,44 @@ export class GamesEntity extends BaseEntity {
 
   @Field()
   @Column()
-  releaseDate: Date;
+  releaseDate: number;
 
   @Field()
   @Column()
   summary: string;
 
+  @Field()
   @ManyToOne(() => GamesPegiEsbr, (pegi) => pegi.id, {
     cascade: true,
   })
   @JoinColumn({ name: "pegi_id" })
   pegi: GamesPegiEsbr;
 
+  @Field()
   @ManyToOne(() => GamesLanguagesEntity, (lang) => lang.id, {
     cascade: true,
   })
-  @JoinColumn({ name: "original_language" })
+  @JoinColumn({ name: "games_languages" })
   originalLanguage: GamesLanguagesEntity;
 
+  @Field()
   @ManyToOne(() => GameCategorieEntity, (categorie) => categorie.id, {
     cascade: true,
   })
   @JoinColumn({ name: "categorie_id" })
   category: GameCategorieEntity;
 
+  @Field(() => [CompaniesEntity])
   @ManyToMany(() => CompaniesEntity, (company) => company.gamesDevelopers)
   @JoinTable()
   developers: CompaniesEntity[];
 
+  @Field(() => [CompaniesEntity])
   @ManyToMany(() => CompaniesEntity, (company) => company.gamesPublishers)
   @JoinTable()
   publishers: CompaniesEntity[];
 
+  @Field(() => [TagsGameEntity])
   @ManyToMany(() => TagsGameEntity, (tag) => tag.games)
   @JoinTable()
   tags: TagsGameEntity[];

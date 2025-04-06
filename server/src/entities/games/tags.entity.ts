@@ -14,7 +14,7 @@ import { GamesEntity } from "./games.entity";
 @Unique(["name"])
 export class TagsGameEntity extends BaseEntity {
   @Field()
-  @PrimaryGeneratedColumn("uuid")
+  @PrimaryGeneratedColumn("increment")
   id: number;
 
   @Field()
