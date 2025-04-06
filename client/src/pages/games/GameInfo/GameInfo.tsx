@@ -1,6 +1,7 @@
 import { useParams } from "react-router";
 import MediaInfoLayout from "@/components/MediaInfoLayout/MediaInfoLayout";
 import SimpleExtraInfo from "@/components/MediaInfoLayout/SimpleExtraInfo/SimpleExtraInfos";
+import WordList from "@/components/MediaInfoLayout/WordList/WordList";
 import { Category } from "@/types/category.type";
 
 import FakeDataGame from "@/utiles/fakeInfoGame.json";
@@ -39,6 +40,8 @@ const GameInfo = () => {
               },
             ]}
           />
+
+          <WordList title="tags" words={game.tags.map((t) => t.name)} />
         </MediaInfoLayout>
       </>
     );
