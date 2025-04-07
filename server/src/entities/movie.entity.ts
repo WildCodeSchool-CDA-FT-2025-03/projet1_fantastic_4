@@ -33,6 +33,7 @@ export class MovieEntity extends BaseEntity {
   // CategoriesEntity relation
   @ManyToOne(() => CategoriesEntity, (category) => category.movies, {
     eager: true,
+    onDelete: "CASCADE",
   })
   @JoinColumn({ name: "categoryId" }) // Associates categoryId to CategoriesEntity
   @Field(() => CategoriesEntity)
