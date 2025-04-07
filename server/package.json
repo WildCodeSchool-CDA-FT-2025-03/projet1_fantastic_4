@@ -13,7 +13,8 @@
     "lint": "eslint .",
     "pretty": "prettier . --write",
     "prettier-check": "prettier . --check",
-    "build-check": "tsc -b --noEmit"
+    "build-check": "tsc -b --noEmit",
+    "migrate": "ts-node-dev ./src/services/migration/migrate.ts"
   },
   "devDependencies": {
     "@types/node": "^22.13.14",

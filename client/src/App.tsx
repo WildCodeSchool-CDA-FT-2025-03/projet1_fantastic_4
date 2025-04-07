@@ -1,12 +1,15 @@
 import { Outlet } from "react-router";
 import "./App.css";
 import Header from "./components/Header/Header";
+import "@/global.css";
 
 function App() {
   return (
     <>
       <Header />
-      <Outlet></Outlet>
+      <main>
+        <Outlet></Outlet>
+      </main>
     </>
   );
 }

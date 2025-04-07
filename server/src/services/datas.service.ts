@@ -1,4 +1,4 @@
-import { CategoriesEntity } from "@/entities/categories.entity";
+import { CategoriesEntity } from "../entities/categories.entity";
 import { DataSource } from "typeorm";
 
 const dataSource = new DataSource({
