@@ -12,8 +12,9 @@ type CarouselProps = {
 type Data = {
   id: number;
   title: string;
-  category_name: string;
+  categoryId: string;
   genre: string;
+  category: { id: number; name: string };
 };
 
 const SLIDEWITHPIXELS = 296 + 9; //we add the gap
@@ -112,7 +113,7 @@ export default function Carousel({ datas, title_carousel }: CarouselProps) {
               <CardMedia
                 key={item.id}
                 title={item.title}
-                category_name={item.category_name}
+                category_name={item.category.name}
                 genre={item.genre}
                 id={item.id}
                 ref={index === datas.length - 1 ? lastItemRef : undefined}
