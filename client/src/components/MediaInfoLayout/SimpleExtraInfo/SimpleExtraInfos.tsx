@@ -1,4 +1,6 @@
 import "./SimpleExtraInfos.css";
+import SimpleText from "./SimpleText/SimpleText";
+
 type PropsSimpleExtraInfos = {
   infos: { title: string; text: string }[];
 };
@@ -6,17 +8,9 @@ type PropsSimpleExtraInfos = {
 const SimpleExtraInfo = ({ infos }: PropsSimpleExtraInfos) => {
   return (
     <div className={"simple-extra-infos"}>
-      {infos.map((info) => {
-        return (
-          <div key={info.title}>
-            <div className="item-title">
-              <h4>{info.title}</h4>
-              <hr />
-            </div>
-            <p className="simple-extra-infos-item">{info.text}</p>
-          </div>
-        );
-      })}
+      {infos.map((info) => (
+        <SimpleText info={info} />
+      ))}
     </div>
   );
 };
