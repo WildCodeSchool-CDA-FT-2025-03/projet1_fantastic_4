@@ -22,18 +22,6 @@ const MediaInfoLayout = ({
   const backgroundColor = `media-info-color-${category}`;
   children = children === children ? children : [];
 
-  const cover = () => {
-    if (url) {
-      return (
-        <img
-          title={`cover: ${title}`}
-          className="media-info-cover-img"
-          src={url}
-        />
-      );
-    }
-  };
-
   return (
     <div className="media-info-layout">
       <section className={`media-info-layout-top ${backgroundColor}`}>
@@ -45,7 +33,13 @@ const MediaInfoLayout = ({
             title={`cover: ${title}`}
             className={`media-info-cover media-cover-${category}`}
           >
-            {cover()}
+            {url && (
+              <img
+                title={`cover: ${title}`}
+                className="media-info-cover-img"
+                src={url}
+              />
+            )}
           </div>
           <p className="subtitle">{subtitle}</p>
         </div>
