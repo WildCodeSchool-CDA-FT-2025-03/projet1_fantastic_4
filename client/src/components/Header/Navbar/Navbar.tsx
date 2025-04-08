@@ -1,31 +1,27 @@
 import { NavLink } from "react-router";
 import "./Navbar.css";
+
+const categoriesData = [
+  { id: 1, name: "movies" },
+  { id: 1, name: "musics" },
+  { id: 1, name: "games" },
+  { id: 1, name: "books" },
+];
+
 const Navbar = () => {
   return (
-    <nav className="navbar">
-      <ul className="navlinks">
+    <ul className="navlinks">
+      {categoriesData.map((category) => (
         <li>
-          <NavLink to="/movies" className="navbar-item">
-            Movies
+          <NavLink
+            to={`/${category.name}`}
+            className={`nav-item nav-item-${category.name} background-slide-${category.name}`}
+          >
+            {category.name}
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/musics" className="navbar-item">
-            Musics
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/games" className="navbar-item">
-            Games
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/books" className="navbar-item">
-            Books
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+      ))}
+    </ul>
   );
 };
 export default Navbar;
