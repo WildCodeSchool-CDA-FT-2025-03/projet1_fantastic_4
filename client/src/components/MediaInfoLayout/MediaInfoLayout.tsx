@@ -17,7 +17,7 @@ const MediaInfoLayout = ({
   summary,
   subtitle,
   url,
-  children,
+  children = [],
 }: PropsMediaInfoLayout) => {
   const backgroundColor = `media-info-color-${category}`;
   children = children === children ? children : [];
