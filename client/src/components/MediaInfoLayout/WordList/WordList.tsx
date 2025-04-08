@@ -10,7 +10,7 @@ const WordList = ({ title, words }: WordListProps) => {
     <div className={"word-list"}>
       <h4>{title}</h4>
       {words.map((w) => (
-        <p>{w}</p>
+        <p key={`word-list-${w}`}>{w}</p>
       ))}
     </div>
   );

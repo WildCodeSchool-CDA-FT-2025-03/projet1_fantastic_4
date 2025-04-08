@@ -9,7 +9,7 @@ const SimpleExtraInfo = ({ infos }: PropsSimpleExtraInfos) => {
   return (
     <div className={"simple-extra-infos"}>
       {infos.map((info) => (
-        <SimpleText info={info} />
+        <SimpleText key={info.title} info={info} />
       ))}
     </div>
   );

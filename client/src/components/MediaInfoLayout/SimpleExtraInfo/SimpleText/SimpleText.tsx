@@ -6,7 +6,7 @@ type PropsSimpleText = {
 
 const SimpleText = ({ info }: PropsSimpleText) => {
   return (
-    <div key={info.title}>
+    <div>
       <div className="item-title">
         <h4>{info.title}</h4>
         <hr />
