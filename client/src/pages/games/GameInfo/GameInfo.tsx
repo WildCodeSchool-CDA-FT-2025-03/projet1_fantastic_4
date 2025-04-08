@@ -15,11 +15,9 @@ const GameInfo = () => {
   const date = new Date(game?.releaseDate || 0);
   const dateStr = `${date.getDay()}-${date.getMonth()}-${date.getFullYear()}`;
 
-  let component = <></>;
-
-  if (game) {
-    component = (
-      <>
+  return (
+    <>
+      {game && (
         <MediaInfoLayout
           category={Category.Games}
           title={game.title}
@@ -43,11 +41,9 @@ const GameInfo = () => {
 
           <WordList title="tags" words={game.tags.map((t) => t.name)} />
         </MediaInfoLayout>
-      </>
-    );
-  }
-
-  return component;
+      )}
+    </>
+  );
 };
 
 export default GameInfo;
