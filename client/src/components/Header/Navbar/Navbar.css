@@ -1,16 +1,5 @@
 
 
-a {
-  text-decoration: none;
-  color: var(--text-color);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .navbar {
   border: solid 2px red;
   padding: 50px;
