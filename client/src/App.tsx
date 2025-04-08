@@ -1,11 +1,13 @@
 import { Outlet } from "react-router";
+import "./App.css";
+import Header from "./components/Header/Header";
 import "@/global.css";
 
 function App() {
   return (
     <>
+      <Header />
       <main>
-        <h1>Projet 1, Les 4 fantastiques</h1>
         <Outlet></Outlet>
       </main>
     </>

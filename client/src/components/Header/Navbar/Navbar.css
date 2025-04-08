@@ -1,0 +1,13 @@
+
+
+.navbar {
+  border: solid 2px red;
+  padding: 50px;
+  display: flex;
+}
+
+.navlinks {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
