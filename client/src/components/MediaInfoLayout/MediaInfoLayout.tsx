@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import { ReactNode, Children } from "react";
 import { Category } from "@/types/category.type";
 import "./MediaInfoLayout.css";
 
@@ -45,7 +45,7 @@ const MediaInfoLayout = ({
         </div>
         <div className={"media-info-layout-description "}>{summary}</div>
       </section>
-      {React.Children.toArray(children).map((child, index) => (
+      {Children.toArray(children).map((child, index) => (
         <section key={`media-info-extra-${index}`} className={backgroundColor}>
           {child}
         </section>
