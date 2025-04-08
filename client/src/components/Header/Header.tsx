@@ -8,15 +8,21 @@ const Header = () => {
   return (
     <>
       <header>
-        <div className="logo-header"></div>
-        <img src="/media-hub-icon.webp"></img>
-        <Navbar />
+        <img
+          src="/public/media-hub-S.webp"
+          alt="logo"
+          className="logo-header"
+        />
+        <nav className="navbar-desktop">
+          <Navbar />
+        </nav>
         <img
           className="burgerMenu"
-          src={isMenuOpen ? "public/close.svg" : "public/burgerMenu.svg"}
+          src={isMenuOpen ? "public//close.svg" : "/public/burgerMenu.svg"}
           alt=""
           onClick={() => setMenuOpen(!isMenuOpen)}
         />
+
         {isMenuOpen ? (
           <nav className="navbar-mobile">
             <Navbar />
