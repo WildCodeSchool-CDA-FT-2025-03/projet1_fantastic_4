@@ -1,27 +1,13 @@
-.home-page-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-top: 20px;
+.music-page-title {
+  background-color: var(--music-color);
 }
-
-.music-page h1 {
-  background-color: var(--musics-light-color);
-}
-
 .music-container {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
 }
 
-.sidebar {
-  width: 20%;
-  padding: 10px;
-  background-color: #f4f4f4;
-  border-right: 1px solid #ddd;
-}
-
 .carousel-section {
-  width: 80%;
+  width: 100%;
   padding: 10px;
 }

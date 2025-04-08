@@ -1,6 +1,7 @@
 import Carousel from "@/components/Carousel/Carousel";
 import "./MusicsPage.css";
 import musicsData from "@/utiles/musics.json";
+import MediaPanel from "@/components/Panel/MediaPanel";
 
 type MusicsType = {
   id: number;
@@ -20,12 +21,9 @@ const MusicsPage = () => {
   return (
     <>
       <div className="music-page" id="top">
-        <h1 className="home-page-title">
-          Welcome to your <span>Musics Page</span> !
-        </h1>
+        <MediaPanel class="music-page-title" title="Musics Section" />
         <div className="music-container">
-          <section className="sidebar">Research by</section>
-          <div className="carousel-section">
+          <div className="music-carousel-section">
             <section className="">
               <Carousel datas={data} title_carousel="Recommandations" />
             </section>
