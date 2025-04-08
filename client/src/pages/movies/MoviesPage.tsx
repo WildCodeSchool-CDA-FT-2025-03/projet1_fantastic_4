@@ -1,10 +1,10 @@
 import { useQuery } from "@apollo/client";
 import "./MoviesPage.css";
-import { GET_ALL_MOVIES } from "@/schemas/movie.schema";
 import Carousel from "@/components/Carousel/Carousel";
+import { GET_MOVIES_NEW_IN } from "@/schemas/movie.schema";
 
-type GetAllMoviesType = {
-  getAllMovies: {
+type GetMoviesNewInType = {
+  getMoviesNewIn: {
     id: string;
     categoryId: string;
     genre: string;
@@ -14,8 +14,9 @@ type GetAllMoviesType = {
 };
 
 const MoviesPage = () => {
-  const { loading, error, data } = useQuery<GetAllMoviesType>(GET_ALL_MOVIES);
-  const moviesNewIn = data?.getAllMovies.slice(0, 9);
+  const { loading, error, data } =
+    useQuery<GetMoviesNewInType>(GET_MOVIES_NEW_IN);
+  const moviesNewIn = data?.getMoviesNewIn;
 
   if (loading) return <p>Loading in progress...</p>;
   if (error) return <p>There might be an error</p>;
