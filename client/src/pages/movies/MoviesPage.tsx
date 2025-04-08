@@ -23,9 +23,9 @@ const MoviesPage = () => {
   return (
     <>
       <h2>Movies Page</h2>
-      {moviesNewIn ? (
+      {moviesNewIn && (
         <Carousel datas={moviesNewIn} title_carousel="New In Movies" />
-      ) : null}
+      )}
     </>
   );
 };
