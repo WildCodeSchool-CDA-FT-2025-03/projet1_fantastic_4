@@ -3,6 +3,7 @@ import { log } from "console";
 import { default as categoriesData } from "./categories.json";
 import { CategoriesEntity } from "../../entities/categories.entity";
 import gameMigrate from "./games.migrate";
+import movieMigrate from "./movies.migrate";
 
 (async () => {
   await dataSource.initialize();
@@ -22,7 +23,9 @@ import gameMigrate from "./games.migrate";
     });
 
     const res =
-      (await dataSource.manager.save(newCategories)) && (await gameMigrate());
+      (await dataSource.manager.save(newCategories)) &&
+      (await gameMigrate()) &&
+      (await movieMigrate());
 
     if (res) log("Migration done !");
     await queryRunner.commitTransaction();

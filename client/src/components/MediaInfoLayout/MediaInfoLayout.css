@@ -1,0 +1,123 @@
+.media-info-layout {
+  width: auto;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.media-info-layout > section {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 15px;
+}
+
+.media-info-layout-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  align-items: center;
+}
+
+.media-info-layout-top > h2 {
+  font-size: 2rem;
+  row-gap: 0.5rem;
+  overflow-wrap: anywhere;
+}
+
+.media-info-layout-main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.media-info-layout-main-left {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 0.5rem;
+  align-items: start;
+}
+
+.media-info-layout-main-left > p {
+  border-left: 3px solid var(--app-main-color);
+  padding-left: 0.5rem;
+}
+
+.media-info-cover {
+  width: 100px;
+  height: 100px;
+  background-color: #ffffffee;
+  border-radius: 15px;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+}
+
+.media-info-layout-main-left > .subtitle {
+  display: flex;
+  flex-wrap: nowrap;
+  word-wrap: break-word;
+}
+
+.media-info-layout-description {
+  border-radius: 0px 15px 15px 0px;
+  border-left: 4px solid var(--app-main-color);
+  min-width: 100px;
+  align-self: flex-start;
+  background-color: #ffffffee;
+  padding: 0.5rem;
+  border-top: 0.9rem;
+  flex: 1;
+  text-wrap: wrap;
+}
+
+.media-info-color-games {
+  background-color: var(--game-color);
+}
+
+.media-info-color-movies {
+  background-color: var(--movie-color);
+}
+
+.media-info-color-musics {
+  background-color: var(--musics-color);
+}
+
+.media-info-color-books {
+  background-color: var(--book-color);
+}
+
+.media-cover-games {
+  width: 300px;
+  height: 400px;
+  background-image: url("/public/games-icon.svg");
+}
+
+.media-cover-movies {
+  width: 280px;
+  height: 400px;
+  background-image: url("/public/movies-icon.svg");
+}
+
+.media-cover-musics {
+  width: 280px;
+  height: 400px;
+  background-image: url("/public/musics-icon.svg");
+}
+
+.media-cover-books {
+  width: 280px;
+  height: 400px;
+  background-image: url("/public/books-icon.svg");
+}
+
+.media-info-cover-img {
+  border-radius: 15px;
+  object-fit: cover;
+  width: 100%;
+}

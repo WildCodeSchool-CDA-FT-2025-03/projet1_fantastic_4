@@ -1,0 +1,12 @@
+.word-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.word-list > p {
+  border: 2px solid var(--app-main-color);
+  padding: 0px 5px 0px 5px;
+  border-radius: 10px;
+}
