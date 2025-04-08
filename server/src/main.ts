@@ -5,6 +5,7 @@ import { buildSchema } from "type-graphql";
 import MediaResolver from "./resolvers/media.resolver";
 import logger from "./services/logger.service";
 import dataSource from "./services/datas.service";
+import BooksResolver from "./resolvers/books.resolver";
 
 import "dotenv";
 import CategoriesResolver from "./resolvers/categories.resolver";
@@ -15,7 +16,7 @@ const PORT = process.env.APOLLO_SERVER_PORT || "4000";
   await dataSource.initialize();
 
   const schema = await buildSchema({
-    resolvers: [MediaResolver, CategoriesResolver],
+    resolvers: [MediaResolver, CategoriesResolver, BooksResolver],
   });
 
   const server = new ApolloServer({

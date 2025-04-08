@@ -1,5 +1,12 @@
 import { Field, ObjectType } from "type-graphql";
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+} from "typeorm";
+import { CategoriesEntity } from "./categories.entity";
 
 @ObjectType()
 @Entity()
@@ -43,4 +50,8 @@ export class BooksEntity extends BaseEntity {
   @Field()
   @Column()
   categoryname: string;
+
+  @ManyToOne(() => CategoriesEntity, (category) => category.books)
+  @Field(() => CategoriesEntity)
+  category: CategoriesEntity;
 }
