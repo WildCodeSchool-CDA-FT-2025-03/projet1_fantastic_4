@@ -38,76 +38,76 @@
 }
 
 .nav-item-movies {
-  border: solid 1px #DBADFF;
-  border-left: solid 8px #DBADFF;
+  border: solid 1px #dbadff;
+  border-left: solid 8px #dbadff;
 }
 
 .nav-item-musics {
-  border: solid 1px #50C5EA;
-  border-left: solid 8px #50C5EA;
+  border: solid 1px #50c5ea;
+  border-left: solid 8px #50c5ea;
 }
 
 .nav-item-games {
-  border: solid 1px #11BFAA;
-  border-left: solid 8px #11BFAA;
+  border: solid 1px #11bfaa;
+  border-left: solid 8px #11bfaa;
 }
 
 .nav-item-books {
-  border: solid 1px #4F62FF;
-  border-left: solid 8px #4F62FF;
+  border: solid 1px #4f62ff;
+  border-left: solid 8px #4f62ff;
 }
 
 .nav-item-movies.background-slide-movies::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
-  background-color: #DBADFF;
+  background-color: #dbadff;
   transition: transform 300ms ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
 }
 
 .nav-item-musics.background-slide-musics::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
-  background-color: #50C5EA;
+  background-color: #50c5ea;
   transition: transform 300ms ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
 }
 
 .nav-item-games.background-slide-games::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
-  background-color: #11BFAA;
+  background-color: #11bfaa;
   transition: transform 300ms ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
 }
 
 .nav-item-books.background-slide-books::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   z-index: -1;
-  background-color: #4F62FF;
+  background-color: #4f62ff;
   transition: transform 300ms ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -120,7 +120,7 @@
 .nav-item-games.background-slide-games:hover::before,
 .nav-item-games.background-slide-games:focus::before,
 .nav-item-books.background-slide-books:hover::before,
-.nav-item-books.background-slide-books:focus::before  {
+.nav-item-books.background-slide-books:focus::before {
   transform: scaleX(1);
 }
 
@@ -133,17 +133,16 @@
 }
 
 @media screen and (min-width: 600px) {
-
   .navbar-desktop {
     display: flex;
   }
 
   .navlinks {
     display: flex;
-    flex-direction: row;;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;;
+    align-items: flex-start;
     gap: 30px;
-    padding: 50px;;
+    padding: 50px;
   }
 }
