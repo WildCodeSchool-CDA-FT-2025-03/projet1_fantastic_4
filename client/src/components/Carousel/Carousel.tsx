@@ -10,7 +10,7 @@ type CarouselProps = {
 };
 
 type Data = {
-  id: number;
+  id: string;
   title: string;
   categoryId: string;
   genre: string;
@@ -115,7 +115,7 @@ export default function Carousel({ datas, title_carousel }: CarouselProps) {
                 title={item.title}
                 category_name={item.category.name}
                 genre={item.genre}
-                id={item.id}
+                id={Number(item.id)}
                 ref={index === datas.length - 1 ? lastItemRef : undefined}
               />
             ))}
