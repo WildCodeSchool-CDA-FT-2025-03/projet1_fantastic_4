@@ -103,6 +103,9 @@ h3 {
 
 a {
   text-decoration: none;
+  color: var(--text-color);
+	font-size: var(--sub-title-font-size-desktop);
+  text-transform: capitalize;
 }
 
 button {
