@@ -10,7 +10,7 @@ import {
 import { CategoriesEntity } from "./categories.entity";
 
 @ObjectType()
-@Entity()
+@Entity("movie")
 export class MovieEntity extends BaseEntity {
   @Field()
   @PrimaryGeneratedColumn("uuid")

@@ -1,5 +1,6 @@
 import { Resolver, Query } from "type-graphql";
 import { MovieEntity } from "../entities/movie.entity";
+
 @Resolver()
 class MoviesResolver {
   @Query(() => [MovieEntity])
