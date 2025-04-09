@@ -2,6 +2,7 @@ import { Field, ObjectType } from "type-graphql";
 import {
   BaseEntity,
   Column,
+  CreateDateColumn,
   Entity,
   JoinColumn,
   ManyToOne,
@@ -10,7 +11,7 @@ import {
 import { CategoriesEntity } from "./categories.entity";
 
 @ObjectType()
-@Entity("movie")
+@Entity("movies")
 export class MovieEntity extends BaseEntity {
   @Field()
   @PrimaryGeneratedColumn("uuid")
@@ -23,7 +24,10 @@ export class MovieEntity extends BaseEntity {
   @Column()
   @Field()
   genre: string;
-  // TODO Relation with movie_producer table
+
+  @CreateDateColumn()
+  @Field()
+  createdAt: Date;
 
   //  Foreign Key CategoriesEntity
   @Column({ default: 3 }) // Force ID 3

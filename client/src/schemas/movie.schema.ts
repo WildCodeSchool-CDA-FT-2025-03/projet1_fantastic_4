@@ -14,3 +14,18 @@ export const GET_MOVIES_NEW_IN = gql`
     }
   }
 `;
+
+export const GET_MOVIES_RECOMMANDATIONS = gql`
+  query GetMoviesRecommandations {
+    getMoviesRecommandations {
+      categoryId
+      genre
+      id
+      title
+      category {
+        id
+        name
+      }
+    }
+  }
+`;
