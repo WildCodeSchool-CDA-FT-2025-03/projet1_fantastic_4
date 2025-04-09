@@ -26,7 +26,7 @@ export class CategoriesEntity extends BaseEntity {
 
   @Column({ default: 1 }) // Force ID 1
   @Field()
-  categoryId: number = 2;
+  categoryId: number = 1;
   @OneToMany(() => BooksEntity, (book) => book.category)
   @Field(() => [BooksEntity])
   books: BooksEntity[];

@@ -5,11 +5,12 @@ import {
   Entity,
   PrimaryGeneratedColumn,
   ManyToOne,
+  JoinColumn,
 } from "typeorm";
 import { CategoriesEntity } from "./categories.entity";
 
 @ObjectType()
-@Entity()
+@Entity("book")
 export class BooksEntity extends BaseEntity {
   @Field()
   @PrimaryGeneratedColumn("uuid")
@@ -17,41 +18,18 @@ export class BooksEntity extends BaseEntity {
 
   @Field()
   @Column()
-  author: string;
-
-  @Field()
-  @Column()
-  publisher: string;
-
-  @Field()
-  @Column()
   genre: string;
-
-  @Field()
-  @Column()
-  synopsis: string;
-
-  @Field()
-  @Column()
-  audiencerate: number;
 
   @Field()
   @Column()
   booktitle: string;
 
   @Field()
-  @Column()
-  series: string;
-
-  @Field()
-  @Column()
-  releasedate: Date;
-
-  @Field()
-  @Column()
-  categoryname: string;
+  @Column({ default: 1 })
+  categoryId: number = 1;
 
   @ManyToOne(() => CategoriesEntity, (category) => category.books)
+  @JoinColumn({ name: "categoryId" })
   @Field(() => CategoriesEntity)
   category: CategoriesEntity;
 }
