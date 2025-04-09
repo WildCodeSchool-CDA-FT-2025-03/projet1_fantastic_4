@@ -25,7 +25,6 @@ const bookMigrate = async (): Promise<boolean> => {
       const newBook = new BooksEntity();
       newBook.booktitle = book.titre;
       newBook.genre = book.genre;
-      newBook.categoryId = 1;
       return newBook;
     });
 

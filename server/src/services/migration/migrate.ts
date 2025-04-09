@@ -26,8 +26,8 @@ import bookMigrate from "./books.migration";
     const res =
       (await dataSource.manager.save(newCategories)) &&
       (await gameMigrate()) &&
-      (await movieMigrate());
-    await bookMigrate();
+      (await movieMigrate()) &&
+      (await bookMigrate());
 
     if (res) log("Migration done !");
     await queryRunner.commitTransaction();
