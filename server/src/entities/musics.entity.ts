@@ -15,25 +15,9 @@ export class MusicsEntity extends BaseEntity {
 
   @Column()
   @Field()
-  artists: string;
+  categoryName: string;
 
   @Column()
   @Field()
-  label: string;
-
-  @Column()
-  @Field()
-  duration: string;
-
-  @Column()
-  @Field()
-  releaseDate: Date;
-
-  @Column()
-  @Field()
-  isbn: string;
-
-  @Column()
-  @Field()
-  series: boolean;
+  genre: string;
 }

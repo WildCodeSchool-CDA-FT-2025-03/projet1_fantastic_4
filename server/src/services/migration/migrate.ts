@@ -2,6 +2,7 @@ import dataSource from "../datas.service";
 import { log } from "console";
 import { default as categoriesData } from "./categories.json";
 import { CategoriesEntity } from "../../entities/categories.entity";
+import musicMigrate from "./musics/musicMigrate";
 
 (async () => {
   await dataSource.initialize();
@@ -21,7 +22,10 @@ import { CategoriesEntity } from "../../entities/categories.entity";
     });
 
     const res = await dataSource.manager.save(newCategories);
-    if (res) log("Migration done !");
+    await musicMigrate();
+    if (res) {
+      log("Migration done !");
+    }
     await queryRunner.commitTransaction();
   } catch (error) {
     log(error);
