@@ -10,7 +10,7 @@ type CarouselProps = {
   title_carousel: string;
 };
 
-type Data = {
+export type Data = {
   id: string;
   title: string;
   categoryId: string;
