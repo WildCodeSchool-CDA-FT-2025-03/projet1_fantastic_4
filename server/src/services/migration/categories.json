@@ -1,18 +1,18 @@
 [
   {
     "id": 1,
-    "name": "Books"
+    "name": "books"
   },
   {
     "id": 2,
-    "name": "Games"
+    "name": "games"
   },
   {
     "id": 3,
-    "name": "Movies"
+    "name": "movies"
   },
   {
     "id": 4,
-    "name": "Musics"
+    "name": "musics"
   }
 ]
