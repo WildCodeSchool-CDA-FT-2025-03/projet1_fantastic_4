@@ -58,6 +58,37 @@ class MoviesResolver {
 
     return randomMovies;
   }
+
+  @Query(() => [MovieEntity])
+  async getMoviesByTargetAudience(
+    @Arg("targetAudience", () => String) targetAudience: string,
+  ): Promise<MovieEntity[]> {
+    let movies;
+
+    if (targetAudience === "Adulte") {
+      movies = await MovieEntity.find({
+        where: {
+          targetedAudience: Like("%Adulte%"),
+        },
+      });
+    } else if (targetAudience === "Tous publics") {
+      movies = await MovieEntity.find({
+        where: [
+          { targetedAudience: Like("%Tous public%") },
+          { targetedAudience: Like("%Enfant%") },
+          { targetedAudience: Like("%Adolescent%") },
+        ],
+      });
+    } else {
+      movies = await MovieEntity.find({
+        where: {
+          targetedAudience: Like(`%${targetAudience}%`),
+        },
+      });
+    }
+
+    return movies;
+  }
 }
 
 export default MoviesResolver;

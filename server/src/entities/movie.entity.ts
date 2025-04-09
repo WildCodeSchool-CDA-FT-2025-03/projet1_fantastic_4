@@ -35,7 +35,7 @@ export class MovieEntity extends BaseEntity {
   rate: number;
 
   @Column({ type: "text", nullable: true })
-  @Field((_type) => String, { nullable: true })
+  @Field(() => String, { nullable: true })
   targetedAudience: string | null;
 
   //  Foreign Key CategoriesEntity
