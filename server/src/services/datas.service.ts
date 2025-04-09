@@ -1,3 +1,4 @@
+import { MusicsEntity } from "../entities/musics.entity";
 import { GamesEntity } from "../entities/games/games.entity";
 import { MovieEntity } from "../entities/movie.entity";
 import { CategoriesEntity } from "../entities/categories.entity";
@@ -20,6 +21,7 @@ const dataSource = new DataSource({
     TagsGameEntity,
     GameCategorieEntity,
     MovieEntity,
+    MusicsEntity,
   ],
   synchronize: true, //pas en prod
 });

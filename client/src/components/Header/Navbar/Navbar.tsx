@@ -1,31 +1,28 @@
 import { NavLink } from "react-router";
 import "./Navbar.css";
+
+import { useQuery } from "@apollo/client";
+import { GET_ALL_CATEGORIES } from "@/schemas/categories.schema";
+
+type GetAllCategoriesType = {
+  getAllCategories: { id: number; name: string }[];
+};
+
 const Navbar = () => {
+  const { data } = useQuery<GetAllCategoriesType>(GET_ALL_CATEGORIES);
   return (
-    <nav className="navbar">
-      <ul className="navlinks">
+    <ul className="navlinks">
+      {data?.getAllCategories.map((category) => (
         <li>
-          <NavLink to="/movies" className="navbar-item">
-            Movies
+          <NavLink
+            to={`/${category.name}`}
+            className={`nav-item nav-item-${category.name} background-slide-${category.name}`}
+          >
+            {category.name}
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/musics" className="navbar-item">
-            Musics
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/games" className="navbar-item">
-            Games
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/books" className="navbar-item">
-            Books
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+      ))}
+    </ul>
   );
 };
 export default Navbar;
