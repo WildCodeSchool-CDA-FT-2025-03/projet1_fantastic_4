@@ -9,6 +9,7 @@ type MusicsType = {
   category_name: string;
   genre: string;
 };
+
 const MusicsPage = () => {
   const data: MusicsType[] = musicsData.map((data, index) => {
     return {
@@ -18,13 +19,14 @@ const MusicsPage = () => {
       genre: data.category,
     };
   });
+
   return (
     <>
       <div className="music-page" id="top">
         <MediaPanel class="music-page-title" title="Musics Section" />
         <div className="music-container">
           <div className="music-carousel-section">
-            <section className="">
+            <section>
               <Carousel datas={data} title_carousel="Recommandations" />
             </section>
             <section>
