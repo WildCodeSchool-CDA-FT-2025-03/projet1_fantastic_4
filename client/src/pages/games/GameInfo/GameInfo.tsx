@@ -1,18 +1,30 @@
 import { useParams } from "react-router";
+import { useQuery } from "@apollo/client";
 import MediaInfoLayout from "@/components/MediaInfoLayout/MediaInfoLayout";
 import SimpleExtraInfo from "@/components/MediaInfoLayout/SimpleExtraInfo/SimpleExtraInfos";
 import WordList from "@/components/MediaInfoLayout/WordList/WordList";
 import { Category } from "@/types/category.type";
-
-import FakeDataGame from "@/utiles/fakeInfoGame.json";
+import { GET_ONE_GAME } from "@/schemas/games.schema";
+import { Game } from "@/types/game.type";
 
 const GameInfo = () => {
   const { slug } = useParams();
-  const game = FakeDataGame.data.getGames.find((g) => g.slug === slug);
+  const { loading, error, data } = useQuery(GET_ONE_GAME, {
+    variables: { slug: slug },
+  });
 
-  const developers = game?.developers.map((d) => d.name).join(", ") || "";
-  const publishers = game?.publishers.map((d) => d.name).join(", ") || "";
-  const date = new Date(game?.releaseDate || 0);
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  if (error) {
+    return <p>The game {slug} doesn't exist.</p>;
+  }
+
+  const game: Game = data.getOneGameBySlug;
+
+  const developers = game.developers.map((d) => d.name).join(", ") || "";
+  const publishers = game.publishers.map((d) => d.name).join(", ") || "";
+  const date = new Date(game.releaseDate);
   const dateStr = `${date.getDay()}-${date.getMonth()}-${date.getFullYear()}`;
 
   return (
