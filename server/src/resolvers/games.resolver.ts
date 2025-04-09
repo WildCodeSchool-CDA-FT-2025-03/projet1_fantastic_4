@@ -36,7 +36,14 @@ class GameResolver {
       take: limit,
       skip: skip,
       order: { [order]: dir },
-      relations: [],
+      relations: [
+        "pegi",
+        "originalLanguage",
+        "category",
+        "developers",
+        "publishers",
+        "tags",
+      ],
     });
   }
 
