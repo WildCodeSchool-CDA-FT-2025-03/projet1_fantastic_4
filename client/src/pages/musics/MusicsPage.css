@@ -1,0 +1,13 @@
+.music-page-title {
+  background-color: var(--music-color);
+}
+.music-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.music-carousel-section {
+  width: 100%;
+  padding: 10px;
+}

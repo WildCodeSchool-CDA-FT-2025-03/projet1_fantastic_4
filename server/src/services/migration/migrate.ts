@@ -2,6 +2,7 @@ import dataSource from "../datas.service";
 import { log } from "console";
 import { default as categoriesData } from "./categories.json";
 import { CategoriesEntity } from "../../entities/categories.entity";
+import musicMigrate from "./musics/musicMigrate";
 import gameMigrate from "./games.migrate";
 import movieMigrate from "./movies.migrate";
 import bookMigrate from "./books.migration";
@@ -27,7 +28,8 @@ import bookMigrate from "./books.migration";
       (await dataSource.manager.save(newCategories)) &&
       (await gameMigrate()) &&
       (await movieMigrate()) &&
-      (await bookMigrate());
+      (await bookMigrate()) &&
+      (await musicMigrate());
 
     if (res) log("Migration done !");
     await queryRunner.commitTransaction();

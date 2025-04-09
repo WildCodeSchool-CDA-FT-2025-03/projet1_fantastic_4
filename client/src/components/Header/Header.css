@@ -1,10 +1,29 @@
 header {
-  border: solid 2px blue;
-  background-color: var(--secondary-color);
+  height: 70px;
+  padding: 8px;
   display: flex;
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--secondary-color);
+  position: relative;
 }
 
 .logo-header {
-  resize: 50%;
+  width: 60px;
+}
+
+.burgerMenu {
+  width: 36px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    justify-content: flex-start;
+  }
+
+  .burgerMenu {
+    display: none;
+  }
 }
