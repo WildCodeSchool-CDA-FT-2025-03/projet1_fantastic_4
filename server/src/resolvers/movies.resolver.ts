@@ -1,7 +1,8 @@
-import { Resolver, Query } from "type-graphql";
+import { Resolver, Query, Arg } from "type-graphql";
 import { MovieEntity } from "../entities/movie.entity";
 import { shuffleArray } from "@/utils/shuffleArray";
 import { MovieGenreEntity } from "@/entities/movieGenre.entity";
+import { Like } from "typeorm";
 
 @Resolver()
 class MoviesResolver {
@@ -9,6 +10,19 @@ class MoviesResolver {
   async getAllMoviesGenres() {
     const moviesGenres = await MovieGenreEntity.find();
     return moviesGenres;
+  }
+
+  @Query(() => [MovieEntity])
+  async getMoviesByGenre(
+    @Arg("genreName", () => String) genreName: string,
+  ): Promise<MovieEntity[]> {
+    const movies = await MovieEntity.find({
+      where: {
+        genre: Like(`%${genreName}%`),
+      },
+    });
+
+    return movies;
   }
 
   @Query(() => [MovieEntity])
