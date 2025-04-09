@@ -1,7 +1,8 @@
 import Carousel from "@/components/Carousel/Carousel";
 import "./MusicsPage.css";
-import musicsData from "@/utiles/musics.json";
 import MediaPanel from "@/components/Panel/MediaPanel";
+import { useQuery } from "@apollo/client";
+import { GET_ALL_MUSICS } from "@/schemas/musics.schema";
 
 type MusicsType = {
   id: string;
@@ -12,18 +13,13 @@ type MusicsType = {
 };
 
 const MusicsPage = () => {
-  const data: MusicsType[] = musicsData.map((data, index) => {
-    return {
-      id: index.toString(),
-      title: data.title,
-      categoryId: "4",
-      genre: data.category,
-      category: {
-        id: 4,
-        name: "musics",
-      },
-    };
-  });
+  const { loading, error, data } = useQuery(GET_ALL_MUSICS);
+
+  const musicsData: MusicsType[] = data?.getAllMusics;
+  const newInMusic: MusicsType[] = data?.getNewInMusics;
+
+  if (loading) return <p>Loading!</p>;
+  if (error) return <p>There might be an issue</p>;
 
   return (
     <>
@@ -32,10 +28,10 @@ const MusicsPage = () => {
         <div className="music-container">
           <div className="music-carousel-section">
             <section>
-              <Carousel datas={data} title_carousel="Recommandations" />
+              <Carousel datas={musicsData} title_carousel="Recommandations" />
             </section>
             <section>
-              <Carousel datas={data} title_carousel="New in" />
+              <Carousel datas={newInMusic} title_carousel="New in" />
             </section>
           </div>
         </div>
