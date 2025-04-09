@@ -15,9 +15,9 @@ class MoviesResolver {
     //  Use the 'take' parameter in the query to limit the results to 8 9like limit=8 im url)
     const movies = await MovieEntity.find({
       relations: ["category"],
-      // order: {
-      //   createdAt: "DESC",
-      // },
+      order: {
+        createdAt: "DESC",
+      },
       take: 10,
     });
     return movies;
@@ -28,9 +28,9 @@ class MoviesResolver {
     // Use 'take' to retrieve a higher number of movies from the database but not too high for performance
     const movies = await MovieEntity.find({
       relations: ["category"],
-      // order: {
-      //   createdAt: "DESC",
-      // },
+      order: {
+        createdAt: "DESC",
+      },
       take: 50,
     });
 

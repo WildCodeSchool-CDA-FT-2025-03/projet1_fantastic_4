@@ -10,7 +10,7 @@ const movieMigrate = async (): Promise<boolean> => {
 
   try {
     await queryRunner.startTransaction();
-    await queryRunner.query("DELETE FROM movie");
+    await queryRunner.query("DELETE FROM movies");
     await queryRunner.query("DELETE FROM sqlite_sequence");
 
     const moviesCategory = await dataSource.manager.findOne(CategoriesEntity, {
