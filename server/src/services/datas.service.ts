@@ -8,6 +8,7 @@ import { GamesLanguagesEntity } from "../entities/games/languages.entity";
 import { CompaniesEntity } from "../entities/games/companies.entity";
 import { TagsGameEntity } from "../entities/games/tags.entity";
 import { GameCategorieEntity } from "../entities/games/categories.entity";
+import { BooksEntity } from "../entities/books.entity";
 
 const dataSource = new DataSource({
   type: "sqlite",
@@ -21,6 +22,7 @@ const dataSource = new DataSource({
     TagsGameEntity,
     GameCategorieEntity,
     MovieEntity,
+    BooksEntity,
     MusicsEntity,
   ],
   synchronize: true, //pas en prod

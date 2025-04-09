@@ -5,6 +5,7 @@ import { CategoriesEntity } from "../../entities/categories.entity";
 import musicMigrate from "./musics/musicMigrate";
 import gameMigrate from "./games.migrate";
 import movieMigrate from "./movies.migrate";
+import bookMigrate from "./books.migration";
 
 (async () => {
   await dataSource.initialize();
@@ -27,6 +28,7 @@ import movieMigrate from "./movies.migrate";
       (await dataSource.manager.save(newCategories)) &&
       (await gameMigrate()) &&
       (await movieMigrate()) &&
+      (await bookMigrate()) &&
       (await musicMigrate());
 
     if (res) log("Migration done !");
