@@ -21,15 +21,25 @@ const movieMigrate = async (): Promise<boolean> => {
       throw new Error("La catégorie 'Movies' avec ID 3 n'existe pas !");
     }
 
-    const newMovies = moviesData.map((movie) => {
-      const newMovie = new MovieEntity();
-      newMovie.title = movie.title;
-      newMovie.genre = movie.category;
-      newMovie.rate = newMovie.rate = Math.floor(Math.random() * 6); // Random rate between 0 and 5 while we have not users to rate them
-      newMovie.categoryId = 3;
-      return newMovie;
-    });
+    const newMovies = await Promise.all(
+      moviesData.map(async (movie) => {
+        const newMovie = new MovieEntity();
+        newMovie.title = movie.title;
+        if (!movie.category) {
+          log(
+            `Le film '${movie.title}' n'a pas de catégorie définie, genre sera null.`,
+          );
+          newMovie.genre = null;
+        } else {
+          newMovie.genre = movie.category;
+        }
 
+        newMovie.rate = Math.floor(Math.random() * 6);
+        newMovie.categoryId = 3;
+
+        return newMovie;
+      }),
+    );
     await dataSource.manager.save(newMovies);
     log("✅ Films insérés !");
     await queryRunner.commitTransaction();
