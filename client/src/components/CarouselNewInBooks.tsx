@@ -12,7 +12,7 @@ type GetBooksNewInType = {
   }[];
 };
 
-export default function CarouselNewInMovies() {
+export default function CarouselNewInBooks() {
   const { loading, error, data } =
     useQuery<GetBooksNewInType>(GET_BOOKS_NEW_IN);
   const booksNewIn = data?.getBooksNewIn;
