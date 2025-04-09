@@ -31,11 +31,11 @@
   --tertiary-color: #ffffff;
   --text-color: #0d0d0d;
   /* COLOR DEFAULT THEME CATEGORY PANEL */
-  --favorite-light-color: #ff45691f;
-  --book-light-color: #4f62ff1f;
-  --musics-light-color: #50c5ea33;
-  --movie-light-color: #dbadff1f;
-  --game-light-color: #11bfaa1f;
+  --favorite-color: #ff4569cc;
+  --book-color: #4f62ffcc;
+  --music-color: #50c5eacc;
+  --movie-color: #dbadffcc;
+  --game-color: #11bfaacc;
 }
 
 * {
@@ -51,11 +51,11 @@
   --tertiary-color: #ffffff;
   --text-color: #0d0d0d;
   /* COLOR LIGHT THEME CATEGORY PANEL */
-  --favorite-light-color: #ff45691f;
-  --book-light-color: #4f62ff1f;
-  --musics-light-color: #50c5ea33;
-  --movie-light-color: #dbadff1f;
-  --game-light-color: #11bfaa1f;
+  --favorite-color: #ff4569cc;
+  --book-color: #4f62ffcc;
+  --music-color: #50c5eacc;
+  --movie-color: #dbadffcc;
+  --game-color: #11bfaacc;
 }
 
 .dark {
@@ -65,11 +65,11 @@
   --tertiary-color: #1c1e1f;
   --text-color: #fbfcff;
   /* COLOR LIGHT THEME CATEGORY PANEL */
-  --favorite-dark-color: #ff4569cc;
-  --book-dark-color: #4f62ffcc;
-  --musics-dark-color: #50c5eacc;
-  --movie-dark-color: #dbadffcc;
-  --game-dark-color: #11bfaacc;
+  --favorite-color: #ff45691f;
+  --books-color: #4f62ff1f;
+  --music-color: #50c5ea33;
+  --movie-color: #dbadff1f;
+  --game-color: #11bfaa1f;
 }
 
 body {
