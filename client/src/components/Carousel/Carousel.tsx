@@ -116,7 +116,7 @@ export default function Carousel({ datas, title_carousel }: CarouselProps) {
                 title={item.title}
                 category_name={item.category.name}
                 genre={item.genre}
-                id={Number(item.id)}
+                id={item.id}
                 ref={index === datas.length - 1 ? lastItemRef : undefined}
               />
             ))}
