@@ -19,7 +19,7 @@ export class CategoriesEntity extends BaseEntity {
   @Field()
   name: string;
   //  Foreign Key CategoriesEntity
-  @Column({ default: 2 }) // Force ID 2
+  @Column({ default: 1 }) // Force ID 1
   @Field()
   categoryId: number = 2;
   @OneToMany(() => BooksEntity, (book) => book.category)
