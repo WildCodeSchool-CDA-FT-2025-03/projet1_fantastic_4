@@ -5,7 +5,7 @@ import { BooksEntity } from "@/entities/books.entity";
 class BooksResolver {
   @Query(() => [BooksEntity])
   async getAllBooks() {
-    const books = await BooksEntity.find();
+    const books = await BooksEntity.find({ take: 10 });
     return books;
   }
 }

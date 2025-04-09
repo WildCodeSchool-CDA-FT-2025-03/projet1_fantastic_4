@@ -14,5 +14,5 @@ export class BooksEntity extends BaseEntity {
 
   @Field()
   @Column()
-  booktitle: string;
+  title: string;
 }
