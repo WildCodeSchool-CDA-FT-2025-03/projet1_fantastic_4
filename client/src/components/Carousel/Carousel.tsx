@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+
 import "@/components/Carousel/Carousel.css";
 
 import Skeleton from "./Skeleton";
