@@ -4,19 +4,24 @@ import musicsData from "@/utiles/musics.json";
 import MediaPanel from "@/components/Panel/MediaPanel";
 
 type MusicsType = {
-  id: number;
+  id: string;
   title: string;
-  category_name: string;
+  categoryId: string;
   genre: string;
+  category: { id: number; name: string };
 };
 
 const MusicsPage = () => {
   const data: MusicsType[] = musicsData.map((data, index) => {
     return {
-      id: index,
+      id: index.toString(),
       title: data.title,
-      category_name: "musics",
+      categoryId: "4",
       genre: data.category,
+      category: {
+        id: 4,
+        name: "musics",
+      },
     };
   });
 
