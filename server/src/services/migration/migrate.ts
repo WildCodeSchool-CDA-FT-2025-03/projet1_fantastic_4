@@ -3,6 +3,8 @@ import { log } from "console";
 import { default as categoriesData } from "./categories.json";
 import { CategoriesEntity } from "../../entities/categories.entity";
 import musicMigrate from "./musics/musicMigrate";
+import gameMigrate from "./games.migrate";
+import movieMigrate from "./movies.migrate";
 
 (async () => {
   await dataSource.initialize();
@@ -21,11 +23,13 @@ import musicMigrate from "./musics/musicMigrate";
       return newCategory;
     });
 
-    const res = await dataSource.manager.save(newCategories);
-    await musicMigrate();
-    if (res) {
-      log("Migration done !");
-    }
+    const res =
+      (await dataSource.manager.save(newCategories)) &&
+      (await gameMigrate()) &&
+      (await movieMigrate()) &&
+      (await musicMigrate());
+
+    if (res) log("Migration done !");
     await queryRunner.commitTransaction();
   } catch (error) {
     log(error);
