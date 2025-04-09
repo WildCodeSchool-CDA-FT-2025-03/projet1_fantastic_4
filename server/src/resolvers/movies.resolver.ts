@@ -1,9 +1,16 @@
 import { Resolver, Query } from "type-graphql";
 import { MovieEntity } from "../entities/movie.entity";
 import { shuffleArray } from "@/utils/shuffleArray";
+import { MovieGenreEntity } from "@/entities/movieGenre.entity";
 
 @Resolver()
 class MoviesResolver {
+  @Query(() => [MovieGenreEntity])
+  async getAllMoviesGenres() {
+    const moviesGenres = await MovieGenreEntity.find();
+    return moviesGenres;
+  }
+
   @Query(() => [MovieEntity])
   async getAllMovies() {
     const movies = await MovieEntity.find({ relations: ["category"] });
