@@ -25,6 +25,7 @@ const movieMigrate = async (): Promise<boolean> => {
       const newMovie = new MovieEntity();
       newMovie.title = movie.title;
       newMovie.genre = movie.category;
+      newMovie.rate = newMovie.rate = Math.floor(Math.random() * 6); // Random rate between 0 and 5 while we have not users to rate them
       newMovie.categoryId = 3;
       return newMovie;
     });

@@ -29,6 +29,10 @@ export class MovieEntity extends BaseEntity {
   @Field()
   createdAt: Date;
 
+  @CreateDateColumn()
+  @Field()
+  rate: number;
+
   //  Foreign Key CategoriesEntity
   @Column({ default: 3 }) // Force ID 3
   @Field()
