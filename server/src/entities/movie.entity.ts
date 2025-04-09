@@ -23,7 +23,10 @@ export class MovieEntity extends BaseEntity {
   @Column()
   @Field()
   genre: string;
-  // TODO Relation with movie_producer table
+
+  @Column()
+  @Field()
+  rate: number;
 
   //  Foreign Key CategoriesEntity
   @Column({ default: 3 }) // Force ID 3
