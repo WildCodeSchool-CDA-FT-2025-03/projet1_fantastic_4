@@ -6,6 +6,11 @@ export const GET_BOOKS_NEW_IN = gql`
       id
       genre
       title
+      categoryId
+      category {
+        id
+        name
+      }
     }
   }
 `;
@@ -16,6 +21,11 @@ export const GET_BOOKS_RECOMMANDATIONS = gql`
       id
       genre
       title
+      categoryId
+      category {
+        id
+        name
+      }
     }
   }
 `;
