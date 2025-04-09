@@ -12,11 +12,6 @@ export const GET_ALL_MUSICS = gql`
         name
       }
     }
-  }
-`;
-
-export const GET_ALL_NEWIN_MUSICS = gql`
-  query GetNewInMusics {
     getNewInMusics {
       id
       title

@@ -2,7 +2,7 @@ import Carousel from "@/components/Carousel/Carousel";
 import "./MusicsPage.css";
 import MediaPanel from "@/components/Panel/MediaPanel";
 import { useQuery } from "@apollo/client";
-import { GET_ALL_MUSICS, GET_ALL_NEWIN_MUSICS } from "@/schemas/musics.schema";
+import { GET_ALL_MUSICS } from "@/schemas/musics.schema";
 
 type MusicsType = {
   id: string;
@@ -14,17 +14,12 @@ type MusicsType = {
 
 const MusicsPage = () => {
   const { loading, error, data } = useQuery(GET_ALL_MUSICS);
-  const {
-    loading: newInLoading,
-    error: newInError,
-    data: newInData,
-  } = useQuery(GET_ALL_NEWIN_MUSICS);
 
   const musicsData: MusicsType[] = data?.getAllMusics;
-  const newInMusic: MusicsType[] = newInData?.getNewInMusics;
+  const newInMusic: MusicsType[] = data?.getNewInMusics;
 
-  if (loading || newInLoading) return <p>Loading!</p>;
-  if (error || newInError) return <p>There might be an issue</p>;
+  if (loading) return <p>Loading!</p>;
+  if (error) return <p>There might be an issue</p>;
 
   return (
     <>
