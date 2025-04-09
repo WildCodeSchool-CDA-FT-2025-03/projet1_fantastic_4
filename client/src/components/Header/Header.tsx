@@ -1,6 +1,6 @@
+import { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import "./Header.css";
-import { useState } from "react";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -23,11 +23,11 @@ const Header = () => {
           onClick={() => setMenuOpen(!isMenuOpen)}
         />
 
-        {isMenuOpen ? (
+        {isMenuOpen && (
           <nav className="navbar-mobile">
             <Navbar />
           </nav>
-        ) : null}
+        )}
       </header>
     </>
   );
