@@ -1,8 +1,11 @@
-.test-test {
+.infinite-scroll {
   /* width: 20px;
   width: 40px; */
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  column-gap: 5px;
 }
 
 .test-b {

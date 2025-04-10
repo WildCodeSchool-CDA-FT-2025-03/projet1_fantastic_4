@@ -2,7 +2,9 @@ import { GET_GAMES } from "@/schemas/games.schema";
 import { Game } from "@/types/game.type";
 import { useLazyQuery } from "@apollo/client";
 import { useCallback, useEffect, useRef, useState } from "react";
+import CardMedia from "../Carousel/CardMedia";
 import "./InfiniteCardScroll.css";
+import { Category } from "@/types/category.type";
 
 type GameCard = Pick<Game, "slug" | "coverUrl" | "category" | "title">;
 
@@ -68,13 +70,18 @@ const InfinitCardScroll = () => {
 
   return (
     <>
-      <div className="test-test">
+      <div className="infinite-scroll">
         {datas &&
           datas.map((e) => {
             return (
-              <div key={`scroll-${e.title}`} className="test-b">
-                {e.title}
-              </div>
+              <CardMedia
+                key={`infinite-cardmedia-${e.slug}`}
+                title={e.title}
+                id={e.slug}
+                genre={e.category.name}
+                coverUrl={e.coverUrl}
+                category_name={Category.Games}
+              />
             );
           })}
       </div>

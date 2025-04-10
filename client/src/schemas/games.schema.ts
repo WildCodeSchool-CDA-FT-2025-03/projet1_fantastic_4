@@ -52,6 +52,7 @@ export const GET_GAMES = gql`
     $page: Int!
   ) {
     getGames(order: $order, dir: $dir, limit: $limit, page: $page) {
+      slug
       coverUrl
       category {
         name
