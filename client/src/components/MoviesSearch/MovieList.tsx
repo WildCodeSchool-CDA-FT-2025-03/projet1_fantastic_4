@@ -1,6 +1,6 @@
 import { GET_MOVIES_BY_GENRE } from "@/schemas/movie.schema";
 import { useQuery } from "@apollo/client";
-import CardMedia from "../Carousel/CardMedia";
+import Carousel from "../Carousel/Carousel";
 
 type Props = {
   selectedGenre: string;
@@ -35,15 +35,7 @@ export default function MovieList({ selectedGenre }: Props) {
 
   return (
     <div className="movies-filtered">
-      {allMovies.map((movie) => (
-        <CardMedia
-          key={movie.id}
-          title={movie.title}
-          genre={movie.genre}
-          category_name={movie.category.name}
-          id={Number(movie.id)}
-        />
-      ))}
+      <Carousel datas={allMovies} title_carousel={genre} />
     </div>
   );
 }
