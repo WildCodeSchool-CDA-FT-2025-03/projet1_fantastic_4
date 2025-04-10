@@ -1,6 +1,6 @@
 import { Resolver, Query } from "type-graphql";
 import { BooksEntity } from "@/entities/books.entity";
-
+import { shuffleArray } from "@/utils/shuffleArray";
 @Resolver()
 class BooksResolver {
   @Query(() => [BooksEntity])
@@ -30,7 +30,11 @@ class BooksResolver {
       },
       take: 50,
     });
-    return books;
+
+    const shuffledBooks = shuffleArray(books);
+    const randomBooks = shuffledBooks.slice(0, 10);
+
+    return randomBooks;
   }
 }
 
