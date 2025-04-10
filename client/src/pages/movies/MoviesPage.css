@@ -9,14 +9,10 @@
 }
 
 .carousels-movies-wrapper {
-  /* width: 80%; */
   padding: 50px;
 }
 
 .research-aside {
-  /* height: 100vw;
-  width: 20%; */
-  /* border: solid 2px black; */
   width: 100vw;
   background: var(--secondary-color);
   border-bottom: solid 1px rgb(0 0 0 / 5%);

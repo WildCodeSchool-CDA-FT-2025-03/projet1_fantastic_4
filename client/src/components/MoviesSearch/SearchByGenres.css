@@ -29,3 +29,16 @@
   font-style: italic;
   color: #888;
 }
+
+.tag-button {
+  background: var(--accent-color);
+  margin: 20px;
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--primary-color);
+}
+
+.tag-button:hover {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
