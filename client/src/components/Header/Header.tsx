@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import "./Header.css";
-import ThemeButton from "./Navbar/themeButton";
+import ThemeButton from "./Navbar/ThemeButton";
 import useTheme from "@/utiles/useTheme";
 
 const Header = () => {
