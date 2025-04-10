@@ -38,3 +38,18 @@ export const GET_MOVIES_RECOMMANDATIONS = gql`
     }
   }
 `;
+
+export const GET_MOVIES_BY_GENRE = gql`
+  query GetMoviesByGenre($genreName: String) {
+    getMoviesByGenre(genreName: $genreName) {
+      categoryId
+      genre
+      id
+      title
+      category {
+        id
+        name
+      }
+    }
+  }
+`;
