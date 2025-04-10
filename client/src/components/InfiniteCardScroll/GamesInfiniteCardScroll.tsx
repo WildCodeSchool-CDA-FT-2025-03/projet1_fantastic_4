@@ -72,18 +72,16 @@ const GamesInfinitCardScroll = () => {
     <>
       <div className="infinite-scroll">
         {datas &&
-          datas.map((e) => {
-            return (
-              <CardMedia
-                key={`infinite-cardmedia-${e.slug}`}
-                title={e.title}
-                id={e.slug}
-                genre={e.category.name}
-                coverUrl={e.coverUrl}
-                category_name={Category.Games}
-              />
-            );
-          })}
+          datas.map((e) => (
+            <CardMedia
+              key={`infinite-cardmedia-${e.slug}`}
+              title={e.title}
+              id={e.slug}
+              genre={e.category.name}
+              coverUrl={e.coverUrl}
+              category_name={Category.Games}
+            />
+          ))}
       </div>
 
       <div ref={observerRef} className="infinite-scroll-observer"></div>
