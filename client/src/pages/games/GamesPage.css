@@ -1,3 +1,8 @@
 .game-page-title {
   background-color: var(--game-color);
 }
+
+.games-body-page {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+}

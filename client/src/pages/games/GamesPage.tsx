@@ -7,8 +7,10 @@ const GamesPage = () => {
   return (
     <>
       <MediaPanel title="Game Section" class="game-page-title" />
-      <CarouselNewInGame />
-      <CarouselRecoGame />
+      <div className="games-body-page">
+        <CarouselNewInGame />
+        <CarouselRecoGame />
+      </div>
     </>
   );
 };
