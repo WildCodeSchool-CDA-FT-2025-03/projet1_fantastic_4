@@ -14,7 +14,7 @@ type GetGameRecoType = {
 
 const ITEM_COUNT = 10;
 
-const InfinitCardScroll = () => {
+const GamesInfinitCardScroll = () => {
   const [datas, setDatas] = useState([] as GameCard[]);
   const observerRef = useRef<HTMLDivElement | null>(null);
   const observerInstance = useRef<IntersectionObserver | null>(null);
@@ -91,4 +91,4 @@ const InfinitCardScroll = () => {
   );
 };
 
-export default InfinitCardScroll;
+export default GamesInfinitCardScroll;

@@ -1,11 +1,10 @@
 .infinite-scroll {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  flex-wrap: wrap;
-  row-gap: 10px;
-  column-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 10px;
   padding: 1rem;
   place-items: center;
+  justify-content: center;
 }
 
 .infinite-scroll-observer {
