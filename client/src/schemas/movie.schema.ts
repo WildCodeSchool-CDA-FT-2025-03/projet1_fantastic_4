@@ -1,5 +1,14 @@
 import { gql } from "@apollo/client";
 
+export const GET_ALL_MOVIES_GENRES = gql`
+  query GetAllMoviesGenres {
+    getAllMoviesGenres {
+      id
+      name
+    }
+  }
+`;
+
 export const GET_MOVIES_NEW_IN = gql`
   query GetMoviesNewIn {
     getMoviesNewIn {
