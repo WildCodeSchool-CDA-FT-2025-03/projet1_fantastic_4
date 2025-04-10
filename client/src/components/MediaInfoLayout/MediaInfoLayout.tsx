@@ -5,7 +5,7 @@ import "./MediaInfoLayout.css";
 type PropsMediaInfoLayout = {
   category: Category;
   title: string;
-  summary?: string;
+  summary: string;
   subtitle?: string;
   url?: string;
   children?: ReactNode;

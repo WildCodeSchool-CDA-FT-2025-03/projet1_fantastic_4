@@ -36,6 +36,7 @@ export const GET_ONE_MOVIE = gql`
       id
       title
       genre
+      summary
       category {
         name
       }

@@ -8,8 +8,9 @@ import { useParams } from "react-router";
 type GetOneMovieByIdType = {
   getOneMovieById: {
     id: string;
-    genre: string;
     title: string;
+    genre: string;
+    summary: string;
     category: { name: string };
   } | null;
 };
@@ -39,6 +40,7 @@ export default function MovieInfo() {
         <MediaInfoLayout
           category={Category.Movies}
           title={movie.title}
+          summary={movie.summary}
         ></MediaInfoLayout>
       )}
     </>
