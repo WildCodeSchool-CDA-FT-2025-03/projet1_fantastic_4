@@ -10,6 +10,8 @@ type GetGameRecoType = {
   getGames: GameCard[];
 };
 
+const ITEM_COUNT = 10;
+
 const InfinitCardScroll = () => {
   const [datas, setDatas] = useState([] as GameCard[]);
   const observerRef = useRef<HTMLDivElement | null>(null);
@@ -18,34 +20,24 @@ const InfinitCardScroll = () => {
   const page = useRef(1);
 
   const [loadGames, { loading }] = useLazyQuery<GetGameRecoType>(GET_GAMES, {
-    // variables: { page: page.current, limit: 10, order: "name", dir: "asc" },
     onCompleted: (data) => {
       const count = data.getGames.length;
-      if (count < 10) {
+      if (count < ITEM_COUNT) {
         finished.current = true;
       }
       setDatas((prevData) => [...prevData, ...data.getGames]);
       page.current += 1;
-
-      if (
-        observerRef.current &&
-        observerInstance.current &&
-        !finished.current
-      ) {
-        observerInstance.current.observe(observerRef.current);
-      }
     },
   });
 
   const handleObserver = useCallback(
-    (entries: IntersectionObserverEntry[], observer: IntersectionObserver) => {
+    (entries: IntersectionObserverEntry[]) => {
       const [entry] = entries;
       if (entry.isIntersecting && !loading && !finished.current) {
-        observer.unobserve(entry.target);
         loadGames({
           variables: {
             page: page.current,
-            limit: 10,
+            limit: ITEM_COUNT,
             order: "name",
             dir: "asc",
           },
@@ -54,8 +46,8 @@ const InfinitCardScroll = () => {
     },
     [loadGames, loading],
   );
+
   useEffect(() => {
-    // Créer un observer qu'une seule fois au montage
     observerInstance.current = new IntersectionObserver(handleObserver, {
       root: null,
       threshold: 1.0,
@@ -80,7 +72,7 @@ const InfinitCardScroll = () => {
         {datas &&
           datas.map((e) => {
             return (
-              <div key={`iii ${e.title}`} className="test-b">
+              <div key={`scroll-${e.title}`} className="test-b">
                 {e.title}
               </div>
             );
