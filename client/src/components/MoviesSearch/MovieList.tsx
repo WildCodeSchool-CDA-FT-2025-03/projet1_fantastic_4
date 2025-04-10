@@ -25,13 +25,11 @@ export default function MovieList({ selectedGenre }: Props) {
       variables: { genreName: genre },
     },
   );
-  // console.log({ selectedGenre });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error loading movies</p>;
 
   const allMovies = data?.getMoviesByGenre || [];
-  // console.log({ data });
 
   return (
     <div className="movies-filtered">
