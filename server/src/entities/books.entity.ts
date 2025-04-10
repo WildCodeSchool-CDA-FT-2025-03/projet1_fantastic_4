@@ -2,49 +2,40 @@ import { Field, ObjectType } from "type-graphql";
 import {
   BaseEntity,
   Column,
-  CreateDateColumn,
   Entity,
+  PrimaryGeneratedColumn,
   JoinColumn,
   ManyToOne,
-  PrimaryGeneratedColumn,
+  CreateDateColumn,
 } from "typeorm";
 import { CategoriesEntity } from "./categories.entity";
 
 @ObjectType()
-@Entity("movies")
-export class MovieEntity extends BaseEntity {
+@Entity("book")
+export class BooksEntity extends BaseEntity {
   @Field()
   @PrimaryGeneratedColumn("uuid")
   id: string;
 
-  @Column()
   @Field()
-  title: string;
+  @Column()
+  genre: string;
 
-  // Change genre to TEXT type in SQLite
-  @Column({ type: "text", nullable: true }) // SQLite needs text type for genre
-  @Field(() => String, { nullable: true })
-  genre: string | null;
+  @Field()
+  @Column()
+  title: string;
 
   @CreateDateColumn()
   @Field()
   createdAt: Date;
 
-  @Column()
-  @Field()
-  rate: number;
-
-  @Column({ type: "text", nullable: true })
-  @Field(() => String, { nullable: true })
-  targetedAudience: string | null;
-
   //  Foreign Key CategoriesEntity
-  @Column({ default: 3 }) // Force ID 3
+  @Column({ default: 1 }) // Force ID 1
   @Field()
   categoryId: number = 3;
 
   // CategoriesEntity relation
-  @ManyToOne(() => CategoriesEntity, (category) => category.movies, {
+  @ManyToOne(() => CategoriesEntity, (category) => category.books, {
     eager: true,
     onDelete: "CASCADE",
   })

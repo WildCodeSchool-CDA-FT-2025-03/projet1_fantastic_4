@@ -1,9 +1,36 @@
-import { Resolver, Query } from "type-graphql";
+/* eslint-disable indent */
+import { Resolver, Query, Arg } from "type-graphql";
 import { MovieEntity } from "../entities/movie.entity";
 import { shuffleArray } from "@/utils/shuffleArray";
+import { MovieGenreEntity } from "@/entities/movieGenre.entity";
+import { Like } from "typeorm";
 
 @Resolver()
 class MoviesResolver {
+  @Query(() => [MovieGenreEntity])
+  async getAllMoviesGenres() {
+    const moviesGenres = await MovieGenreEntity.find();
+    return moviesGenres;
+  }
+
+  @Query(() => [MovieEntity])
+  async getMoviesByGenre(
+    @Arg("genreName", () => String, { nullable: true })
+    genreName: string | null,
+  ): Promise<MovieEntity[]> {
+    if (!genreName) {
+      genreName = "Thriller";
+    }
+
+    const movies = await MovieEntity.find({
+      where: {
+        genre: Like(`%${genreName}%`),
+      },
+    });
+
+    return movies;
+  }
+
   @Query(() => [MovieEntity])
   async getAllMovies() {
     const movies = await MovieEntity.find({ relations: ["category"] });
@@ -12,7 +39,6 @@ class MoviesResolver {
 
   @Query(() => [MovieEntity])
   async getMoviesNewIn() {
-    //  Use the 'take' parameter in the query to limit the results to 8 9like limit=8 im url)
     const movies = await MovieEntity.find({
       relations: ["category"],
       order: {
@@ -25,7 +51,6 @@ class MoviesResolver {
 
   @Query(() => [MovieEntity])
   async getMoviesRecommandations() {
-    // Use 'take' to retrieve a higher number of movies from the database but not too high for performance
     const movies = await MovieEntity.find({
       relations: ["category"],
       order: {
@@ -38,6 +63,37 @@ class MoviesResolver {
     const randomMovies = shuffledMovies.slice(0, 10);
 
     return randomMovies;
+  }
+
+  @Query(() => [MovieEntity])
+  async getMoviesByTargetAudience(
+    @Arg("targetAudience", () => String) targetAudience: string,
+  ): Promise<MovieEntity[]> {
+    let movies;
+
+    if (targetAudience === "Adulte") {
+      movies = await MovieEntity.find({
+        where: {
+          targetedAudience: Like("%Adulte%"),
+        },
+      });
+    } else if (targetAudience === "Tous publics") {
+      movies = await MovieEntity.find({
+        where: [
+          { targetedAudience: Like("%Tous public%") },
+          { targetedAudience: Like("%Enfant%") },
+          { targetedAudience: Like("%Adolescent%") },
+        ],
+      });
+    } else {
+      movies = await MovieEntity.find({
+        where: {
+          targetedAudience: Like(`%${targetAudience}%`),
+        },
+      });
+    }
+
+    return movies;
   }
 }
 

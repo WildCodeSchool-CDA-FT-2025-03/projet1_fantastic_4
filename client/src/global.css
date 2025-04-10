@@ -31,11 +31,11 @@
   --tertiary-color: #ffffff;
   --text-color: #0d0d0d;
   /* COLOR DEFAULT THEME CATEGORY PANEL */
-  --favorite-color: #ff4569cc;
-  --book-color: #4f62ffcc;
-  --music-color: #50c5eacc;
-  --movie-color: #dbadffcc;
-  --game-color: #11bfaacc;
+  --favorite-color: #ff45691f;
+  --books-color: #4f62ff1f;
+  --music-color: #50c5ea33;
+  --movie-color: #dbadff1f;
+  --game-color: #11bfaa1f;
 }
 
 * {

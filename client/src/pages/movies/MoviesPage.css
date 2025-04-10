@@ -1,0 +1,24 @@
+.movies-page-title {
+  background-color: var(--music-color);
+  width: 100vw;
+}
+
+.movies-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.carousels-movies-wrapper {
+  padding: 50px;
+}
+
+@media (min-width: 769px) {
+  .movies-container {
+    flex-direction: row;
+  }
+
+  .carousels-movies-wrapper {
+    width: 80%;
+  }
+}

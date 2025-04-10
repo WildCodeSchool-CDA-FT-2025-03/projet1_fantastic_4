@@ -1,6 +1,7 @@
 .media-info-layout {
   width: auto;
-  padding-right: 1rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -43,7 +44,7 @@
 }
 
 .media-info-layout-main-left > p {
-  border-left: 3px solid var(--app-main-color);
+  border-left: 3px solid var(--accent-color);
   padding-left: 0.5rem;
 }
 
@@ -66,7 +67,7 @@
 
 .media-info-layout-description {
   border-radius: 0px 15px 15px 0px;
-  border-left: 4px solid var(--app-main-color);
+  border-left: 4px solid var(--accent-color);
   min-width: 100px;
   align-self: flex-start;
   background-color: #ffffffee;

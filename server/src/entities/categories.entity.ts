@@ -8,6 +8,7 @@ import {
 } from "typeorm";
 import { MovieEntity } from "./movie.entity";
 import { MusicsEntity } from "./musics/musics.entity";
+import { BooksEntity } from "./books.entity";
 
 @ObjectType()
 @Entity("categories")
@@ -26,4 +27,7 @@ export class CategoriesEntity extends BaseEntity {
 
   @OneToMany(() => MusicsEntity, (music) => music.category)
   musics?: MusicsEntity[];
+
+  @OneToMany(() => BooksEntity, (book) => book.category)
+  books?: BooksEntity[];
 }
