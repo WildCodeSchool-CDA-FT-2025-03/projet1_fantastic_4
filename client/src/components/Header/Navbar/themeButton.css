@@ -22,8 +22,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
-  /* box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3); */
+  background-color: var(--shadow-color);
   transition: 0.4s;
   border-radius: 5px;
 }
@@ -41,8 +40,7 @@
 }
 
 input:checked + .slider {
-  background-color: #171717;
-  /* box-shadow: inset 2px 5px 10px rgb(0, 0, 0); */
+  background-color: #0d0d0d;
 }
 
 input:checked + .slider:before {
