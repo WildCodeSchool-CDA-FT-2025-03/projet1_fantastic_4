@@ -58,6 +58,10 @@ export class MovieEntity extends BaseEntity {
   @Field()
   originalLanguage: string;
 
+  @Column("text", { array: true })
+  @Field(() => [String])
+  keywords: string[];
+
   //  Foreign Key CategoriesEntity
   @Column({ default: 3 }) // Force ID 3
   @Field()
