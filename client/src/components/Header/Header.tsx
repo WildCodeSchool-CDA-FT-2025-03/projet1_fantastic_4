@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import "./Header.css";
+import ThemeButton from "./Navbar/themeButton";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -22,12 +23,12 @@ const Header = () => {
           alt=""
           onClick={() => setMenuOpen(!isMenuOpen)}
         />
-
         {isMenuOpen && (
           <nav className="navbar-mobile">
             <Navbar />
           </nav>
         )}
+        <ThemeButton />
       </header>
     </>
   );
