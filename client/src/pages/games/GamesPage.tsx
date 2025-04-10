@@ -11,8 +11,8 @@ const GamesPage = () => {
       <div className="games-body-page">
         <CarouselNewInGame />
         <CarouselRecoGame />
+        <InfinitCardScroll />
       </div>
-      <InfinitCardScroll />
     </>
   );
 };

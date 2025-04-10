@@ -86,9 +86,7 @@ const InfinitCardScroll = () => {
           })}
       </div>
 
-      <div ref={observerRef} style={{ height: "10px" }}>
-        LA
-      </div>
+      <div ref={observerRef} className="infinite-scroll-observer"></div>
     </>
   );
 };
