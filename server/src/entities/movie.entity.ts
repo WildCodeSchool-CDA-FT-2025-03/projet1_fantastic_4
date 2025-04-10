@@ -21,13 +21,22 @@ export class MovieEntity extends BaseEntity {
   @Field()
   title: string;
 
-  @Column()
-  @Field()
-  genre: string;
+  // Change genre to TEXT type in SQLite
+  @Column({ type: "text", nullable: true }) // SQLite needs text type for genre
+  @Field(() => String, { nullable: true })
+  genre: string | null;
 
   @CreateDateColumn()
   @Field()
   createdAt: Date;
+
+  @Column()
+  @Field()
+  rate: number;
+
+  @Column({ type: "text", nullable: true })
+  @Field(() => String, { nullable: true })
+  targetedAudience: string | null;
 
   //  Foreign Key CategoriesEntity
   @Column({ default: 3 }) // Force ID 3
