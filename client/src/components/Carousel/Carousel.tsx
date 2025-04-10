@@ -16,6 +16,7 @@ export type Data = {
   categoryId: string;
   genre: string;
   category: { id: number; name: string };
+  coverUrl?: string;
 };
 
 const SLIDEWITHPIXELS = 296 + 9; //we add the gap
@@ -118,6 +119,7 @@ export default function Carousel({ datas, title_carousel }: CarouselProps) {
                 genre={item.genre}
                 id={item.id}
                 ref={index === datas.length - 1 ? lastItemRef : undefined}
+                coverUrl={item.coverUrl}
               />
             ))}
             <Skeleton />
