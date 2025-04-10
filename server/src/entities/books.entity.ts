@@ -6,6 +6,7 @@ import {
   PrimaryGeneratedColumn,
   JoinColumn,
   ManyToOne,
+  CreateDateColumn,
 } from "typeorm";
 import { CategoriesEntity } from "./categories.entity";
 
@@ -23,6 +24,10 @@ export class BooksEntity extends BaseEntity {
   @Field()
   @Column()
   title: string;
+
+  @CreateDateColumn()
+  @Field()
+  createdAt: Date;
 
   //  Foreign Key CategoriesEntity
   @Column({ default: 1 }) // Force ID 1
