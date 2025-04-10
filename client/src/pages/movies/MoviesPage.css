@@ -6,21 +6,14 @@
 .movies-container {
   display: flex;
   flex-direction: column;
+  width: 100%;
+
+  text-align: center;
 }
 
 .carousels-movies-wrapper {
   padding: 50px;
 }
-
-.research-aside {
-  width: 100vw;
-  background: var(--secondary-color);
-  border-bottom: solid 1px rgb(0 0 0 / 5%);
-  padding: 30px;
-  display: flex;
-  justify-content: center;
-}
-
 
 @media (min-width: 769px) {
   .movies-container {
@@ -29,11 +22,5 @@
 
   .carousels-movies-wrapper {
     width: 80%;
-  }
-
-  .research-aside {
-  height: 100vw;
-  width: 20%;
- 
   }
 }

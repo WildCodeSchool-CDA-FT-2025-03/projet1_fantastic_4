@@ -5,6 +5,7 @@ import MediaPanel from "@/components/Panel/MediaPanel";
 import SearchByGenres from "@/components/MoviesSearch/SearchByGenres";
 import { useState } from "react";
 import MovieList from "@/components/MoviesSearch/MovieList";
+import ResearchBar from "@/components/ResearchBar/ResearchBar";
 
 const MoviesPage = () => {
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
@@ -13,13 +14,14 @@ const MoviesPage = () => {
     <div className="movies-page" id="top">
       <MediaPanel class="movies-page-title" title="Movies section" />
       <section className="movies-container">
-        <section className="research-aside">
+        <ResearchBar>
           <SearchByGenres onGenreSelect={setSelectedGenre} />
-        </section>
+        </ResearchBar>
+
         <div className="carousels-movies-wrapper">
+          {selectedGenre && <MovieList selectedGenre={selectedGenre} />}
           <CarouselNewInMovies />
           <CarouselRecoMovies />
-          {selectedGenre && <MovieList selectedGenre={selectedGenre} />}
         </div>
       </section>
     </div>
