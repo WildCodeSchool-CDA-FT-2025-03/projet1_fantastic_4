@@ -28,6 +28,7 @@ export default function CarouselNewInGame() {
       genre: g.category.name,
       category: { id: 0, name: Category.Games }, // id: useless
       categoryId: "0", // useless
+      coverUrl: g.coverUrl,
     } as Data;
   });
 
