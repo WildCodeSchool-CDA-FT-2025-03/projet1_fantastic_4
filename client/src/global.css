@@ -56,6 +56,8 @@
   --music-color: #50c5eacc;
   --movie-color: #dbadffcc;
   --game-color: #11bfaacc;
+  transition: all 100ms ease-in;
+  /* --switch-color:  */
 }
 
 .dark {
@@ -70,6 +72,7 @@
   --music-color: #50c5ea33;
   --movie-color: #dbadff1f;
   --game-color: #11bfaa1f;
+  transition: all 100ms ease-in-out;
 }
 
 body {
@@ -80,7 +83,7 @@ body {
 
 main {
   background-color: var(--primary-color);
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 70px);
 }
 
 h1 {

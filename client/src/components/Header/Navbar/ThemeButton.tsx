@@ -6,7 +6,7 @@ export default function ThemeButton() {
 
   return (
     <>
-      <label className="switch">
+      <label className={`switch  ${theme ? "light" : "dark"}`}>
         <input
           type="checkbox"
           checked={theme}

@@ -2,13 +2,15 @@ import { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import "./Header.css";
 import ThemeButton from "./Navbar/themeButton";
+import useTheme from "@/utiles/useTheme";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const { theme } = useTheme();
 
   return (
     <>
-      <header>
+      <header className={theme ? "light" : "dark"}>
         <img
           src="/public/media-hub-S.webp"
           alt="logo"
