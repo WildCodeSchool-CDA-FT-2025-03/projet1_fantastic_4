@@ -38,7 +38,7 @@ export default function CarouselRecoGame() {
   return (
     <>
       {gameNewIn && (
-        <Carousel datas={gameNewIn} title_carousel="New In Games" />
+        <Carousel datas={gameNewIn} title_carousel="Recommandations Games" />
       )}
     </>
   );
