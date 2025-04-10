@@ -29,3 +29,15 @@ export const GET_BOOKS_RECOMMANDATIONS = gql`
     }
   }
 `;
+
+export const GET_ONE_BOOK = gql`
+  query GetOneBook {
+    getOneBook {
+      id
+      genre
+      title
+      publisher
+      synopsis
+    }
+  }
+`;

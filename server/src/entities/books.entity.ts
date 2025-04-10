@@ -25,6 +25,14 @@ export class BooksEntity extends BaseEntity {
   @Column()
   title: string;
 
+  @Field()
+  @Column()
+  publisher: string;
+
+  @Field()
+  @Column()
+  synopsis: string;
+
   @CreateDateColumn()
   @Field()
   createdAt: Date;
