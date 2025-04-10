@@ -19,10 +19,6 @@ header {
 }
 
 @media screen and (min-width: 600px) {
-  header {
-    justify-content: flex-start;
-  }
-
   .burgerMenu {
     display: none;
   }

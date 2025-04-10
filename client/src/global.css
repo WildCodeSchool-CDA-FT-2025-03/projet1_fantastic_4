@@ -79,6 +79,7 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
+  color: var(--text-color);
 }
 
 main {
@@ -90,18 +91,25 @@ h1 {
   font-family: var(--title-font-family);
   font-weight: var(--title-font-weight);
   font-size: var(--title-font-size-mobile);
+  color: var(--text-color);
 }
 
 h2 {
   font-family: var(--sub-title-font-family);
   font-weight: var(--sub-title-font-weight);
   font-size: var(--sub-title-font-size-mobile);
+  color: var(--text-color);
 }
 
 h3 {
   font-family: var(--sub-sub-title-font-family);
   font-weight: var(--sub-sub-title-font-weight);
   font-size: var(--sub-sub-title-font-size-mobile);
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
 }
 
 a {
@@ -144,6 +152,10 @@ button {
 
   h3 {
     font-size: var(--sub-title-font-size-desktop);
+  }
+
+  h4 {
+    color: var(--text-color);
   }
 
   .arrow-button {
