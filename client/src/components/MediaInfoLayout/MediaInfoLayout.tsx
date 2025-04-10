@@ -6,7 +6,7 @@ type PropsMediaInfoLayout = {
   category: Category;
   title: string;
   summary: string;
-  subtitle: string;
+  subtitle?: string;
   url?: string;
   children?: ReactNode;
 };
