@@ -5,7 +5,7 @@ import { BooksEntity } from "@/entities/books.entity";
 class BooksResolver {
   @Query(() => [BooksEntity])
   async getAllBooks() {
-    const books = await BooksEntity.find({ take: 10 });
+    const books = await BooksEntity.find({ relations: ["category"], take: 10 });
     return books;
   }
   @Query(() => [BooksEntity])
@@ -17,6 +17,18 @@ class BooksResolver {
         createdAt: "DESC",
       },
       take: 10,
+    });
+    return books;
+  }
+  @Query(() => [BooksEntity])
+  async getBooksRecommandations() {
+    // Use 'take' to retrieve a higher number of movies from the database but not too high for performance
+    const books = await BooksEntity.find({
+      relations: ["category"],
+      order: {
+        createdAt: "DESC",
+      },
+      take: 50,
     });
     return books;
   }

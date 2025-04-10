@@ -3,7 +3,7 @@ import Carousel from "./Carousel/Carousel";
 import { GET_BOOKS_RECOMMANDATIONS } from "@/schemas/books.schema";
 
 type GetBooksRecommandationType = {
-  getBooksRecommandation: {
+  getBooksRecommandations: {
     id: string;
     categoryId: string;
     genre: string;
@@ -16,7 +16,7 @@ export default function CarouselRecoBooks() {
   const { loading, error, data } = useQuery<GetBooksRecommandationType>(
     GET_BOOKS_RECOMMANDATIONS,
   );
-  const booksReco = data?.getBooksRecommandation;
+  const booksReco = data?.getBooksRecommandations;
 
   if (loading) return <p>Loading in progress...</p>;
   if (error) return <p>There might be an error</p>;
