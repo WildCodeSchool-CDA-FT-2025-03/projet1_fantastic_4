@@ -68,6 +68,7 @@ const movieMigrate = async (): Promise<boolean> => {
         newMovie.directors = movie.directors.join(", ");
         newMovie.studios = movie.studios.join(", ");
         newMovie.releaseDate = movie.release_date;
+        newMovie.originalLanguage = movie.original_language;
         return newMovie;
       }),
     );
