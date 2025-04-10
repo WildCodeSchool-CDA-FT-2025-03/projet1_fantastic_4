@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <ul className="navlinks">
       {data?.getAllCategories.map((category) => (
-        <li>
+        <li key={`li-key-${category.name}`}>
           <NavLink
             to={`/${category.name}`}
             className={`nav-item nav-item-${category.name} background-slide-${category.name}`}
