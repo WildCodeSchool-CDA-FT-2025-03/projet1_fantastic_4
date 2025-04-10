@@ -13,5 +13,6 @@
 }
 
 .item-title > hr {
-  border-top: 1px solid var(--app-main-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 2px;
 }
