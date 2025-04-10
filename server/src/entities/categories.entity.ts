@@ -7,7 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { MovieEntity } from "./movie.entity";
-import { MusicsEntity } from "./musics.entity";
+import { MusicsEntity } from "./musics/musics.entity";
 
 @ObjectType()
 @Entity("categories")

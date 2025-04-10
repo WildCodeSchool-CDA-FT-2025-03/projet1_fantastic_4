@@ -32,9 +32,14 @@ export const GET_ONE_MUSIC = gql`
       title
       releaseDate
       genre
+      summery
       category {
         id
         name
+      }
+      tracklist {
+        title
+        duration
       }
     }
   }

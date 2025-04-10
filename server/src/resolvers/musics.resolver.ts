@@ -1,5 +1,5 @@
 import { Resolver, Query, Arg } from "type-graphql";
-import { MusicsEntity } from "@/entities/musics.entity";
+import { MusicsEntity } from "@/entities/musics/musics.entity";
 import { MoreThan } from "typeorm";
 
 @Resolver()
@@ -23,7 +23,7 @@ class MusicsResolver {
   async getOneMusic(@Arg("id") id: string): Promise<MusicsEntity | null> {
     const music = await MusicsEntity.findOne({
       where: { id: +id },
-      relations: ["category"],
+      relations: ["category", "tracklist"],
     });
 
     if (!music) {
