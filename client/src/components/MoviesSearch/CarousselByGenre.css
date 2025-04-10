@@ -1,0 +1,16 @@
+.movies-filtered {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  padding-top: 30px;
+}
+
+@media (min-width: 769px) {
+  .movies-filtered {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    width: 65%;
+    margin: auto;
+  }
+}

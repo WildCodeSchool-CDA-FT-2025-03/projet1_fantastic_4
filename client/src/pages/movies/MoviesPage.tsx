@@ -21,9 +21,12 @@ const MoviesPage = () => {
         <div className="carousels-movies-wrapper">
           <CarouselNewInMovies />
           <CarouselRecoMovies />
-          <div id="carousel-by-genre">
+          <div className="movies-by-genre" id="carousel-by-genre">
             {selectedGenre && (
-              <CarousselByGenre selectedGenre={selectedGenre} />
+              <>
+                <h2>Your Selection : {selectedGenre}</h2>
+                <CarousselByGenre selectedGenre={selectedGenre} />
+              </>
             )}
           </div>
         </div>
