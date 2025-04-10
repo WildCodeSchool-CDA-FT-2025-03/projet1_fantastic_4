@@ -1,5 +1,6 @@
 import MediaInfoLayout from "@/components/MediaInfoLayout/MediaInfoLayout";
 import SimpleExtraInfo from "@/components/MediaInfoLayout/SimpleExtraInfo/SimpleExtraInfos";
+import WordList from "@/components/MediaInfoLayout/WordList/WordList";
 import { GET_ONE_MOVIE } from "@/schemas/movie.schema";
 import { Category } from "@/types/category.type";
 
@@ -37,6 +38,7 @@ export default function MovieInfo() {
     return <p>Loading...</p>;
   }
   if (error) {
+    throw error;
     return <p>The movie doesn't exist.</p>;
   }
 
@@ -60,6 +62,10 @@ export default function MovieInfo() {
                 text: movie.originalLanguage,
               },
             ]}
+          />
+          <WordList
+            title="tags"
+            words={movie.genre.split(",").map((genre) => genre.trim())}
           />
         </MediaInfoLayout>
       )}

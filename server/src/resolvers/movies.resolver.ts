@@ -20,6 +20,9 @@ class MoviesResolver {
       where: { id: id },
       relations: ["category"],
     });
+    if (!oneMovie) {
+      return null;
+    }
     return oneMovie;
   }
 
