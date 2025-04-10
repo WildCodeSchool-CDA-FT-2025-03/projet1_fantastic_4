@@ -1,5 +1,13 @@
 import { Field, ObjectType } from "type-graphql";
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  JoinTable,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from "typeorm";
+import { CategoriesEntity } from "./categories.entity";
 
 @ObjectType()
 @Entity("musics")
@@ -15,9 +23,14 @@ export class MusicsEntity extends BaseEntity {
 
   @Column()
   @Field()
-  categoryName: string;
+  releaseDate: Date;
 
   @Column()
   @Field()
   genre: string;
+
+  @Field(() => CategoriesEntity)
+  @ManyToOne(() => CategoriesEntity, (category) => category.musics)
+  @JoinTable()
+  category?: CategoriesEntity;
 }

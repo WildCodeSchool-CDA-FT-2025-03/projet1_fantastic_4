@@ -7,6 +7,7 @@ import {
   PrimaryGeneratedColumn,
 } from "typeorm";
 import { MovieEntity } from "./movie.entity";
+import { MusicsEntity } from "./musics.entity";
 
 @ObjectType()
 @Entity("categories")
@@ -21,5 +22,8 @@ export class CategoriesEntity extends BaseEntity {
 
   // Inverse relationship to link movies to a category => Optional
   @OneToMany(() => MovieEntity, (movie) => movie.category) // MovieEntity -> category
-  movies: MovieEntity[];
+  movies?: MovieEntity[];
+
+  @OneToMany(() => MusicsEntity, (music) => music.category)
+  musics?: MusicsEntity[];
 }
