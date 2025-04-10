@@ -4,8 +4,8 @@ import CarouselNewInMovies from "@/components/CarouselNewInMovies";
 import MediaPanel from "@/components/Panel/MediaPanel";
 import SearchByGenres from "@/components/MoviesSearch/SearchByGenres";
 import { useState } from "react";
-import MovieList from "@/components/MoviesSearch/MovieList";
 import ResearchBar from "@/components/ResearchBar/ResearchBar";
+import CarousselByGenre from "@/components/MoviesSearch/CarouselByGenre";
 
 const MoviesPage = () => {
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
@@ -19,9 +19,13 @@ const MoviesPage = () => {
         </ResearchBar>
 
         <div className="carousels-movies-wrapper">
-          {selectedGenre && <MovieList selectedGenre={selectedGenre} />}
           <CarouselNewInMovies />
           <CarouselRecoMovies />
+          <div id="carousel-by-genre">
+            {selectedGenre && (
+              <CarousselByGenre selectedGenre={selectedGenre} />
+            )}
+          </div>
         </div>
       </section>
     </div>

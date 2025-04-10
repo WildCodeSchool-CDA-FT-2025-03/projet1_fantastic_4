@@ -16,7 +16,7 @@ type GetMoviesByGenreType = {
   }[];
 };
 
-export default function MovieList({ selectedGenre }: Props) {
+export default function CarousselByGenre({ selectedGenre }: Props) {
   const genre =
     selectedGenre && selectedGenre.trim() !== "" ? selectedGenre : "Thriller";
   const { loading, error, data } = useQuery<GetMoviesByGenreType>(
