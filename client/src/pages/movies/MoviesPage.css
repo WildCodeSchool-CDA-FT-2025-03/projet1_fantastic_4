@@ -1,0 +1,23 @@
+.movies-page-title {
+  background-color: var(--music-color);
+  width: 100vw;
+}
+
+.movies-container {
+
+display: flex;
+flex-direction: row;
+}
+
+.carousels-movies-wrapper {
+  width: 80%;
+  padding: 50px;
+}
+
+.research-aside {
+  height: 100vw;
+  width: 20%;
+  /* border: solid 2px black; */
+  background: var(--secondary-color);
+  border-right: solid 1px rgb(0 0 0 / 5%);
+}
