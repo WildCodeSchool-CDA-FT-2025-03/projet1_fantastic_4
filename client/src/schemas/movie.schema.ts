@@ -29,3 +29,16 @@ export const GET_MOVIES_RECOMMANDATIONS = gql`
     }
   }
 `;
+
+export const GET_ONE_MOVIE = gql`
+  query GetOneMovieById($id: String!) {
+    getOneMovieById(id: $id) {
+      id
+      title
+      genre
+      category {
+        name
+      }
+    }
+  }
+`;
