@@ -37,6 +37,11 @@ export const GET_ONE_MOVIE = gql`
       title
       genre
       summary
+      directors
+      studios
+      releaseDate
+      targetedAudience
+      originalLanguage
       category {
         name
       }
