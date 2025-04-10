@@ -14,15 +14,19 @@ const MusicInfo = () => {
     return <p>Loading...</p>;
   }
   if (error) {
-    return <p>The game {id} doesn't exist.</p>;
+    return <p>The music {id} doesn't exist.</p>;
   }
 
   const music = data.getOneMusic;
-  const info = music.tracklist.map((track: { title: string }) => {
-    return {
-      title: track.title,
-    };
-  });
+  const info = music.tracklist.map(
+    (track: { title: string; duration: string }) => {
+      return {
+        title: track.title,
+        text: track.duration,
+      };
+    },
+  );
+
   return (
     <>
       {music && (
@@ -30,7 +34,7 @@ const MusicInfo = () => {
           category={music.category.name}
           title={music.title}
           summary={music.summery}
-          subtitle={""}
+          subtitle={`Release date ${new Date(music.releaseDate).toLocaleDateString("fr-FR")}`}
           url={""}
         >
           <h3>Tracklist</h3>
