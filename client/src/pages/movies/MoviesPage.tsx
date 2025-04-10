@@ -1,14 +1,20 @@
 import CarouselRecoMovies from "@/components/CarouselRecoMovies";
 import "./MoviesPage.css";
 import CarouselNewInMovies from "@/components/CarouselNewInMovies";
+import MediaPanel from "@/components/Panel/MediaPanel";
 
 const MoviesPage = () => {
   return (
-    <>
-      <h2>Movies Page</h2>
-      <CarouselNewInMovies />
-      <CarouselRecoMovies />
-    </>
+    <div className="movies-page" id="top">
+      <MediaPanel class="movies-page-title" title="Movies section" />
+      <section className="movies-container">
+        <section className="research-aside"></section>
+        <div className="carousels-movies-wrapper">
+          <CarouselNewInMovies />
+          <CarouselRecoMovies />
+        </div>
+      </section>
+    </div>
   );
 };
 
