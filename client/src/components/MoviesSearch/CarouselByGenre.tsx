@@ -2,6 +2,7 @@ import { GET_MOVIES_BY_GENRE } from "@/schemas/movie.schema";
 import { useQuery } from "@apollo/client";
 import CardMedia from "@/components/Carousel/CardMedia";
 import "./CarousselByGenre.css";
+// TODO : RENAME CarousselByGenre.css by a better name like ListMoviesByGenre.css
 
 type Props = {
   selectedGenre: string;
@@ -43,7 +44,6 @@ export default function CarousselByGenre({ selectedGenre }: Props) {
           id={item.id}
         />
       ))}
-      {/* <Carousel datas={allMovies} title_carousel={genre} /> */}
     </div>
   );
 }
