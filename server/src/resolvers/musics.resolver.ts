@@ -1,5 +1,5 @@
-import { Resolver, Query } from "type-graphql";
-import { MusicsEntity } from "@/entities/musics.entity";
+import { Resolver, Query, Arg } from "type-graphql";
+import { MusicsEntity } from "@/entities/musics/musics.entity";
 import { MoreThan } from "typeorm";
 
 @Resolver()
@@ -17,6 +17,20 @@ class MusicsResolver {
       order: { releaseDate: "DESC" },
       take: 8,
     });
+  }
+
+  @Query(() => MusicsEntity, { nullable: true })
+  async getOneMusic(@Arg("id") id: string): Promise<MusicsEntity | null> {
+    const music = await MusicsEntity.findOne({
+      where: { id: +id },
+      relations: ["category", "tracklist"],
+    });
+
+    if (!music) {
+      throw new Error(`Music with id ${id} not found`);
+    }
+
+    return music;
   }
 }
 

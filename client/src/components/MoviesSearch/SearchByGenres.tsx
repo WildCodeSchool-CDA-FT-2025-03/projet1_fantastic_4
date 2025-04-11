@@ -31,6 +31,15 @@ export default function SearchByGenres({ onGenreSelect }: Props) {
     );
   }
 
+  const handleGenreSelect = (genreName: string) => {
+    onGenreSelect(genreName);
+    // Faire défiler la page jusqu'à l'élément avec l'id "carousel-by-genre"
+    const carouselElement = document.getElementById("carousel-by-genre");
+    if (carouselElement) {
+      carouselElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong</p>;
 
@@ -47,7 +56,7 @@ export default function SearchByGenres({ onGenreSelect }: Props) {
         {filteredGenres.map((genre) => (
           <button
             key={genre.id}
-            onClick={() => onGenreSelect(genre.name)}
+            onClick={() => handleGenreSelect(genre.name)}
             className="tag-button"
           >
             {genre.name}

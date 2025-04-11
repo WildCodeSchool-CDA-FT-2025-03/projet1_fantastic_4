@@ -1,4 +1,3 @@
-import { MusicsEntity } from "../entities/musics.entity";
 import { GamesEntity } from "../entities/games/games.entity";
 import { MovieEntity } from "../entities/movie.entity";
 import { CategoriesEntity } from "../entities/categories.entity";
@@ -8,6 +7,8 @@ import { GamesLanguagesEntity } from "../entities/games/languages.entity";
 import { CompaniesEntity } from "../entities/games/companies.entity";
 import { TagsGameEntity } from "../entities/games/tags.entity";
 import { GameCategorieEntity } from "../entities/games/categories.entity";
+import { MusicsEntity } from "@/entities/musics/musics.entity";
+import { TrackListEntity } from "@/entities/musics/trackList.entity";
 import { MovieGenreEntity } from "@/entities/movieGenre.entity";
 import { BooksEntity } from "../entities/books.entity";
 
@@ -26,6 +27,7 @@ const dataSource = new DataSource({
     MovieGenreEntity,
     BooksEntity,
     MusicsEntity,
+    TrackListEntity,
   ],
   synchronize: true, //pas en prod
 });

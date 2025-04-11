@@ -43,3 +43,21 @@ export const GET_GAMES_CAROUSEL = gql`
     }
   }
 `;
+
+export const GET_GAMES = gql`
+  query GetGames(
+    $order: GameOrder!
+    $dir: GameDir!
+    $limit: Int!
+    $page: Int!
+  ) {
+    getGames(order: $order, dir: $dir, limit: $limit, page: $page) {
+      slug
+      coverUrl
+      category {
+        name
+      }
+      title
+    }
+  }
+`;

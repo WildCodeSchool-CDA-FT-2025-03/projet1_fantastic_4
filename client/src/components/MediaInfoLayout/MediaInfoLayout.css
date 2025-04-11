@@ -1,10 +1,11 @@
 .media-info-layout {
   width: auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
+  margin: auto;
 }
 
 .media-info-layout > section {
@@ -30,6 +31,7 @@
 
 .media-info-layout-main {
   display: flex;
+  justify-self: center;
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -70,11 +72,12 @@
   border-left: 4px solid var(--accent-color);
   min-width: 100px;
   align-self: flex-start;
-  background-color: #ffffffee;
+  background-color: var(--secondary-color);
   padding: 0.5rem;
   border-top: 0.9rem;
-  flex: 1;
+  margin-top: 2rem;
   text-wrap: wrap;
+  color: var(--text-color);
 }
 
 .media-info-color-games {
@@ -86,7 +89,7 @@
 }
 
 .media-info-color-musics {
-  background-color: var(--musics-color);
+  background-color: var(--music-color);
 }
 
 .media-info-color-books {
@@ -121,4 +124,15 @@
   border-radius: 15px;
   object-fit: cover;
   width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  .media-info-layout {
+    max-width: 900px;
+  }
+
+  .media-info-layout-description {
+    max-width: 50%;
+  }
 }

@@ -1,5 +1,5 @@
 .movies-page-title {
-  background-color: var(--music-color);
+  background-color: var(--movie-color);
   width: 100vw;
 }
 
@@ -16,6 +16,12 @@
 @media (min-width: 769px) {
   .movies-container {
     flex-direction: row;
+  }
+  .movies-by-genre {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
   }
 
   .carousels-movies-wrapper {
