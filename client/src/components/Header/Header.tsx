@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import "./Header.css";
+import { Link } from "react-router";
 import ThemeButton from "./Navbar/ThemeButton";
 import useTheme from "@/utiles/useTheme";
 
@@ -10,7 +11,13 @@ const Header = () => {
 
   return (
     <header className={theme ? "light" : "dark"}>
-      <img src="/public/media-hub-S.webp" alt="logo" className="logo-header" />
+      <Link to={"/"}>
+        <img
+          src="/public/media-hub-S.webp"
+          alt="logo"
+          className="logo-header"
+        />
+      </Link>
       <nav className="navbar-desktop">
         <Navbar />
       </nav>
