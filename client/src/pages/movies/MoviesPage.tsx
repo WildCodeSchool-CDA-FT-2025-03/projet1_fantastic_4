@@ -6,6 +6,7 @@ import SearchByGenres from "@/components/MoviesSearch/SearchByGenres";
 import { useState } from "react";
 import ResearchBar from "@/components/ResearchBar/ResearchBar";
 import CarousselByGenre from "@/components/MoviesSearch/CarouselByGenre";
+// TODO : RENAME CarousselByGenre by a better name like ListMoviesByGenre
 
 const MoviesPage = () => {
   const [selectedGenre, setSelectedGenre] = useState<string | null>(null);
@@ -21,9 +22,12 @@ const MoviesPage = () => {
         <div className="carousels-movies-wrapper">
           <CarouselNewInMovies />
           <CarouselRecoMovies />
-          <div id="carousel-by-genre">
+          <div className="movies-by-genre" id="carousel-by-genre">
             {selectedGenre && (
-              <CarousselByGenre selectedGenre={selectedGenre} />
+              <>
+                <h2>Your Selection : {selectedGenre}</h2>
+                <CarousselByGenre selectedGenre={selectedGenre} />
+              </>
             )}
           </div>
         </div>

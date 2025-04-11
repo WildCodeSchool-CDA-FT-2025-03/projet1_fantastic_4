@@ -32,7 +32,7 @@
 .media-info-layout-main {
   display: flex;
   justify-self: center;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
@@ -71,14 +71,13 @@
   border-radius: 0px 15px 15px 0px;
   border-left: 4px solid var(--accent-color);
   min-width: 100px;
-  max-width: 50%;
   align-self: flex-start;
-  background-color: #ffffffee;
-  margin-top: 2rem;
+  background-color: var(--secondary-color);
   padding: 0.5rem;
   border-top: 0.9rem;
-  /* flex: 1; */
+  margin-top: 2rem;
   text-wrap: wrap;
+  color: var(--text-color);
 }
 
 .media-info-color-games {
@@ -130,11 +129,9 @@
 @media screen and (min-width: 900px) {
   .media-info-layout {
     max-width: 900px;
-    padding-right: 1rem;
-    padding-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
+  }
+
+  .media-info-layout-description {
+    max-width: 50%;
   }
 }
-

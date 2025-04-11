@@ -1,0 +1,105 @@
+import { GET_GAMES } from "@/schemas/games.schema";
+import { Game } from "@/types/game.type";
+import { useLazyQuery } from "@apollo/client";
+import { useCallback, useEffect, useRef, useState } from "react";
+import CardMedia from "../Carousel/CardMedia";
+import "./InfiniteCardScroll.css";
+import { Category } from "@/types/category.type";
+
+type GameCard = Pick<Game, "slug" | "coverUrl" | "category" | "title">;
+
+type GetGameRecoType = {
+  getGames: GameCard[];
+};
+
+const ITEM_COUNT = 10;
+
+const GamesInfinitCardScroll = () => {
+  const [datas, setDatas] = useState([] as GameCard[]);
+  const observerRef = useRef<HTMLDivElement | null>(null);
+  const observerInstance = useRef<IntersectionObserver | null>(null);
+  const finished = useRef(false);
+  const page = useRef(1);
+
+  // LasyQuery n'execute pas la requete automatiquement au demarrage.
+  const [loadGames, { loading }] = useLazyQuery<GetGameRecoType>(GET_GAMES, {
+    onCompleted: (data) => {
+      const count = data.getGames.length;
+
+      if (count < ITEM_COUNT) {
+        finished.current = true;
+      }
+      setDatas((prevData) => [...prevData, ...data.getGames]);
+
+      // Incrementation de la page pour la prochaine requete.
+      page.current += 1;
+    },
+  });
+
+  // Callback de l'observeur. creer une seul fois
+  const handleObserver = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      const [entry] = entries;
+
+      // Envant d'effectuer une nouvelle requete, On test
+      // * Si l'element est visible
+      // * Qu'il n'y a pas de donnees qui charge
+      // * Qu'il reste des donnees.
+      if (entry.isIntersecting && !loading && !finished.current) {
+        loadGames({
+          variables: {
+            page: page.current,
+            limit: ITEM_COUNT,
+            order: "name",
+            dir: "asc",
+          },
+        });
+      }
+    },
+    [loadGames, loading],
+  );
+
+  useEffect(() => {
+    // Creation d'un observeur qui se declanche sur un element visible a 100%
+    observerInstance.current = new IntersectionObserver(handleObserver, {
+      root: null,
+      threshold: 1.0,
+    });
+
+    // Connection de l'observeur sur l'element html via sa ref
+    const currentRef = observerRef.current;
+    if (currentRef && observerInstance.current) {
+      observerInstance.current.observe(currentRef);
+    }
+
+    // Deconnection de l'observeur
+    return () => {
+      if (currentRef && observerInstance.current) {
+        observerInstance.current.unobserve(currentRef);
+      }
+      observerInstance.current?.disconnect();
+    };
+  }, [handleObserver]);
+
+  return (
+    <>
+      <div className="infinite-scroll">
+        {datas &&
+          datas.map((e) => (
+            <CardMedia
+              key={`infinite-cardmedia-${e.slug}`}
+              title={e.title}
+              id={e.slug}
+              genre={e.category.name}
+              coverUrl={e.coverUrl}
+              category_name={Category.Games}
+            />
+          ))}
+      </div>
+
+      <div ref={observerRef} className="infinite-scroll-observer"></div>
+    </>
+  );
+};
+
+export default GamesInfinitCardScroll;

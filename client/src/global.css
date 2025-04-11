@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
+  color-scheme: light dark;
   /*FONT TITLE H1*/
   --title-font-family: "Inter", sans-serif;
   --title-font-weight: bold;
@@ -56,6 +57,8 @@
   --music-color: #50c5eacc;
   --movie-color: #dbadffcc;
   --game-color: #11bfaacc;
+  transition: all 100ms ease-in;
+  /* --switch-color:  */
 }
 
 .dark {
@@ -70,35 +73,48 @@
   --music-color: #50c5ea33;
   --movie-color: #dbadff1f;
   --game-color: #11bfaa1f;
+  transition: all 100ms ease-in-out;
 }
 
 body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size);
+  color: var(--text-color);
 }
 
 main {
   background-color: var(--primary-color);
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 70px);
 }
 
 h1 {
   font-family: var(--title-font-family);
   font-weight: var(--title-font-weight);
   font-size: var(--title-font-size-mobile);
+  color: var(--text-color);
 }
 
 h2 {
   font-family: var(--sub-title-font-family);
   font-weight: var(--sub-title-font-weight);
   font-size: var(--sub-title-font-size-mobile);
+  color: var(--text-color);
 }
 
 h3 {
   font-family: var(--sub-sub-title-font-family);
   font-weight: var(--sub-sub-title-font-weight);
   font-size: var(--sub-sub-title-font-size-mobile);
+  color: var(--text-color);
+}
+
+h4 {
+  color: var(--text-color);
+}
+
+p {
+  color: var(--text-color);
 }
 
 a {
@@ -141,6 +157,10 @@ button {
 
   h3 {
     font-size: var(--sub-title-font-size-desktop);
+  }
+
+  h4 {
+    color: var(--text-color);
   }
 
   .arrow-button {
