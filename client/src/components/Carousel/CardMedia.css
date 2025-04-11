@@ -46,6 +46,7 @@
   justify-content: space-between;
   padding: 8px;
   border-top: solid 3.5px var(--primary-color);
+  color: var(--text-color);
 }
 
 .card-footer p {

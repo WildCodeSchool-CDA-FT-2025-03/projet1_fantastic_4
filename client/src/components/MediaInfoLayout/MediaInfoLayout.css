@@ -70,11 +70,12 @@
   border-left: 4px solid var(--accent-color);
   min-width: 100px;
   align-self: flex-start;
-  background-color: #ffffffee;
+  background-color: var(--secondary-color);
   padding: 0.5rem;
   border-top: 0.9rem;
   flex: 1;
   text-wrap: wrap;
+  color: var(--text-color);
 }
 
 .media-info-color-games {
