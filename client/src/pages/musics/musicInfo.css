@@ -1,12 +1,12 @@
 .item-title-music {
-  color: white;
+  color: var(--text-color);
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid var(--accent-color);
 }
 
 .general-info {
-  color: white;
+  color: var(--text-color);
   text-align: left;
 }
 .general-info-table td {
