@@ -32,10 +32,19 @@ export const GET_ONE_MUSIC = gql`
     getOneMusic(id: $id) {
       id
       title
+      artists
       releaseDate
       genre
       coverUrl
       summery
+      targetedAudience
+      label
+      producers
+      format
+      keywords
+      awards
+      recordingStudio
+      certifications
       category {
         id
         name

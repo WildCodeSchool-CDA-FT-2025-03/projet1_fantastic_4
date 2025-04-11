@@ -27,9 +27,33 @@ export class MusicsEntity extends BaseEntity {
   @Field(() => [String])
   artists: string[];
 
+  @Column("simple-array")
+  @Field(() => [String])
+  certifications: string[];
+
+  @Column("simple-array")
+  @Field(() => [String])
+  producers: string[];
+
+  @Column("simple-array")
+  @Field(() => [String])
+  format: string[];
+
+  @Column("simple-array")
+  @Field(() => [String])
+  keywords: string[];
+
+  @Column("simple-array")
+  @Field(() => [String])
+  awards: string[];
+
   @Column()
   @Field()
   label: string;
+
+  @Column()
+  @Field()
+  recordingStudio: string;
 
   @Column({ nullable: true })
   @Field({ nullable: true })

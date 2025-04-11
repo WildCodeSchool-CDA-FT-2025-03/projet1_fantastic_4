@@ -30,6 +30,17 @@ const musicMigrate = async () => {
         newMusic.genre = music.genre;
         newMusic.summery = music.summary;
         newMusic.coverUrl = music.url;
+        newMusic.certifications = music.certifications;
+        newMusic.producers = music.producers;
+        newMusic.awards = music.awards;
+        newMusic.keywords = music.keywords;
+        newMusic.format = Array.isArray(music.format)
+          ? music.format
+          : [music.format];
+        newMusic.recordingStudio = Array.isArray(music.recording_studio)
+          ? music.recording_studio.join(", ")
+          : music.recording_studio;
+
         newMusic.releaseDate = new Date(Date.parse(music.release_date));
 
         const newTrackList: TrackListEntity[] = [];
