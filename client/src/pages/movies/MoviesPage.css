@@ -17,6 +17,12 @@
   .movies-container {
     flex-direction: row;
   }
+  .movies-by-genre {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+  }
 
   .carousels-movies-wrapper {
     width: 80%;
