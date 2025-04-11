@@ -54,10 +54,9 @@ export const SET_GAME_FAVORIE = gql`
   }
 `;
 
-export const GET_GAME_FAVORITE = gql`
+export const GET_GAMES_FAVORITE = gql`
   query GetFavorites($userName: String!) {
     getFavorites(userName: $userName) {
-      isFavorite
       game {
         slug
         coverUrl

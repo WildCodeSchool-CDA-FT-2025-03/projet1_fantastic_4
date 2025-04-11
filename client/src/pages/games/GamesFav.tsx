@@ -1,5 +1,14 @@
-const GamesAddFav = () => {
-  return <h1>ok</h1>;
+import CarouselGameFav from "@/components/CarouselGameFav";
+import { useParams } from "react-router";
+
+const GamesFav = () => {
+  const { username } = useParams();
+
+  if (username) {
+    return <CarouselGameFav user={username} />;
+  } else {
+    return <p>User {username} doesn't exist</p>;
+  }
 };
 
-export default GamesAddFav;
+export default GamesFav;

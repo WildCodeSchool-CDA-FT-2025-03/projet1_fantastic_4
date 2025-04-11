@@ -11,10 +11,10 @@ const GamesAddFav = () => {
   const [setFav] = useMutation(SET_GAME_FAVORIE);
 
   useEffect(() => {
-    if (fav && slug && fav) {
+    if (fav && slug && user) {
       const enable = fav === "true";
       setFav({
-        variables: { slug: slug, userName: user, enable: enable },
+        variables: { slugid: slug, userName: user, enable: enable },
       });
     }
   });

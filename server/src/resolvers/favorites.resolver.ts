@@ -48,6 +48,7 @@ class FavoritesResolver {
       newFav.isFavorite = enable;
       await newFav.save();
     } else {
+      fav.isFavorite = enable;
       await fav.save();
     }
     return true;
