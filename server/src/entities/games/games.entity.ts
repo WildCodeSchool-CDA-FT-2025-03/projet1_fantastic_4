@@ -86,7 +86,6 @@ export class GamesEntity extends BaseEntity {
   @JoinTable()
   tags: TagsGameEntity[];
 
-  @Field(() => [GamesFavoritesEntity])
-  @OneToMany(() => GamesFavoritesEntity, (fav) => fav.games)
+  @OneToMany(() => GamesFavoritesEntity, (fav) => fav.game)
   favorites: GamesFavoritesEntity[];
 }

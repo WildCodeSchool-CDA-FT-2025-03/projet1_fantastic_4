@@ -2,6 +2,7 @@ import dataSource from "../datas.service";
 import { log } from "console";
 import { default as categoriesData } from "./categories.json";
 import { CategoriesEntity } from "../../entities/categories.entity";
+import userMigrate from "./users.migrates";
 import musicMigrate from "./musics/musicMigrate";
 import gameMigrate from "./games.migrate";
 import movieMigrate from "./movies.migrate";
@@ -26,6 +27,7 @@ import bookMigrate from "./books.migration";
 
     const res =
       (await dataSource.manager.save(newCategories)) &&
+      (await userMigrate()) &&
       (await gameMigrate()) &&
       (await movieMigrate()) &&
       (await bookMigrate()) &&

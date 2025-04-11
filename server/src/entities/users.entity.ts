@@ -19,7 +19,6 @@ export class UserEntity extends BaseEntity {
   @Column()
   name: string;
 
-  @Column()
-  @OneToMany(() => GamesFavoritesEntity, (game) => game.games)
-  gamesFavorites: GamesFavoritesEntity[];
+  @OneToMany(() => GamesFavoritesEntity, (fav) => fav.user)
+  favorites: GamesFavoritesEntity[];
 }
