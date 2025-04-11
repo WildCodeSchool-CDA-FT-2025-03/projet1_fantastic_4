@@ -1,8 +1,8 @@
 import { useParams } from "react-router";
 import { useQuery } from "@apollo/client";
 import MediaInfoLayout from "@/components/MediaInfoLayout/MediaInfoLayout";
-import SimpleExtraInfo from "@/components/MediaInfoLayout/SimpleExtraInfo/SimpleExtraInfos";
 import { GET_ONE_MUSIC } from "@/schemas/musics.schema";
+import "./musicInfo.css";
 
 const MusicInfo = () => {
   const { id } = useParams();
@@ -35,10 +35,20 @@ const MusicInfo = () => {
           title={music.title}
           summary={music.summery}
           subtitle={`Release date ${new Date(music.releaseDate).toLocaleDateString("fr-FR")}`}
-          url={""}
+          url={music.coverUrl}
         >
           <h3>Tracklist</h3>
-          <SimpleExtraInfo infos={info} />
+          <div className={"simple-extra-infos"}>
+            {info &&
+              info.map((i: { title: string; text: string }) => (
+                <div className="item-title-music">
+                  <span className="title">{i.title}</span>
+                  <small style={{ textAlign: "right" }} className="duration">
+                    {i.text}
+                  </small>
+                </div>
+              ))}
+          </div>
         </MediaInfoLayout>
       )}
     </>
