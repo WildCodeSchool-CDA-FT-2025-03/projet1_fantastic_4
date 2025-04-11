@@ -1,10 +1,26 @@
 import { GamesFavoritesEntity } from "@/entities/games/favorites.entity";
 import { GamesEntity } from "@/entities/games/games.entity";
 import { UserEntity } from "@/entities/users.entity";
-import { Arg, Mutation, Resolver } from "type-graphql";
+import { Arg, Mutation, Query, Resolver } from "type-graphql";
 
 @Resolver()
 class FavoritesResolver {
+  @Query(() => [GamesFavoritesEntity])
+  async getFavorites(
+    @Arg("userName", () => String) userName: string,
+  ): Promise<GamesFavoritesEntity[]> {
+    const user = await UserEntity.findOneBy({ name: userName });
+
+    if (!user) {
+      throw "Error user mot exist";
+    }
+    return (
+      (await GamesFavoritesEntity.find({
+        where: { user: user, isFavorite: true },
+      })) || []
+    );
+  }
+
   @Mutation(() => Boolean)
   async addFavoritesGame(
     @Arg("userName", () => String) userName: string,
@@ -32,7 +48,6 @@ class FavoritesResolver {
       newFav.isFavorite = enable;
       await newFav.save();
     } else {
-      fav.isFavorite = enable;
       await fav.save();
     }
     return true;

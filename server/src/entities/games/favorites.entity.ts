@@ -4,7 +4,7 @@ import {
   BaseEntity,
   PrimaryGeneratedColumn,
   Column,
-  // Unique,
+  Unique,
   JoinTable,
   ManyToOne,
 } from "typeorm";
@@ -13,7 +13,7 @@ import { UserEntity } from "../users.entity";
 
 @ObjectType()
 @Entity("games_favorites")
-// @Unique(["gameId", "userId"])
+@Unique(["game", "user"])
 export class GamesFavoritesEntity extends BaseEntity {
   @Field()
   @PrimaryGeneratedColumn("uuid")
@@ -23,11 +23,12 @@ export class GamesFavoritesEntity extends BaseEntity {
   @Column()
   isFavorite: boolean;
 
-  @ManyToOne(() => GamesEntity, (game) => game.id)
+  @Field(() => GamesEntity)
+  @ManyToOne(() => GamesEntity, (game) => game, { eager: true })
   @JoinTable()
   game: GamesEntity;
 
-  @ManyToOne(() => UserEntity, (user) => user.id)
+  @ManyToOne(() => UserEntity, (user) => user, { eager: true })
   @JoinTable()
   user: UserEntity;
 }
