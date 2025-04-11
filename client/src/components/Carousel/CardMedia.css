@@ -61,13 +61,3 @@
   padding: 0px;
   margin: 0px;
 }
-
-.card-media.games {
-  min-width: 230px;
-  max-width: 230px;
-  padding: 1px;
-}
-
-.card-content.games {
-  height: 300px;
-}

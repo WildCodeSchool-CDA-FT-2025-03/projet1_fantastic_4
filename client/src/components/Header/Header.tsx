@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className={theme ? "light" : "dark"}>
-      <Link to={"/"}>
+      <Link to="/">
         <img
           src="/public/media-hub-S.webp"
           alt="logo"
@@ -23,7 +23,7 @@ const Header = () => {
       </nav>
       <img
         className="burgerMenu"
-        src={isMenuOpen ? "public//close.svg" : "/public/burgerMenu.svg"}
+        src={isMenuOpen ? "/public/close.svg" : "/public/burgerMenu.svg"}
         alt=""
         onClick={() => setMenuOpen(!isMenuOpen)}
       />
