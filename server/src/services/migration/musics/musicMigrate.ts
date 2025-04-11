@@ -29,6 +29,7 @@ const musicMigrate = async () => {
         newMusic.category = category;
         newMusic.genre = music.genre;
         newMusic.summery = music.summary;
+        newMusic.coverUrl = music.url;
         newMusic.releaseDate = new Date(Date.parse(music.release_date));
 
         const newTrackList: TrackListEntity[] = [];
