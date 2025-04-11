@@ -41,7 +41,7 @@ const MusicInfo = () => {
           <div className={"simple-extra-infos"}>
             {info &&
               info.map((i: { title: string; text: string }) => (
-                <div className="item-title-music">
+                <div key={i.title} className="item-title-music">
                   <span className="title">{i.title}</span>
                   <small style={{ textAlign: "right" }} className="duration">
                     {i.text}
