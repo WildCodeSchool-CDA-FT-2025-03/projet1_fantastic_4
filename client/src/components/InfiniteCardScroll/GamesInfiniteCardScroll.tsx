@@ -21,20 +21,30 @@ const GamesInfinitCardScroll = () => {
   const finished = useRef(false);
   const page = useRef(1);
 
+  // LasyQuery n'execute pas la requete automatiquement au demarrage.
   const [loadGames, { loading }] = useLazyQuery<GetGameRecoType>(GET_GAMES, {
     onCompleted: (data) => {
       const count = data.getGames.length;
+
       if (count < ITEM_COUNT) {
         finished.current = true;
       }
       setDatas((prevData) => [...prevData, ...data.getGames]);
+
+      // Incrementation de la page pour la prochaine requete.
       page.current += 1;
     },
   });
 
+  // Callback de l'observeur. creer une seul fois
   const handleObserver = useCallback(
     (entries: IntersectionObserverEntry[]) => {
       const [entry] = entries;
+
+      // Envant d'effectuer une nouvelle requete, On test
+      // * Si l'element est visible
+      // * Qu'il n'y a pas de donnees qui charge
+      // * Qu'il reste des donnees.
       if (entry.isIntersecting && !loading && !finished.current) {
         loadGames({
           variables: {
@@ -50,16 +60,19 @@ const GamesInfinitCardScroll = () => {
   );
 
   useEffect(() => {
+    // Creation d'un observeur qui se declanche sur un element visible a 100%
     observerInstance.current = new IntersectionObserver(handleObserver, {
       root: null,
       threshold: 1.0,
     });
 
+    // Connection de l'observeur sur l'element html via sa ref
     const currentRef = observerRef.current;
     if (currentRef && observerInstance.current) {
       observerInstance.current.observe(currentRef);
     }
 
+    // Deconnection de l'observeur
     return () => {
       if (currentRef && observerInstance.current) {
         observerInstance.current.unobserve(currentRef);
