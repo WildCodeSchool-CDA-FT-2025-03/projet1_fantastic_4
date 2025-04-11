@@ -1,4 +1,4 @@
-import { Resolver, Query } from "type-graphql";
+import { Resolver, Query, Arg } from "type-graphql";
 import { BooksEntity } from "@/entities/books.entity";
 import { shuffleArray } from "@/utils/shuffleArray";
 @Resolver()
@@ -35,6 +35,19 @@ class BooksResolver {
     const randomBooks = shuffledBooks.slice(0, 10);
 
     return randomBooks;
+  }
+  @Query(() => BooksEntity, { nullable: true })
+  async getOneBookById(
+    @Arg("id", () => String) id: string,
+  ): Promise<BooksEntity | null> {
+    const oneBook = await BooksEntity.findOne({
+      where: { id: id },
+      relations: ["category"],
+    });
+    if (!oneBook) {
+      throw new Error("No books found");
+    }
+    return oneBook;
   }
 }
 
