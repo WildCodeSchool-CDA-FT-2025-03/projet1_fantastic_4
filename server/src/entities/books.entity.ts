@@ -40,7 +40,7 @@ export class BooksEntity extends BaseEntity {
   //  Foreign Key CategoriesEntity
   @Column({ default: 1 }) // Force ID 1
   @Field()
-  categoryId: number = 3;
+  categoryId: number = 1;
 
   // CategoriesEntity relation
   @ManyToOne(() => CategoriesEntity, (category) => category.books, {
