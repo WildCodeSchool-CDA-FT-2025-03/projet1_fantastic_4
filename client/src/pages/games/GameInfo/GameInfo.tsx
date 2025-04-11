@@ -9,6 +9,7 @@ import { Game } from "@/types/game.type";
 
 const GameInfo = () => {
   const { slug } = useParams();
+
   const { loading, error, data } = useQuery(GET_ONE_GAME, {
     variables: { slug: slug },
   });
