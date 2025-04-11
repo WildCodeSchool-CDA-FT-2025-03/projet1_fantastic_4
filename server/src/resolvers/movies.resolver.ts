@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 import { Resolver, Query, Arg } from "type-graphql";
 import { MovieEntity } from "../entities/movie.entity";
 import { shuffleArray } from "@/utils/shuffleArray";
@@ -28,8 +29,13 @@ class MoviesResolver {
 
   @Query(() => [MovieEntity])
   async getMoviesByGenre(
-    @Arg("genreName", () => String) genreName: string,
+    @Arg("genreName", () => String, { nullable: true })
+    genreName: string | null,
   ): Promise<MovieEntity[]> {
+    if (!genreName) {
+      genreName = "Thriller";
+    }
+
     const movies = await MovieEntity.find({
       where: {
         genre: Like(`%${genreName}%`),
