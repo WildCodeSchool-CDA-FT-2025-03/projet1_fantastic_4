@@ -29,13 +29,3 @@ export const GET_BOOKS_RECOMMANDATIONS = gql`
     }
   }
 `;
-
-export const SET_GAME_FAVORIE = gql`
-  mutation AddFavoritesGame(
-    $enable: Boolean!
-    $slugid: String!
-    $userName: String!
-  ) {
-    addFavoritesGame(enable: $enable, slugid: $slugid, userName: $userName)
-  }
-`;

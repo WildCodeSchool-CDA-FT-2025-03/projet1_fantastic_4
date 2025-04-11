@@ -43,3 +43,26 @@ export const GET_GAMES_CAROUSEL = gql`
     }
   }
 `;
+
+export const SET_GAME_FAVORIE = gql`
+  mutation AddFavoritesGame(
+    $enable: Boolean!
+    $slugid: String!
+    $userName: String!
+  ) {
+    addFavoritesGame(enable: $enable, slugid: $slugid, userName: $userName)
+  }
+`;
+
+export const GET_GAME_FAVORITE = gql`
+  query GetFavorites($userName: String!) {
+    getFavorites(userName: $userName) {
+      isFavorite
+      game {
+        slug
+        coverUrl
+        title
+      }
+    }
+  }
+`;
