@@ -9,12 +9,14 @@ import {
   ManyToOne,
   ManyToMany,
   JoinTable,
+  OneToMany,
 } from "typeorm";
 import { GamesPegiEsbr } from "./pegiesbr.entity";
 import { GamesLanguagesEntity } from "./languages.entity";
 import { CompaniesEntity } from "./companies.entity";
 import { TagsGameEntity } from "./tags.entity";
 import { GameCategorieEntity } from "./categories.entity";
+import { GamesFavoritesEntity } from "./favorites.entity";
 
 @ObjectType()
 @Entity("games")
@@ -83,4 +85,8 @@ export class GamesEntity extends BaseEntity {
   @ManyToMany(() => TagsGameEntity, (tag) => tag.games)
   @JoinTable()
   tags: TagsGameEntity[];
+
+  @Field(() => [GamesFavoritesEntity])
+  @OneToMany(() => GamesFavoritesEntity, (fav) => fav.games)
+  favorites: GamesFavoritesEntity[];
 }
