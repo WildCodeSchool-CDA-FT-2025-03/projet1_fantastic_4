@@ -1,0 +1,13 @@
+.book-page-title {
+    background-color: var(--book-color);
+  }
+  .book-container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+  
+  .book-carousel-section {
+    width: 100%;
+    padding: 10px;
+  }
