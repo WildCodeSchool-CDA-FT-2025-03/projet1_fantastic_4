@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import "@/global.css";
 import useTheme from "./utiles/useTheme";
+import Footer from "./pages/musics/footer";
 
 function App() {
   const { theme } = useTheme();
@@ -13,6 +14,7 @@ function App() {
       <main className={theme ? "light" : "dark"}>
         <Outlet></Outlet>
       </main>
+      <Footer />
     </>
   );
 }
