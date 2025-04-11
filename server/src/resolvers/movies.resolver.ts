@@ -13,6 +13,20 @@ class MoviesResolver {
     return moviesGenres;
   }
 
+  @Query(() => MovieEntity, { nullable: true })
+  async getOneMovieById(
+    @Arg("id", () => String) id: string,
+  ): Promise<MovieEntity | null> {
+    const oneMovie = await MovieEntity.findOne({
+      where: { id: id },
+      relations: ["category"],
+    });
+    if (!oneMovie) {
+      throw new Error("No movies found");
+    }
+    return oneMovie;
+  }
+
   @Query(() => [MovieEntity])
   async getMoviesByGenre(
     @Arg("genreName", () => String, { nullable: true })

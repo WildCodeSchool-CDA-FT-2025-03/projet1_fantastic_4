@@ -64,6 +64,11 @@ const movieMigrate = async (): Promise<boolean> => {
         newMovie.rate = Math.floor(Math.random() * 6);
         newMovie.categoryId = 3;
         newMovie.targetedAudience = movie.targeted_audience;
+        newMovie.summary = movie.summary;
+        newMovie.directors = movie.directors.join(", ");
+        newMovie.studios = movie.studios.join(", ");
+        newMovie.releaseDate = movie.release_date;
+        newMovie.originalLanguage = movie.original_language;
         return newMovie;
       }),
     );

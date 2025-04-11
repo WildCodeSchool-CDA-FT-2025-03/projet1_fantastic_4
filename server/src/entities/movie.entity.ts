@@ -38,6 +38,26 @@ export class MovieEntity extends BaseEntity {
   @Field(() => String, { nullable: true })
   targetedAudience: string | null;
 
+  @Column()
+  @Field()
+  summary: string;
+
+  @Column()
+  @Field()
+  directors: string;
+
+  @Column()
+  @Field()
+  studios: string;
+
+  @Column()
+  @Field()
+  releaseDate: string;
+
+  @Column()
+  @Field()
+  originalLanguage: string;
+
   //  Foreign Key CategoriesEntity
   @Column({ default: 3 }) // Force ID 3
   @Field()

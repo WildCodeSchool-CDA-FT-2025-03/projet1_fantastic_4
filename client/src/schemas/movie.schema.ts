@@ -39,6 +39,25 @@ export const GET_MOVIES_RECOMMANDATIONS = gql`
   }
 `;
 
+export const GET_ONE_MOVIE = gql`
+  query GetOneMovieById($id: String!) {
+    getOneMovieById(id: $id) {
+      id
+      title
+      genre
+      summary
+      directors
+      studios
+      releaseDate
+      targetedAudience
+      originalLanguage
+      category {
+        name
+      }
+    }
+  }
+`;
+
 export const GET_MOVIES_BY_GENRE = gql`
   query GetMoviesByGenre($genreName: String) {
     getMoviesByGenre(genreName: $genreName) {
