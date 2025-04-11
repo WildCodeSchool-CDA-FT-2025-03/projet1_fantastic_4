@@ -39,7 +39,6 @@ export default function MovieInfo() {
   }
   if (error) {
     throw error;
-    return <p>The movie doesn't exist.</p>;
   }
 
   return (

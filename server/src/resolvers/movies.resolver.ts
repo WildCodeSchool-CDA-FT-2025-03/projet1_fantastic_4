@@ -21,7 +21,7 @@ class MoviesResolver {
       relations: ["category"],
     });
     if (!oneMovie) {
-      return null;
+      throw new Error("No movies found");
     }
     return oneMovie;
   }
