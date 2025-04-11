@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className={theme ? "light" : "dark"}>
-      <Link to={"/"}>
+      <Link to="/">
         <img
           src="/public/media-hub-S.webp"
           alt="logo"
