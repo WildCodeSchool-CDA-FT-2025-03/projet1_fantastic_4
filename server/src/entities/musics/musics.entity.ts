@@ -31,6 +31,10 @@ export class MusicsEntity extends BaseEntity {
   @Field()
   label: string;
 
+  @Column({ nullable: true })
+  @Field({ nullable: true })
+  coverUrl: string;
+
   @Column()
   @Field()
   targetedAudience: string;

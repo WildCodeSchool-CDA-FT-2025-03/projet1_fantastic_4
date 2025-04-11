@@ -7,6 +7,7 @@ export const GET_ALL_MUSICS = gql`
       title
       releaseDate
       genre
+      coverUrl
       category {
         id
         name
@@ -17,6 +18,7 @@ export const GET_ALL_MUSICS = gql`
       title
       releaseDate
       genre
+      coverUrl
       category {
         id
         name
@@ -32,6 +34,7 @@ export const GET_ONE_MUSIC = gql`
       title
       releaseDate
       genre
+      coverUrl
       summery
       category {
         id
