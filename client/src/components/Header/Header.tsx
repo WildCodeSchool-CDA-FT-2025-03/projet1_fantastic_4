@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Navbar from "./Navbar/Navbar";
 import "./Header.css";
+import { Link } from "react-router";
 
 const Header = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -8,11 +9,14 @@ const Header = () => {
   return (
     <>
       <header>
-        <img
-          src="/public/media-hub-S.webp"
-          alt="logo"
-          className="logo-header"
-        />
+        <Link to={"/"}>
+          <img
+            src="/public/media-hub-S.webp"
+            alt="logo"
+            className="logo-header"
+          />
+        </Link>
+
         <nav className="navbar-desktop">
           <Navbar />
         </nav>
