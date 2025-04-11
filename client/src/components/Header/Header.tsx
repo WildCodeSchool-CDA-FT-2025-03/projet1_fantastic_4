@@ -23,7 +23,7 @@ const Header = () => {
       </nav>
       <img
         className="burgerMenu"
-        src={isMenuOpen ? "public//close.svg" : "/public/burgerMenu.svg"}
+        src={isMenuOpen ? "/public/close.svg" : "/public/burgerMenu.svg"}
         alt=""
         onClick={() => setMenuOpen(!isMenuOpen)}
       />
