@@ -31,7 +31,7 @@ export default function Bookinfo() {
   }
   if (error) {
     throw error;
-    return <p>The movie doesn't exist.</p>;
+    return <p>The book doesn't exist.</p>;
   }
 
   return (
