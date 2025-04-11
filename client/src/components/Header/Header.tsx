@@ -9,30 +9,24 @@ const Header = () => {
   const { theme } = useTheme();
 
   return (
-    <>
-      <header className={theme ? "light" : "dark"}>
-        <img
-          src="/public/media-hub-S.webp"
-          alt="logo"
-          className="logo-header"
-        />
-        <nav className="navbar-desktop">
+    <header className={theme ? "light" : "dark"}>
+      <img src="/public/media-hub-S.webp" alt="logo" className="logo-header" />
+      <nav className="navbar-desktop">
+        <Navbar />
+      </nav>
+      <img
+        className="burgerMenu"
+        src={isMenuOpen ? "public//close.svg" : "/public/burgerMenu.svg"}
+        alt=""
+        onClick={() => setMenuOpen(!isMenuOpen)}
+      />
+      {isMenuOpen && (
+        <nav className="navbar-mobile">
           <Navbar />
         </nav>
-        <img
-          className="burgerMenu"
-          src={isMenuOpen ? "public//close.svg" : "/public/burgerMenu.svg"}
-          alt=""
-          onClick={() => setMenuOpen(!isMenuOpen)}
-        />
-        {isMenuOpen && (
-          <nav className="navbar-mobile">
-            <Navbar />
-          </nav>
-        )}
-        <ThemeButton />
-      </header>
-    </>
+      )}
+      <ThemeButton />
+    </header>
   );
 };
 export default Header;
