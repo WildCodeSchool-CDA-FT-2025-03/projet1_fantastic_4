@@ -1,8 +1,10 @@
 .word-list {
   display: flex;
   align-items: center;
+
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
+  padding: 0.5rem;
 }
 
 .word-list > p {

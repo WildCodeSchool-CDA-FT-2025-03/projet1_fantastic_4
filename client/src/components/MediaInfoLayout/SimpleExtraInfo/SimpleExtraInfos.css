@@ -1,8 +1,8 @@
 .simple-extra-infos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  column-gap: 0.5rem;
-  row-gap: 1rem;
+  column-gap: 2rem;
+  row-gap: 2rem;
   width: 100%;
   padding: 0.5rem;
   border-radius: 15px;
