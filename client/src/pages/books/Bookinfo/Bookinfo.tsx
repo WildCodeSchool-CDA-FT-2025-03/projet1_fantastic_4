@@ -30,7 +30,6 @@ export default function Bookinfo() {
     return <p>Loading...</p>;
   }
   if (error) {
-    throw error;
     return <p>The book doesn't exist.</p>;
   }
 

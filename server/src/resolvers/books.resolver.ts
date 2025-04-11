@@ -45,7 +45,7 @@ class BooksResolver {
       relations: ["category"],
     });
     if (!oneBook) {
-      return null;
+      throw new Error("No movies found");
     }
     return oneBook;
   }
