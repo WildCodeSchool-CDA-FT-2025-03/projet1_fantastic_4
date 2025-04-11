@@ -1,5 +1,14 @@
 .item-title-music {
+  color: white;
   display: flex;
   justify-content: space-between;
   border-bottom: 2px solid var(--accent-color);
+}
+
+.general-info {
+  color: white;
+  text-align: left;
+}
+.general-info-table td {
+  text-align: right;
 }

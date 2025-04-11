@@ -49,6 +49,34 @@ const MusicInfo = () => {
                 </div>
               ))}
           </div>
+          <div className="general-info">
+            <h3>General info</h3>
+            <table className="general-info-table">
+              <tbody>
+                <tr>
+                  <th>Artists</th>
+                  <td>{music.artists}</td>
+                </tr>
+                <tr>
+                  <th>Genre</th>
+                  <td>{music.genre}</td>
+                </tr>
+                <tr>
+                  <th>Label</th>
+                  <td>{music.label}</td>
+                </tr>
+
+                <tr>
+                  <th>Awards</th>
+                  <td>{music.awards}</td>
+                </tr>
+                <tr>
+                  <th>Producers</th>
+                  <td>{music.producers}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </MediaInfoLayout>
       )}
     </>
