@@ -6,7 +6,6 @@ import MusicsPage from "@/pages/musics/MusicsPage";
 import GamesPage from "@/pages/games/GamesPage";
 import BooksPage from "@/pages/books/BooksPage";
 import GameInfo from "@/pages/games/GameInfo/GameInfo";
-import GamesAddFav from "@/pages/games/GamesAddFav";
 import GamesFav from "@/pages/games/GamesFav";
 
 const router = createBrowserRouter([
@@ -37,10 +36,6 @@ const router = createBrowserRouter([
       {
         path: "/games",
         element: <GamesPage />,
-      },
-      {
-        path: "/games/:slug/:user/:fav",
-        element: <GamesAddFav />,
       },
       {
         path: "/books",

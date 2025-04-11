@@ -1,12 +1,15 @@
 import { ReactNode, Children } from "react";
 import { Category } from "@/types/category.type";
 import "./MediaInfoLayout.css";
+import GamesAddFav from "@/pages/games/GamesAddFav";
 
 type PropsMediaInfoLayout = {
   category: Category;
   title: string;
   summary: string;
   subtitle: string;
+  slug?: string;
+  addFav?: boolean;
   url?: string;
   children?: ReactNode;
 };
@@ -16,6 +19,8 @@ const MediaInfoLayout = ({
   title,
   summary,
   subtitle,
+  slug,
+  addFav,
   url,
   children = [],
 }: PropsMediaInfoLayout) => {
@@ -26,6 +31,7 @@ const MediaInfoLayout = ({
     <div className="media-info-layout">
       <section className={`media-info-layout-top ${backgroundColor}`}>
         <h2>{title}</h2>
+        {addFav && slug && <GamesAddFav user="user-1" slug={slug} />}
       </section>
       <section className={`media-info-layout-main ${backgroundColor}`}>
         <div className="media-info-layout-main-left">

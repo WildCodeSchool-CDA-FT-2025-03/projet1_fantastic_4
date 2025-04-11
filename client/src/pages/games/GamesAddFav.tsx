@@ -1,24 +1,26 @@
 import { SET_GAME_FAVORIE } from "@/schemas/games.schema";
 import { useMutation } from "@apollo/client";
-import { useEffect } from "react";
-import { useParams } from "react-router";
+// import { useEffect } from "react";
 
-const GamesAddFav = () => {
-  const { slug } = useParams();
-  const { user } = useParams();
-  const { fav } = useParams();
+type Props = {
+  user: string;
+  slug: string;
+};
 
+const GamesAddFav = ({ user, slug }: Props) => {
   const [setFav] = useMutation(SET_GAME_FAVORIE);
 
-  useEffect(() => {
-    if (fav && slug && user) {
-      const enable = fav === "true";
-      setFav({
-        variables: { slugid: slug, userName: user, enable: enable },
-      });
-    }
-  });
-  return <h1>ok</h1>;
+  const setFavorite = () => {
+    setFav({
+      variables: { slugid: slug, userName: user, enable: true },
+    });
+  };
+
+  return (
+    <button className="tag-button" onClick={setFavorite}>
+      ADD
+    </button>
+  );
 };
 
 export default GamesAddFav;

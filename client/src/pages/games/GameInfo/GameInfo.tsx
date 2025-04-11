@@ -37,6 +37,8 @@ const GameInfo = () => {
           summary={game.summary}
           subtitle={game.subtitle}
           url={game.coverUrl}
+          slug={game.slug}
+          addFav={true}
         >
           <SimpleExtraInfo
             infos={[
